@@ -1,8 +1,22 @@
-import './App.css';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages";
+import PageMisi from "./pages/PageMisi";
+import PageKelompok from './pages/PageKelompok'
+import PageBerita from './pages/PageBerita'
 
 function App() {
   return (
-    <h1>Hello World</h1>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/PageMisi" element={<PageMisi />} />
+        <Route path="/PageKelompok" element={<PageKelompok />} />
+        <Route path="/PageBerita" element={<PageBerita />} />
+        <Route path="/faq" element={<Home />} />
+
+      </Routes>
+    </Router>
   );
 }
 
