@@ -1,0 +1,23 @@
+.book-bg{
+    position: relative; 
+    top: -20vh;
+    width: 100vw;
+    z-index: 0;
+}
+
+.about-div{
+    position: absolute; 
+    top: 120vh; 
+}
+
+.about-title {
+    font-family: Signika;
+    padding: 50px 50px 30px 80px;
+}
+  
+.about-content {
+    font-family: Poppins;
+    padding: 0px 50px 50px 80px;
+    width: 50vw;
+    text-align: justify;
+}

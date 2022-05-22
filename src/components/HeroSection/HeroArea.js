@@ -12,10 +12,10 @@ const HeroArea = () => {
         >
           <div className="container relative w-full h-full m-auto text-center items-center flex flex-wrap ">
             <div className=" relative w-[800px] text-left md:w-8/12 lg:w-6/12 xl:w-6/12 my-auto z-10">
-              <h1 className="text-9xl tracking-wide text-white  lg:text-8xl  mb-2">
+              <h1 className="h1-shadow text-9xl tracking-wide text-white  lg:text-8xl  mb-2">
                 OKK UI
               </h1>
-              <h1 className="text-9xl tracking-wide text-white lg:text-8xl">
+              <h1 className="h1-shadow text-9xl tracking-wide text-white lg:text-8xl">
                 2022
               </h1>
               <h2 className="text-4xl tracking-wide text-white lg:text-3xl my-2">
