@@ -17,9 +17,9 @@ const OurContent = () => {
         <div className = "content-area md:text-left text-center">
           <h1 className = "text-6xl mb-8 pb-4 border-orange-300 border-b-8"> Content </h1>
         </div>
-        <div className = "content-area">
+        <div className = "content-area ">
           <YoutubeEmbed embedId = {id1}/>
-          <div className = "flex justify-center flex-col">
+          <div className = "flex justify-center flex-col mb-10">
             <h2 className = "text-5xl md:block hidden"> Lebih dekat dengan OKK UI </h2>
             <p className = "text-lg mt-4 md:text-left text-center"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
           </div>

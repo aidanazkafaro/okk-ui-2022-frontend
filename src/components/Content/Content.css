@@ -29,7 +29,7 @@
 .content-area-2{
     display:grid;
     grid-template-rows: auto;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 /* @media screen(md){
@@ -63,5 +63,7 @@
         grid-auto-columns: 1fr;
         column-gap: 3em;
         max-width: 1400px;
+        margin: 50px auto;
+        
     }
 }
