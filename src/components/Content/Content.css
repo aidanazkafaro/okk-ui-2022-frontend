@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.content{
+    box-shadow: 1px 2px 2px 1px rgba(0, 0, 0, 0.5);
+    background-color: #F9E1CF;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content h1{
+    font-family: 'Signika', sans-serif;
+    text-shadow: none;
+    font-weight: bold;
+    border-color: rgb(225,170,67);
+    border-radius: 5px;
+}
+
+.content h2{
+    font-weight:bold;
+}
+
+.content-area{
+    display:grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+    margin: 0 auto;
+}
+
+.content-area-2{
+    display:grid;
+    grid-template-rows: auto;
+    margin: 0 auto;
+}
+
+/* @media screen(md){
+
+    .content-area{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        column-gap: 3em;
+        max-width: 1400px;
+    }
+
+    .content-area-2{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        column-gap: 3em;
+        max-width: 1400px;
+    }
+} */
+
+@media(min-width: 768px){
+
+    .content-area{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        column-gap: 3em;
+        max-width: 1400px;
+    }
+
+    .content-area-2{
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        column-gap: 3em;
+        max-width: 1400px;
+    }
+}
