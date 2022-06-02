@@ -9,23 +9,33 @@ import Footer from "../components/footer/Footer";
 import Sponsor from "../components/Sponsor/Sponsor";
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-  return (
-    <>
-      <Navbar isOpen={isOpen} setIsOpen={toggle} />
-      <HeroArea />
-      <IndexAbout />
-      <IndexMisi />
-      <OurContent />
-      <Timeline />
-      <Sponsor />
-      <Footer />
-    </>
-  );
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    };
+    return ( <
+        >
+        <
+        Navbar isOpen = { isOpen }
+        setIsOpen = { toggle }
+        /> <
+        HeroArea / >
+        <
+        IndexAbout / >
+        <
+        IndexMisi / >
+        <
+        OurContent / >
+        <
+        Timeline / >
+        <
+        Sponsor / >
+        <
+        Footer / >
+        <
+        />
+    );
 };
 
 export default Home;
