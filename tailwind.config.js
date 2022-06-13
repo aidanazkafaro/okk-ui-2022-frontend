@@ -13,6 +13,10 @@ module.exports = {
       },
       height: {
         cardheight: "450px",
+        cardheightmobile: "600px",
+      },
+      top: {
+        topOfAbsoluteButton: "92.5%",
       },
       lineClamp: {
         10: "10",

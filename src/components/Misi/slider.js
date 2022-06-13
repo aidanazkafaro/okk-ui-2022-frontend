@@ -6,7 +6,6 @@ import carouselCard from "../../assets/carousel-misi.png";
 import RightArrow from "../../assets/right-arrow.png";
 import LeftArrow from "../../assets/left-arrow.png";
 import misiData from "./MisiData";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -98,9 +97,6 @@ export default class CustomArrows extends Component {
               <Card key={obj.id} title={obj.title} content={obj.content} />
             );
           })}
-          {/* <Card />
-          <Card />
-          <Card /> */}
         </Slider>
       </div>
     );
