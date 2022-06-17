@@ -1,0 +1,15 @@
+.main-sect{
+    display:grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr 4fr 0.5fr;
+    grid-template-rows:auto auto;
+    grid-template-areas: "title-2 title-2 title-2 title-2 title-2 title-2" 
+    ". input . . pict .";
+}
+
+.title-2{
+    grid-area: title-2;
+}
+
+.input{
+    grid-area: input;
+}
