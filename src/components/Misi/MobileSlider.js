@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import carouselCard from "../../assets/carousel-misi-mobile.png";
 import rectangleMobile from "../../assets/Rectangle.png";
-import RightArrow from "../../assets/right-arrow.png";
-import LeftArrow from "../../assets/left-arrow.png";
+import RightArrow from "../../assets/right-arrow.svg";
+import LeftArrow from "../../assets/left-arrow.svg";
 import misiData from "./MisiData";
 
 function SampleNextArrow(props) {
@@ -20,8 +20,8 @@ function SampleNextArrow(props) {
         display: "block",
         right: "15%",
         top: "92.5%",
-        width: "10%",
-        height: "5%",
+        width: "40px",
+        height: "30px",
       }}
       onClick={onClick}
     />
@@ -41,8 +41,8 @@ function SamplePrevArrow(props) {
         left: "15%",
         "z-index": "1",
         top: "92.5%",
-        width: "10%",
-        height: "5%",
+        width: "40px",
+        height: "30px",
       }}
       onClick={onClick}
     />
@@ -64,8 +64,8 @@ function Card(props) {
             />
           </div>
           {/* button selengkapnya */}
-          <div className={`absolute w-4/5 h-cardheightmobile top-0`}>
-            <div className="absolute top-[90%] w-full h-cardheightmobile">
+          <div className={`absolute w-4/5 h-cardheightmobile top-0 z-10`}>
+            <div className="absolute top-[89%] w-full h-cardheightmobile">
               <div className="flex items-center justify-center">
                 <a href={"/PageMisi"}>
                   <button
@@ -78,7 +78,7 @@ function Card(props) {
               </div>
             </div>
           </div>
-          <div className={`absolute w-4/5 h-cardheightmobile top-5 px-7 `}>
+          <div className={`absolute w-4/5 h-cardheightmobile top-9 px-7 `}>
             <div className={`flex items-center justify-center h-1/3`}>
               <img src={rectangleMobile} className={``} alt="" />
             </div>
