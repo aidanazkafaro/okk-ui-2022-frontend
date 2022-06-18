@@ -3,7 +3,6 @@ import Footer from "../components/footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import Misi from "../components/Misi/Misi";
 import Sponsor from "../components/Sponsor/Sponsor";
-import { misiItems } from "../components/Misi/MisiData";
 
 const PageMisi = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +13,7 @@ const PageMisi = () => {
   return (
     <div className={`${isOpen ? "fixed h-screen w-full" : ""} `}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
-      <Misi />
+      <Misi/>
       <Sponsor />
       <Footer />
     </div>

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,7 +6,6 @@ import carouselCard from "../../assets/carousel-misi-mobile.png";
 import rectangleMobile from "../../assets/Rectangle.png";
 import RightArrow from "../../assets/right-arrow.svg";
 import LeftArrow from "../../assets/left-arrow.svg";
-import misiData from "./MisiData";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -50,7 +49,7 @@ function SamplePrevArrow(props) {
 }
 
 function Card(props) {
-  const { title, content } = props;
+  const { judul, deskripsi } = props;
 
   return (
     <div className={`relative`}>
@@ -85,7 +84,7 @@ function Card(props) {
 
             <div className={`grid grid-rows-8 gap-1`}>
               <div className="w-44 h-full font-poppins text-2xl font-bold mt-7">
-                {title}
+                {judul}
               </div>
 
               {/* konten misi */}
@@ -93,7 +92,7 @@ function Card(props) {
                 <div
                   className={`line-clamp-6 font-poppins text-lg font-normal`}
                 >
-                  {content}
+                  {deskripsi}
                 </div>
               </div>
             </div>
@@ -104,26 +103,22 @@ function Card(props) {
   );
 }
 
-export default class MobileCard extends Component {
-  render() {
-    const settings = {
-      infinite: true,
-      speed: 1000,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      nextArrow: <SampleNextArrow />,
-      prevArrow: <SamplePrevArrow />,
-    };
-    return (
-      <div>
-        <Slider {...settings}>
-          {misiData.map((obj, index) => {
-            return (
-              <Card key={obj.id} title={obj.title} content={obj.content} />
-            );
-          })}
-        </Slider>
-      </div>
-    );
-  }
+export default function MobileCard({ misiItems }) {
+  const settings = {
+    infinite: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+  return (
+    <div>
+      <Slider {...settings}>
+        {misiItems.map((obj, index) => {
+          return <Card key={index} judul={obj.judul} deskripsi={obj.deskripsi} />;
+        })}
+      </Slider>
+    </div>
+  );
 }

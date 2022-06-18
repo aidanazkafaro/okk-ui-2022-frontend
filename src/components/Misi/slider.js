@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import carouselCard from "../../assets/carousel-misi.png";
 import RightArrow from "../../assets/right-arrow.svg";
 import LeftArrow from "../../assets/left-arrow.svg";
-import misiData from "./MisiData";
+import {misiItems} from "./MisiData";
 import MediaQuery from "react-responsive";
 
 function SampleNextArrow(props) {
@@ -145,7 +145,7 @@ export default class CustomArrows extends Component {
     return (
       <div>
         <Slider {...settings}>
-          {misiData.map((obj, index) => {
+          {misiItems.map((obj, index) => {
             return (
               <Card key={obj.id} title={obj.title} content={obj.content} />
             );
