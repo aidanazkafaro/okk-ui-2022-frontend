@@ -62,7 +62,7 @@ export default function Calendar({startDate, endDate}) {
                       "py-1.5"
                     )}
                   >
-                  {console.log(day)}
+                  {/* {console.log(day)} */}
                     <button
                       type="button"
                       onClick={() => setSelectedDay(day)}

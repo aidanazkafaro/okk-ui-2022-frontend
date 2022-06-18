@@ -7,13 +7,12 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Calendar from "./Calendar";
 
 
-export default function Misi({props}) {
+export default function Misi({misiItem}) {
   const [showTimeline, setShowTimeline] = useState(true);
   const [showDescription, setShowDescription] = useState(false);
 
   return (
     <>
-    {console.log(props)}
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -23,8 +22,7 @@ export default function Misi({props}) {
             backgroundColor: "#E1AA43",
           }}
         >
-          <Typography>{props.judul}</Typography>
-          {console.log(props[0].judul)}
+          <Typography>{misiItem.judul}</Typography>
         </AccordionSummary>
         <AccordionDetails
           sx={{
@@ -39,8 +37,8 @@ export default function Misi({props}) {
                 showTimeline ? "" : "hidden"
               }`}
             >
-              {/* ini isinya timeline dari {props.range.start} sampai {props.range.end} */}
-              <Calendar startDate={props.range.start} endDate={props.range.end}/>
+              {/* ini isinya timeline dari {misiItem.range.start} sampai {misiItem.range.end} */}
+              <Calendar startDate={misiItem.range.start} endDate={misiItem.range.end}/>
             </div>
 
             <div
@@ -48,7 +46,7 @@ export default function Misi({props}) {
                 showDescription ? "" : "hidden"
               }`}
             >
-              {props.deskripsi}
+              {misiItem.deskripsi}
             </div>
             <div className="flex-auto my-auto">
               <div className="w-full md:w-2/4">

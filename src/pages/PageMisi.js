@@ -13,12 +13,15 @@ const PageMisi = () => {
   };
   return (
     <>
-      {console.log(misiItems)}
       <div className={`${isOpen ? "fixed h-screen w-full" : ""} `}>
-        <Navbar isOpen={isOpen} setIsOpen={toggle} />
-        <Misi props={misiItems} />
-        <Sponsor />
-        <Footer />
+      <Navbar isOpen={isOpen} setIsOpen={toggle} />
+      <div className="p-10 md:px-32 md:pt-20">
+      {misiItems.map((misiItem, id) => (
+          <Misi key={id} misiItem={misiItem}/>
+        ))}
+      </div>
+      <Sponsor />
+      <Footer />
       </div>
     </>
   );
