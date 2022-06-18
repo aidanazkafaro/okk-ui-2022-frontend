@@ -38,7 +38,7 @@ function SamplePrevArrow(props) {
         ...style,
         display: "block",
         left: "15%",
-        "z-index": "1",
+        zIndex: "1",
         top: "92.5%",
         width: "40px",
         height: "30px",
