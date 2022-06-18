@@ -20,7 +20,7 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function Calendar({startDate, endDate, showTimeline}) {
+export default function Calendar({startDate, endDate}) {
   let today = startOfToday();
   let [selectedDay, setSelectedDay] = useState(today);
   let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
@@ -32,7 +32,7 @@ export default function Calendar({startDate, endDate, showTimeline}) {
   });
 
   return (
-    <div className={`pt-8 ${showTimeline ? "":"hidden"}`}>
+    <div className="pt-8 ">
       <div className="max-w-md px-2 mx-auto sm:px-7  md:px-2">
         <div className="md:grid md:divide-gray-200 ">
           <div className=" bg-white shadow-md rounded-md p-2 md:flex">
