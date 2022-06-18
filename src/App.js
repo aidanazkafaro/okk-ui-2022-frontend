@@ -4,6 +4,7 @@ import Home from "./pages";
 import PageMisi from "./pages/PageMisi";
 import PageKelompok from './pages/PageKelompok'
 import PageBerita from './pages/PageBerita'
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/PageKelompok" element={<PageKelompok />} />
         <Route path="/PageBerita" element={<PageBerita />} />
         <Route path="/faq" element={<Home />} />
+        <Route path="*" element={<PageNotFound />} />
 
       </Routes>
     </Router>

@@ -4,10 +4,6 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      fontFamily: {
-        signika: ["Signika", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
-      },
       colors: {
         underlineOrange: "#E1AA43",
       },
@@ -21,6 +17,14 @@ module.exports = {
       lineClamp: {
         10: "10",
       },
+      backgroundImage: {
+        "hero-bg": "url('/src/assets/hero-bg.svg')",
+        "hero-loop": "url('/src/assets/LOOP.png')",
+      },
+    },
+    fontFamily: {
+      signika: ["Signika"],
+      poppins: ["Poppins"],
     },
   },
   plugins: [require("@tailwindcss/line-clamp")],

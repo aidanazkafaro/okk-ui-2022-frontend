@@ -34,7 +34,7 @@ function MobileNav({ isOpen, setIsOpen }) {
           LOGO
         </a>
       </div>
-      <div className="flex flex-col ml-4 mt-4 items-center">
+      <div className="flex flex-col mt-4 items-center">
         {menuItems.map((menuItem, id) => (
           <NavLink
             key={id}
@@ -60,7 +60,7 @@ function MobileNav({ isOpen, setIsOpen }) {
 export default function Navbar({ isOpen, setIsOpen }) {
   return (
     <Fragment>
-      <nav className="flex filter drop-shadow-md bg-white px-8 py-4 h-20 items-center">
+      <nav className="relative z-50 flex filter drop-shadow-md bg-white px-8 py-4 h-20 items-center">
         <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="w-3/12 flex items-center">
           <a className="text-2xl font-semibold" href="/">
@@ -80,7 +80,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
           <button
             type="button"
             href="/PageKelompok"
-            className="hidden md:block text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="hidden md:block text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-2 py-2.5 text-center mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
           >
           <NavLink to={'/PageKelompok'}>Cari Kelompok</NavLink>
             
