@@ -87,7 +87,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
           </button>
         </div>
         <div
-          className="z-50 flex relative w-8 h-8 flex-col justify-between items-center lg:hidden"
+          className="z-50 flex relative w-8 h-8 flex-col justify-between items-center md:hidden"
           onClick={() => {
             setIsOpen(!isOpen);
           }}
