@@ -11,19 +11,13 @@ const PageMisi = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-
-
   return (
-    <>
+    <div className={`${isOpen ? "fixed h-screen w-full" : ""} `}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
-      <div className="p-10 md:px-32 md:pt-20">
-      {misiItems.map((misiItem, id) => (
-          <Misi misiItem={misiItem}/>
-        ))}
-      </div>
+      <Misi />
       <Sponsor />
       <Footer />
-    </>
+    </div>
   );
 };
 export default PageMisi;

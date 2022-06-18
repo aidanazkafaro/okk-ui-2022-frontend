@@ -15,7 +15,7 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
+    <div className={`${isOpen ? "fixed h-screen w-full" : ""} `}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
       <HeroArea />
       <IndexAbout />
@@ -24,7 +24,7 @@ const Home = () => {
       <Timeline />
       <Sponsor />
       <Footer />
-    </>
+    </div>
   );
 };
 
