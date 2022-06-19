@@ -2,6 +2,7 @@ import React from "react";
 import CustomArrows from "./slider";
 import MediaQuery from "react-responsive";
 import MobileCard from "./MobileSlider";
+import { misiItems } from "./MisiData";
 
 const IndexMisi = () => {
   return (
@@ -19,7 +20,7 @@ const IndexMisi = () => {
             className={`container w-64 h-3 bg-underlineOrange rounded-xl mb-11`}
           />
         </div>
-        <CustomArrows />
+        <CustomArrows misiItems={misiItems}/>
       </MediaQuery>
       <MediaQuery maxDeviceWidth={767}>
         <div className={`flex items-center justify-center`}>
@@ -30,7 +31,7 @@ const IndexMisi = () => {
             className={`container w-16 h-1 bg-underlineOrange rounded-xl mb-4`}
           />
         </div>
-        <MobileCard />
+        <MobileCard misiItems={misiItems}/>
       </MediaQuery>
     </div>
   );
