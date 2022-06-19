@@ -20,7 +20,6 @@ module.exports = {
       backgroundImage: {
         "hero-bg": "url('/src/assets/hero-bg.svg')",
         "hero-loop": "url('/src/assets/LOOP.png')",
-        "empty-book-bg": "url('/src/assets/BookSVG.svg')",
       },
     },
     fontFamily: {
