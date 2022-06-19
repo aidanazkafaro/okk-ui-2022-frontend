@@ -7,6 +7,7 @@ import OurContent from "../components/Content/OurContent";
 import Timeline from "../components/Timeline/indexTimeline";
 import Footer from "../components/footer/Footer";
 import Sponsor from "../components/Sponsor/Sponsor";
+import FAQ from "../components/FAQ/FAQ";
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -14,27 +15,18 @@ const Home = () => {
     const toggle = () => {
         setIsOpen(!isOpen);
     };
-    return ( <
-        >
-        <
-        Navbar isOpen = { isOpen }
-        setIsOpen = { toggle }
-        /> <
-        HeroArea / >
-        <
-        IndexAbout / >
-        <
-        IndexMisi / >
-        <
-        OurContent / >
-        <
-        Timeline / >
-        <
-        Sponsor / >
-        <
-        Footer / >
-        <
-        />
+    return ( <>
+        <Navbar isOpen = { isOpen }
+        setIsOpen = { toggle }/> 
+        <HeroArea />
+        <IndexAbout />
+        <IndexMisi />
+        <OurContent />
+        <Timeline />
+        <Sponsor />
+        <Footer />
+        {/* <FAQ/> */}
+        </>
     );
 };
 
