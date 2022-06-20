@@ -1,15 +1,14 @@
 .loop {
-  transform: scale(0.8) rotate(117.68deg);
+  transform: scale(1.1) rotate(117.68deg);
   position: absolute;
   top: 450px;
-  right: -50px;
+  right: -40px;
   z-index: 0;
 }
 
 .hero-section {
   height: 700px;
-  width: 100vw;
-  min-width: 600px;
+  min-width: 250px;
 }
 
 .margin-y-center {
