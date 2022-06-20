@@ -24,7 +24,6 @@ const Home = () => {
       <Timeline />
       <Sponsor />
       <Footer />
-
     </div>
   );
 };
