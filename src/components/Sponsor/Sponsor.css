@@ -1,0 +1,29 @@
+.horizontal-image {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.resize-image {
+
+    width: 20%;
+    height: auto;
+
+}
+
+.font-center {
+
+    justify-content: center;
+
+}
+
+.font-sponsor {
+
+    font-family: 'Signika', sans-serif;
+    text-shadow: none;
+    font-weight: bold;
+
+}
