@@ -7,10 +7,10 @@ const HeroArea = () => {
     <>
       <section className="bg-[#F9E1CF] relative items-center flex -top-20">
         <div
-          className="bg-hero-bg bg-cover no-repeat w-full hero-section 
-        lg:py-4 md:px-10 sm:px-10 px-5 lg:px-24 py-4 md:py-6 2xl:px-48 overflow-hidden "
+          className="bg-hero-bg bg-cover no-repeat w-full hero-section px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-48
+        lg:py-4 py-4 md:py-6 overflow-hidden"
         >
-          <div className="container relative w-full h-full m-auto text-center items-center flex flex-wrap ">
+          <div className="container relative w-full h-full max-w-[1400px] m-auto text-center items-center flex flex-wrap ">
             <div className=" relative text-left md:w-8/12 lg:w-6/12 xl:w-6/12 my-auto z-10">
               <h1 className="h1-shadow text-6xl tracking-wide text-white  lg:text-8xl  mb-2">
                 OKK UI
@@ -32,8 +32,12 @@ const HeroArea = () => {
                 >
                   Tentang
                 </a> */}
-                <button type="button" className="inline-block px-6 py-2.5 bg-[#E1AA43] text-white font-medium text-xs leading-tight uppercase rounded-xl shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out">Tentang OKK UI</button>
-                
+                <button
+                  type="button"
+                  className="inline-block px-6 py-2.5 bg-[#E1AA43] text-white font-medium text-xs leading-tight uppercase rounded-xl shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out"
+                >
+                  Tentang OKK UI
+                </button>
               </div>
             </div>
 

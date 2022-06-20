@@ -8,16 +8,16 @@
 }
 
 .about-right{
-    padding: 20px 20px 0px 20px;
+    padding:0;
 }
 
 .about-left{
-    padding: 0px 40px 0px 40px;
+    padding: 0;
 }
 
 .about-title {
     font-family: Signika;
-    text-align: center;
+    text-align: left;
     margin: 2rem 0 2rem 0;
 }
   
