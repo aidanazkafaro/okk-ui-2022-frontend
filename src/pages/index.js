@@ -9,7 +9,7 @@ import Footer from "../components/footer/Footer";
 import Sponsor from "../components/Sponsor/Sponsor";
 
 const Home = () => {
-  const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
     setIsOpen(!isOpen);
