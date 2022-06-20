@@ -12,13 +12,13 @@ const Kelompok = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
+    <div className={`${isOpen ? "fixed h-screen w-full" : ""} `}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
 
       <Berita />
       <Sponsor />
       <Footer />
-    </>
+    </div>
   );
 };
 
