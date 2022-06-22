@@ -1,6 +1,8 @@
 import React from "react";
 import "./hero.css";
 import loop from "../../assets/LOOP.png";
+import { Link, animateScroll as scroll } from "react-scroll";
+import { Button } from "@mui/material";
 
 const HeroArea = () => {
   return (
@@ -19,7 +21,7 @@ const HeroArea = () => {
                 2022
               </h1>
               <h2 className="text-2xl tracking-wide text-white lg:text-3xl my-2">
-                Some text explaining OKK UI
+                Buku, Pesta, dan Cinta
               </h2>
               <h3 className="text-xl tracking-wide text-white lg:text-2xl my-2 italic">
                 #BersamaBereksplorasi
@@ -32,12 +34,21 @@ const HeroArea = () => {
                 >
                   Tentang
                 </a> */}
-                <button
-                  type="button"
-                  className="inline-block px-6 py-2.5 bg-[#E1AA43] text-white font-medium text-xs leading-tight uppercase rounded-xl shadow-md hover:bg-yellow-600 hover:shadow-lg focus:bg-yellow-600 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-yellow-700 active:shadow-lg transition duration-150 ease-in-out"
-                >
-                  Tentang OKK UI
-                </button>
+                <Button variant="contained" style={{
+                  backgroundColor: "#E1AA43"
+                }}>
+
+                  <Link
+                    activeClass="active"
+                    to="index-about"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    Tentang OKK UI
+                  </Link>
+                </Button>
               </div>
             </div>
 

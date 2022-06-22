@@ -84,7 +84,7 @@
 
 @media (min-width: 768px){
     .about-section{
-        top: -9.5rem;
+        top: -10rem;
     }
     .about-article{
         flex-direction: row;
@@ -116,20 +116,3 @@
     }
 }
 
-@media (min-width: 1024px){
-    .about-section{
-        top: -10.5rem;
-    }
-}
-
-@media (min-width: 1280px){
-    .about-section{
-        top: -11rem;
-    }
-}
-
-@media (min-width:1350px){
-    .about-section{
-        top: -12.5rem;
-    }
-}	

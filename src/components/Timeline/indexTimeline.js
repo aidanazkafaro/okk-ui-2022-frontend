@@ -4,7 +4,7 @@ import { TimelineData } from "./TimelineData";
 const Timeline = () => {
   return (
     <>
-      <div className="xl:mx-12 md:mx-10 mx-3 my-8 py-8">
+      <div className="xl:mx-12 md:mx-10 mx-3 my-8 py-8 -mt-28 md:-mt-16">
         <div className={`flex items-center justify-center`}>
           <h1
             className={`font-signika font-semibold rounded text-6xl pb-1 border-orange-300 border-b-8 mb-32`}

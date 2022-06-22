@@ -100,7 +100,7 @@ function Card(props) {
             <div className={`px-24 grid grid-cols-2 gap-6`}>
               <div className={`w-full h-full`}></div>
               <div className={`grid grid-rows-7 gap-5`}>
-                <div className="w-44 h-10 font-poppins text-3xl font-bold mt-7">
+                <div className="w-fit h-10 font-poppins text-3xl font-bold mt-7">
                   {judul}
                 </div>
 
