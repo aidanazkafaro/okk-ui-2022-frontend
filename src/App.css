@@ -2,11 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Encode Sans Expanded', sans-serif;
+  font-family: "Encode Sans Expanded", sans-serif;
+}
+
+body {
+  overflow: overlay;
 }
 /* custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
