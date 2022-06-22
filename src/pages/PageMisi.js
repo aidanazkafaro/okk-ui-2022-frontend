@@ -15,7 +15,7 @@ const PageMisi = () => {
     <>
     <div className={`${isOpen ? "fixed h-screen w-full" : ""} min-w-[300px]`}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
-      <div className="p-10 md:pt-20">
+      <div className="p-5 md:pt-20">
       {misiItems.map((misiItem, id) => (
           <Misi key={id} misiItem={misiItem}/>
         ))}

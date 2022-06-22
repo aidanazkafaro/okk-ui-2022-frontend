@@ -20,8 +20,8 @@ const Home = () => {
       <HeroArea />
       <IndexAbout />
       <IndexMisi />
-      <OurContent />
       <Timeline />
+      <OurContent />
       <Sponsor />
       <Footer />
     </div>

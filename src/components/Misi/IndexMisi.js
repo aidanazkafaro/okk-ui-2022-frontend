@@ -13,7 +13,7 @@ const IndexMisi = () => {
       ></link>
       <MediaQuery minDeviceWidth={767}>
         <div className={`flex items-center justify-center`}>
-          <h1 className={`font-signika font-semibold rounded text-6xl mb-8 pb-1 border-orange-300 border-b-8`}>MISI</h1>
+          <h1 className={`font-signika font-semibold rounded text-6xl mb-8 pb-1 border-orange-300 border-b-8`}>Misi</h1>
         </div>
         {/* <div className={`flex items-center justify-center`}>
           <div
