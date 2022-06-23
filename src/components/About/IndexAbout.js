@@ -7,9 +7,9 @@ import lilStar from "../../assets/star-small.svg";
 
 const IndexAbout = () => {
   return (
-    <section className="about-section " >
+    <section className="about-section" id="index-about">
       <img
-        className=" -mt-2 md:-mt-5 lg:-mt-5 2xl:-mt-10 3xl:-mt-20"
+        className="lg:-mt-5 3xl:-mt-16"
         alt=""
         src={garland}
       />
@@ -18,7 +18,7 @@ const IndexAbout = () => {
       <img className="star big-star" alt="" src={bigStar} />
       <img className="star lil-star2" alt="" src={lilStar} />
 
-      <div id="index-about" className="about-article md:h-screen flex items-center max-w-[1400px] mx-auto px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-32  3xl:px-0">
+      <div className="about-article flex items-center max-w-[1400px] mx-auto px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-32 3xl:px-0">
         <div className="about-left ">
           <h1 className="w-fit about-title font-semibold rounded text-6xl mb-8 pb-1 border-orange-300 border-b-8 ">
             OKK UI 2022
