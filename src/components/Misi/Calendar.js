@@ -19,10 +19,10 @@ function classNames(...classes) {
 }
 
 export default function Calendar({ startDate, endDate }) {
-  let today = startOfToday();
-  let [selectedDay, setSelectedDay] = useState(today);
-  let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
-  let firstDayCurrentMonth = parse(currentMonth, "MMM-yyyy", new Date());
+  // let today = startOfToday();
+  // let [selectedDay, setSelectedDay] = useState(today);
+  // let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
+  let firstDayCurrentMonth = parse("JUL-2022", "MMM-yyyy", new Date());
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
@@ -42,7 +42,7 @@ export default function Calendar({ startDate, endDate }) {
               </h2>
             </div>
             <div className="flex-right items-center mx-auto">
-              <div className="grid grid-cols-7 mt-5 text-[0.7rem] md:text-xs leading-6 text-center text-gray-500 space-x-0">
+              <div className="grid grid-cols-7 mt-5 text-[0.6rem] md:text-xs leading-6 text-center text-gray-500 space-x-0">
                 <div>SUN</div>
                 <div>MON</div>
                 <div>TUE</div>
@@ -73,7 +73,7 @@ export default function Calendar({ startDate, endDate }) {
                           "bg-[#2B662E] rounded-l-lg",
                         isEqual(day, new Date(endDate)) &&
                           "bg-[#2B662E] rounded-r-lg",
-                        (isEqual(day, selectedDay) || isToday(day)) &&
+                         isToday(day) &&
                           "font-semibold",
                         "mx-auto flex h-10 w-full text-[0.7rem] md:text-xs md:h-10 md:w-full items-center justify-center"
                       )}
