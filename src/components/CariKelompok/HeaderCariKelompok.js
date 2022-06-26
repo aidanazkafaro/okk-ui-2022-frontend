@@ -39,8 +39,11 @@ const HeaderCariKelompok = () => {
           </div>
         </div>
         {/* result-side */}
-        <div className="p-0 my-10 md:my-0 md:w-[47%] lg:w-2/5 flex items-center justify-center">
+        <div className="relative p-0 my-10 md:my-0 md:w-[47%] lg:w-2/5 flex items-center justify-center">
           <img alt="hasil" src={hasil} />
+          <h3 className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
+            Mari cari kelompokmu!
+          </h3>
         </div>
       </div>
     </div>
