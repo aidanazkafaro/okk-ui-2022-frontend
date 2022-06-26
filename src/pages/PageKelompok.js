@@ -15,7 +15,7 @@ const Kelompok = () => {
     <>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
       <HeaderCariKelompok />
-      <CariKelompok />
+      {/* <CariKelompok /> */}
       <Sponsor />
       <Footer />
     </>
