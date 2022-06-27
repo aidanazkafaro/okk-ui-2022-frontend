@@ -49,7 +49,7 @@ function MobileNav({ isOpen, setIsOpen }) {
 
         <button
           type="button"
-          className=" text-[#E8D05F] border-[#E8D05F] border-[4px] active:bg-[#E8D05F] hover:bg-[#E8D05F] active:text-white hover:text-white font-signika font-semibold rounded-[8px] text-xl px-20 py-3 text-center mb-2 mt-4"
+          className=" text-[#E8D05F] border-[#E8D05F] border-[4px] active:bg-[#E8D05F] active:text-white font-signika font-semibold rounded-[8px] text-xl px-20 md:px-64 py-3 text-center mb-2 mt-4"
           href="/PageKelompok">
           <NavLink to={'/PageKelompok'}>Cari Kelompok</NavLink>
         </button>
@@ -81,7 +81,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
           <button
             type="button"
             href="/PageKelompok"
-            className="hidden xl:block text-[#E8D05F] font-signika font-semibold border-[#E8D05F] border-[4px] active:bg-[#E8D05F] hover:bg-[#E8D05F] active:text-white hover:text-white bg-opacity-50 rounded-[20px] text-normal px-4 py-2 text-center mr-20 2xl:mr-60 mb-2 mt-2"
+            className="hidden xl:block text-[#E8D05F] font-signika font-semibold border-[#E8D05F] border-[4px] active:bg-[#E8D05F] transition duration-300 ease-in-out hover:bg-[#E8D05F] active:text-white hover:text-white bg-opacity-50 rounded-[20px] text-normal px-4 py-2 text-center mr-20 2xl:mr-60 mb-2 mt-2"
           >
           <NavLink to={'/PageKelompok'}>Cari Kelompok</NavLink>
             
