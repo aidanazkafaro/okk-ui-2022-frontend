@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
+
+.main-sect {
+  display: flex;
+  flex-direction: column;
+  font-family: "Signika", sans-serif;
+  margin: 0 2em;
+  margin-top: 100px;
+}
+
+.title-2 {
+  grid-area: title-2;
+}
+
+.input {
+  grid-area: input;
+}
+
+.pict {
+  grid-area: pict;
+}
+
+@media (min-width: 450px) {
+  .main-sect {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-sect {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr 4fr 0.5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      ". title-2 . . . ."
+      ". input . . pict .";
+  }
+}
