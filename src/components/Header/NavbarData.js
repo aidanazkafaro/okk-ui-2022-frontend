@@ -9,11 +9,7 @@ export const menuItems = [
   },
   {
     path: "/PageBerita",
-    label: "Berita",
-  },
-  {
-    path: "/tentang",
-    label: "Tentang",
+    label: "FAQ",
   },
   {
     path: "/kontak",
