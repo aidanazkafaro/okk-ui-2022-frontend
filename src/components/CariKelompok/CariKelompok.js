@@ -16,7 +16,7 @@ const CariKelompok = () => {
   const notifyLine = () => toast("⚠ Masukkan ID LINEmu terlebih dahulu!");
 
   const handleRadioChange = () => {
-    if(valInput1 == "none"){
+    if(valInput1 === "none"){
       setValInput1("flex")
       setValInput2("none")
       setCheck(true)
@@ -29,33 +29,33 @@ const CariKelompok = () => {
 
   const handleSubmitNpm = (e) =>{
       e.preventDefault()
-      if(valNpm == ""){
+      if(valNpm === ""){
         notifyNPM()      
       }
   }
 
   const handleSubmitLine = (e) =>{
     e.preventDefault()
-    if(valLine == ""){
+    if(valLine === ""){
       notifyLine()
     }
   }
 
   const handleInputNPM = () =>{
-    if(valNpm == ""){
+    if(valNpm === ""){
       notifyNPM()
     }
   }
 
   const handleInputLine = () =>{
-    if(valLine == ""){
+    if(valLine === ""){
       notifyLine()
     }
   }
 
   return (
     <div className = "main-sect">
-      <h2 className = "text-5xl font-bold title-2"> Cari Berdasarkan: </h2>
+      <h2 className = "text-5xl font-bold title-2 border-b-8 border-[#E1AA43]"> Cari Berdasarkan: </h2>
       <div className = "input">
         <div className = "my-8">
           <div className = "flex items-center gap-4 mb-4">
