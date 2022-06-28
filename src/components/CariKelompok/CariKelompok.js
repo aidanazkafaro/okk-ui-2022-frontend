@@ -13,14 +13,12 @@ const CariKelompok = () => {
   const [valLine, setValLine] = useState("");
   const [valInput1, setValInput1] = useState("flex");
   const [valInput2, setValInput2] = useState("none");
-  const [notSubmit, setnotSubmit] = useState("flex");
-  const [submitted, setSubmitted] = useState("none");
   const [check, setCheck] = useState(true);
   const notifyNPM = () => toast("⚠ Masukkan NPMmu terlebih dahulu!");
   const notifyLine = () => toast("⚠ Masukkan ID LINEmu terlebih dahulu!");
 
   useEffect(() => {
-    
+
 
     document.getElementById("hasilPencarian").style.display = "none";
 
@@ -38,7 +36,7 @@ const CariKelompok = () => {
     }
   };
 
-  
+
   const handleSubmitNpm = (e) => {
     e.preventDefault();
     if (valNpm === "") {
@@ -54,12 +52,23 @@ const CariKelompok = () => {
         )
         .then(function (response) {
 
-          console.log(response.data);
-          document.getElementById("hasilAwal").style.display = "none";
-          document.getElementById("hasilPencarian").style.display = "flex";
-          
+          if (response.data.npm != undefined) {
 
+            console.log(response.data);
+            document.getElementById("hasilAwal").style.display = "none";
+            document.getElementById("hasilPencarian").style.display = "flex";
 
+            document.getElementById("nomorKelompok").innerHTML = response.data.nomor_kelompok;
+            document.getElementById("mentor1").innerHTML = response.data.nama_mentor_1;
+            document.getElementById("mentor2").innerHTML = response.data.nama_mentor_2;
+
+          } else {
+
+            document.getElementById("hasilAwal").style.display = "flex";
+            document.getElementById("hasilPencarian").style.display = "none";
+            document.getElementById("cariKelompokText").innerHTML = "Maaf, pencarian tidak ditemukan :(";
+
+          }
 
         })
         .catch(function (error) {
@@ -197,32 +206,44 @@ const CariKelompok = () => {
       </div>
 
       <div id="hasilPencarian" className="pict">
-        <div prop={notSubmit} className="relative flex items-center justify-center mt-20 md:mt-0">
+        <div className="relative flex items-center justify-center mt-20 md:mt-0">
           <img alt="hasil" src={hasil} />
-          <h3 id="hasilPencarian" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
-            heehy asd
+          <h3 className="absolute posNoKelText defFont text-white text-2xl lg:text-2xl sm:text-xl  ">
+            Nomor Kelompokmu
           </h3>
-        </div>
-      </div>
-      
-   
-      <div id="hasilAwal" className="pict">
-        <div prop={notSubmit} className="relative flex items-center justify-center mt-20 md:mt-0">
-          <img alt="hasil" src={hasil} />
-          <h3 id="hasilPencarian" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
-            mariCariKelompokMu
+          <h3 id="nomorKelompok" className="absolute posNoKel defFont text-white text-2xl lg:text-8xl sm:text-xl  ">
+            10
           </h3>
-        </div>
-      </div>
-  
-     
 
-      {/* <div id="hasilPencarian" className=" relative flex items-center justify-center pict mt-20 md:mt-0">
-        <img alt="hasil" src={hasil} />
-        <h3 className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
-          Mari cari kelompokmu!
-        </h3>
-      </div> */}
+          <h3 className="absolute posMentor defFont text-white text-2xl lg:text-2xl sm:text-xl  ">
+            Mentor
+          </h3>
+
+
+          <div className="absolute posMentor12">
+            <h3 id="mentor1" className="defFont text-white text-2xl lg:text-4xl sm:text-xl">JOhn Doe</h3>
+            <br></br>
+            <h3 id="mentor2" className="defFont text-white text-2xl lg:text-4xl sm:text-xl">DoeJohn</h3>
+          </div>
+
+        </div>
+        {/* <h3 id="hasilPencarian" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
+            heqwrehy asd
+          </h3> */}
+
+
+
+      </div>
+
+
+      <div id="hasilAwal" className="pict">
+        <div className="relative flex items-center justify-center mt-20 md:mt-0">
+          <img alt="hasil" src={hasil} />
+          <h3 id="cariKelompokText" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
+            Cari Kelompok Mu
+          </h3>
+        </div>
+      </div>
 
 
       <ToastContainer

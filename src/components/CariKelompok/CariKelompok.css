@@ -36,3 +36,38 @@
       ". input . . pict .";
   }
 }
+
+.posNoKelText {
+
+  right: 9vw;
+  top: 8vh;
+
+  z-index: 999;
+
+}
+
+.posNoKel {
+  right: 200px;
+  top: 80px;
+}
+
+.posMentor {
+  right: 270px;
+  top: 200px;
+}
+
+.posMentor12 {
+  left: 30px;
+  top: 280px;
+}
+
+.defFont {
+  font-family: 'Signika';
+  font-style: normal;
+}
+
+.popFont {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+}
