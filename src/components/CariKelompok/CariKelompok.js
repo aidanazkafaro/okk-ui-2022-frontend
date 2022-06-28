@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { Form } from "./CariKelompok.styled";
 import hasil from "../../assets/hasil.png";
 import axios from "axios";
-import HasilCariKelompok from "./HasilCariKelompok";
 
 const CariKelompok = () => {
   const [valNpm, setValNpm] = useState("");
