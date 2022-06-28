@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "./CariKelompok.css";
@@ -14,9 +14,18 @@ const CariKelompok = () => {
   const [valLine, setValLine] = useState("");
   const [valInput1, setValInput1] = useState("flex");
   const [valInput2, setValInput2] = useState("none");
+  const [notSubmit, setnotSubmit] = useState("flex");
+  const [submitted, setSubmitted] = useState("none");
   const [check, setCheck] = useState(true);
   const notifyNPM = () => toast("⚠ Masukkan NPMmu terlebih dahulu!");
   const notifyLine = () => toast("⚠ Masukkan ID LINEmu terlebih dahulu!");
+
+  useEffect(() => {
+    
+
+    document.getElementById("hasilPencarian").style.display = "none";
+
+  }, []);
 
   const handleRadioChange = () => {
     if (valInput1 === "none") {
@@ -30,6 +39,7 @@ const CariKelompok = () => {
     }
   };
 
+  
   const handleSubmitNpm = (e) => {
     e.preventDefault();
     if (valNpm === "") {
@@ -46,7 +56,9 @@ const CariKelompok = () => {
         .then(function (response) {
 
           console.log(response.data);
-          document.getElementById("hasilPencarian").innerHTML = "ginidoang"
+          document.getElementById("hasilAwal").style.display = "none";
+          document.getElementById("hasilPencarian").style.display = "flex";
+          
 
 
 
@@ -185,14 +197,26 @@ const CariKelompok = () => {
         </div>
       </div>
 
-      <div className="pict">
-        <div className="relative flex items-center justify-center mt-20 md:mt-0">
+      <div id="hasilPencarian" className="pict">
+        <div prop={notSubmit} className="relative flex items-center justify-center mt-20 md:mt-0">
+          <img alt="hasil" src={hasil} />
+          <h3 id="hasilPencarian" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
+            heehy asd
+          </h3>
+        </div>
+      </div>
+      
+   
+      <div id="hasilAwal" className="pict">
+        <div prop={notSubmit} className="relative flex items-center justify-center mt-20 md:mt-0">
           <img alt="hasil" src={hasil} />
           <h3 id="hasilPencarian" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
             mariCariKelompokMu
           </h3>
         </div>
       </div>
+  
+     
 
       {/* <div id="hasilPencarian" className=" relative flex items-center justify-center pict mt-20 md:mt-0">
         <img alt="hasil" src={hasil} />
