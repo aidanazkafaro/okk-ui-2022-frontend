@@ -16,7 +16,7 @@ export const menuItems = [
     label: "TENTANG",
   },
   {
-    path: "/kontak",
+    path: "/PageKontak",
     label: "KONTAK",
   },
 ];
