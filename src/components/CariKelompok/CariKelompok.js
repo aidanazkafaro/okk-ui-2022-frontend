@@ -55,6 +55,7 @@ const CariKelompok = () => {
           if (response.data.npm != undefined) {
 
             console.log(response.data);
+
             document.getElementById("hasilAwal").style.display = "none";
             document.getElementById("hasilPencarian").style.display = "flex";
 
@@ -205,7 +206,7 @@ const CariKelompok = () => {
         </div>
       </div>
 
-      <div id="hasilPencarian" className="pict">
+      {/* <div id="hasilPencarian" className="pict">
         <div className="relative flex items-center justify-center mt-20 md:mt-0">
           <img alt="hasil" src={hasil} />
           <h3 className="absolute posNoKelText defFont text-white text-2xl lg:text-2xl sm:text-xl  ">
@@ -227,13 +228,9 @@ const CariKelompok = () => {
           </div>
 
         </div>
-        {/* <h3 id="hasilPencarian" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
-            heqwrehy asd
-          </h3> */}
+      </div> */}
 
 
-
-      </div>
 
 
       <div id="hasilAwal" className="pict">
@@ -242,6 +239,33 @@ const CariKelompok = () => {
           <h3 id="cariKelompokText" className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold">
             Cari Kelompok Mu
           </h3>
+        </div>
+      </div>
+
+      <div id="hasilPencarian" className="pict">
+        <div className="relative flex items-center justify-center mt-20 md:mt-0">
+          <img alt="hasil" src={hasil} />
+          <div className="absolute items-center justify-center top-20 left-20">
+            
+            <h3 className="text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold ">
+              Nomor Kelompokmu
+            </h3>
+            <h3 id="nomorKelompok" className="text-center defFont text-white text-2xl lg:text-8xl sm:text-xl  ">
+              10
+            </h3>
+            <br></br>
+
+            <h3 className="defFont text-white text-2xl lg:text-2xl sm:text-xl  ">
+              Mentor:
+            </h3>
+
+
+
+            <h3 id="mentor1" className="defFont text-white text-2xl lg:text-4xl sm:text-xl">JOhn Doe</h3>
+            <br></br>
+            <h3 id="mentor2" className="defFont text-white text-2xl lg:text-4xl sm:text-xl">DoeJohn</h3>
+           
+          </div>
         </div>
       </div>
 
