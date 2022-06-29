@@ -55,64 +55,14 @@ const CariKelompok = () => {
 
           if (response.data.npm != undefined) {
 
-            console.log(response.data);
+            menampilkanHasil(response);
 
-            document.getElementById("hasilAwal").style.display = "none";
-            document.getElementById("hasilPencarian").style.display = "flex";
-
-            document.getElementById("nomorKelompok").innerHTML = response.data.nomor_kelompok;
-            
-            var mentor1 = response.data.nama_mentor1;
-            var mentor2 = response.data.nama_mentor2;
-            
-            var whitespace = 0;
-
-            var mentor1Strip = [];
-            for(let i = 0; i < mentor1.length; i++){
-              if(mentor1[i] == " ") {
-                whitespace++;
-                
-              }
-              if(whitespace < 2) {
-
-                mentor1Strip.push(mentor1[i]);
-
-              } else {
-                break;
-              }
-            }
-
-            var mentor2Strip = [];
-            whitespace = 0;
-            for(let i = 0; i < mentor2.length; i++){
-              if(mentor2[i] == " ") {
-                whitespace++;
-              
-              }
-              if(whitespace < 2) {
-
-                mentor2Strip.push(mentor2[i]);
-
-              } else {
-                break;
-              }
-            }
-
-            document.getElementById("mentor1").innerHTML = mentor1Strip.join("");
-            document.getElementById("mentor2").innerHTML = mentor2Strip.join("");
-
-            document.getElementById("idLineMentor1").innerHTML = response.data.id_line_mentor1;
-            document.getElementById("idLineMentor2").innerHTML = response.data.id_line_mentor2;
-
-            document.getElementById("noTelpMentor1").innerHTML = response.data.nomor_wa_mentor1;
-            document.getElementById("noTelpMentor2").innerHTML = response.data.nomor_wa_mentor2;
-
-          } else {
+          }
+          else {
 
             document.getElementById("hasilAwal").style.display = "flex";
             document.getElementById("hasilPencarian").style.display = "none";
             document.getElementById("cariKelompokText").innerHTML = "Maaf, pencarian tidak ditemukan :(";
-
           }
 
         })
@@ -128,8 +78,93 @@ const CariKelompok = () => {
     e.preventDefault();
     if (valLine === "") {
       notifyLine();
+    } else {
+      console.log(valNpm);
+      axios
+        .post(
+          "http://localhost:5500/line",
+          {
+            id_line: valLine,
+          }
+        )
+        .then(function (response) {
+
+          if (response.data.id_line != undefined) {
+
+            menampilkanHasil(response);
+
+          }
+          else {
+
+            document.getElementById("hasilAwal").style.display = "flex";
+            document.getElementById("hasilPencarian").style.display = "none";
+            document.getElementById("cariKelompokText").innerHTML = "Maaf, pencarian tidak ditemukan :(";
+          }
+
+        })
+        .catch(function (error) {
+
+          console.error(error);
+
+        });
     }
   };
+
+  const menampilkanHasil = (response) => {
+
+    console.log(response.data);
+
+    document.getElementById("hasilAwal").style.display = "none";
+    document.getElementById("hasilPencarian").style.display = "flex";
+
+    document.getElementById("nomorKelompok").innerHTML = response.data.nomor_kelompok;
+
+    var mentor1 = response.data.nama_mentor1;
+    var mentor2 = response.data.nama_mentor2;
+
+    var whitespace = 0;
+
+    var mentor1Strip = [];
+    for (let i = 0; i < mentor1.length; i++) {
+      if (mentor1[i] == " ") {
+        whitespace++;
+
+      }
+      if (whitespace < 2) {
+
+        mentor1Strip.push(mentor1[i]);
+
+      } else {
+        break;
+      }
+    }
+
+    var mentor2Strip = [];
+    whitespace = 0;
+    for (let i = 0; i < mentor2.length; i++) {
+      if (mentor2[i] == " ") {
+        whitespace++;
+
+      }
+      if (whitespace < 2) {
+
+        mentor2Strip.push(mentor2[i]);
+
+      } else {
+        break;
+      }
+    }
+
+    document.getElementById("mentor1").innerHTML = mentor1Strip.join("");
+    document.getElementById("mentor2").innerHTML = mentor2Strip.join("");
+
+    document.getElementById("idLineMentor1").innerHTML = response.data.id_line_mentor1;
+    document.getElementById("idLineMentor2").innerHTML = response.data.id_line_mentor2;
+
+    document.getElementById("noTelpMentor1").innerHTML = response.data.nomor_wa_mentor1;
+    document.getElementById("noTelpMentor2").innerHTML = response.data.nomor_wa_mentor2;
+
+  }
 
   const handleInputNPM = () => {
     if (valNpm === "") {
