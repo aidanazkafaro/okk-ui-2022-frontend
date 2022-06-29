@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
 
+@font-face {
+  font-family: 'FontAwesomeFonts';
+  src: url('../../assets/webfonts/fa-brands-400.ttf');
+}
+
 .main-sect {
   display: flex;
   flex-direction: column;
@@ -70,4 +75,13 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
+}
+
+.onTop {
+  z-index: 999;
+}
+
+.lineFonts {
+  font-family: 'FontAwesomeFonts';
+  font-style: normal;
 }
