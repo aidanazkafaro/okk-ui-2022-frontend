@@ -29,10 +29,9 @@ function MobileNav({ isOpen, setIsOpen }) {
       } transition-transform duration-300 ease-in-out filter drop-shadow-md `}
     >
       <div className="flex items-center w-full filter bg-white h-20">
-        {" "}
         {/*logo container*/}
         <a className="text-xl font-semibold" href="/">
-          <img class="object-scale-down h-[70px] w-[100px] sm:ml-[12px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
+          <img class="object-scale-down h-[60px] w-[100px] ml-[12px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
         </a>
       </div>
       <div className="flex flex-col mt-4 items-center">
@@ -61,11 +60,11 @@ function MobileNav({ isOpen, setIsOpen }) {
 export default function Navbar({ isOpen, setIsOpen }) {
   return (
     <Fragment>
-      <nav className="sticky top-0 z-50 flex filter bg-white sm:px-0 lg:px-4 py-4 h-[80px] bg-opacity-50 items-center">
+      <nav className="sticky top-0 z-50 flex filter bg-white py-4 h-[80px] border-b-2 items-center px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-48 3xl:px-64">
         <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
-        <div className="sm:w-4/12 flex lg:items-center">
-          <a className="text-2xl font-semibold lg:ml-[40px] 2xl:ml-52 mr-[25px]" href="/">
-            <img class="object-scale-down h-[70px] w-[100px] ml-[12px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
+        <div className="sm:w-4/12 flex justify-start">
+          <a className="text-2xl font-semibold " href="/">
+            <img class="object-scale-down h-[60px] w-[100px] md:ml-[-15px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
           </a>
         </div>
         <div className="w-6/12 flex justify-center">
@@ -81,7 +80,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
           <button
             type="button"
             href="/PageKelompok"
-            className="hidden xl:block text-[#E8D05F] font-signika font-semibold border-[#E8D05F] border-[4px] active:bg-[#E8D05F] transition duration-300 ease-in-out hover:bg-[#E8D05F] active:text-white hover:text-white bg-opacity-50 rounded-[20px] text-normal px-4 py-2 text-center mr-20 2xl:mr-60 mb-2 mt-2"
+            className="hidden xl:block text-[#E8D05F] font-signika font-semibold border-[#E8D05F] border-[4px] active:bg-[#E8D05F] transition duration-300 ease-in-out hover:bg-[#E8D05F] active:text-white hover:text-white bg-opacity-50 rounded-[20px] text-normal px-4 py-2 text-center mb-2 mt-2"
           >
           <NavLink to={'/PageKelompok'}>Cari Kelompok</NavLink>
             

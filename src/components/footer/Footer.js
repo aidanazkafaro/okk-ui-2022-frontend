@@ -19,7 +19,7 @@ const Footer = () => {
             <p className="font-bold text-sm pt-[9px]">Contact Person:</p>
             <p className="text-sm">bla | 0822222</p>
             <p className="text-sm">blu | 08333222</p>
-            <p className="text-sm pt-2">© 2021 OKK UI</p>
+            <p className="text-sm pt-2">© 2022 OKK UI</p>
           </div>
           <div className="flex gap-3 mt-32">
             <a

@@ -10,8 +10,8 @@ export default function Misi({ misiItem }) {
   const [showDescription, setShowDescription] = useState(false);
 
   return (
-    <div className=" my-2 max-w-[1400px] mx-auto lg:px-16 2xl:px-32 3xl:px-0">
-      <Accordion>
+    <div className=" my-2 max-w-[1400px] mx-auto lg:px-16 2xl:px-32 3xl:px-0 ">
+      <Accordion className="" sx={{}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -38,7 +38,6 @@ export default function Misi({ misiItem }) {
             backgroundColor: "#F9E1CF",
           }}
         >
-          {/* bagian options di kanan */}
           <div className="flex flex-wrap">
             <div
               className={`flex-auto w-full md:w-2/4 ${
@@ -105,13 +104,14 @@ export default function Misi({ misiItem }) {
                   >
                     <div className="absolute w-3 h-3 bg-[#E1AA43] rounded-full mt-1.5 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-[#E1AA43]"></div>
                     Deskripsi Misi
-                    <p
+                    <div
                       className={`font-normal ${
                         showDescription ? "visible md:hidden" : "hidden"
                       }`}
                     >
-                      {misiItem.deskripsi}
-                    </p>
+                      <h2 className="font-bold">{misiItem.judul}</h2>
+                      <p>{misiItem.deskripsi}</p>
+                    </div>
                   </li>
                   <li className="ml-4 text-xl font-medium cursor-pointer">
                     <div className="absolute w-3 h-3 bg-[#E1AA43] rounded-full mt-1.5 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-[#E1AA43]"></div>
