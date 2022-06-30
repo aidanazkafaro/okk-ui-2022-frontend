@@ -12,7 +12,8 @@ export const menuItems = [
     label: "FAQ",
   },
   {
-    path: "/kontak",
-    label: "Kontak",
+
+    path: "/PageKontak",
+    label: "KONTAK",
   },
 ];
