@@ -11,14 +11,17 @@ export default function Misi({ misiItem }) {
 
   return (
     <div className=" my-2 max-w-[1400px] mx-auto lg:px-16 2xl:px-32 3xl:px-0 ">
-      <Accordion className="" sx={{}}>
+      <Accordion
+        square={true}
+        className="rounded-3xl"
+        sx={{
+          backgroundColor: "#E1AA43",
+        }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-          sx={{
-            backgroundColor: "#E1AA43",
-          }}
           className="m-0 p-0 w-full"
         >
           <div className="grid gap-y-0">
@@ -34,6 +37,8 @@ export default function Misi({ misiItem }) {
             <Typography>{misiItem.misiKe}</Typography> */}
         </AccordionSummary>
         <AccordionDetails
+          square={true}
+          className="rounded-b-3xl"
           sx={{
             backgroundColor: "#F9E1CF",
           }}
