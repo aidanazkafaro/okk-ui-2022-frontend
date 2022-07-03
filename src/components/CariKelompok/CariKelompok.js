@@ -327,40 +327,40 @@ const CariKelompok = () => {
             <img alt="hasil" src={hasil} />
             <div className="absolute items-center justify-center top-10 lg:top-20 md:top-20 left-14 lg:left-20 md:left-8">
 
-              <h3 className="text-base lg:text-3xl md:text-xs text-white font-poppins font-bold ">
+              <h3 className="text-base lg:text-3xl md:text-xs se:text-sm s8:text-sm text-white font-poppins font-bold ">
                 Nomor Kelompokmu
               </h3>
-              <h3 id="nomorKelompok" className="text-center defFont text-white pr-10 lg:pr-5 text-4xl lg:text-8xl md:text-xl">
+              <h3 id="nomorKelompok" className="text-center defFont text-white pr-10 lg:pr-5 se:pr-16 text-4xl lg:text-8xl md:text-xl se:text-2xl">
                 10
               </h3>
               <br></br>
 
-              <h3 className="defFont text-white text-base lg:text-2xl md:text-xs">
+              <h3 className="defFont text-white text-base lg:text-2xl md:text-xs se:text-sm s8:text-sm">
                 Mentor:
               </h3>
 
 
               <div className="flex">
-                <h3 id="mentor1" className="defFont text-white text-lg lg:text-3xl md:text-base">Mentor1</h3>
+                <h3 id="mentor1" className="defFont text-white text-lg lg:text-3xl md:text-base se:text-base s8:text-base">Mentor1</h3>
                 <br></br>
 
-                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text:xl pl-2 lg:pl-5 md:pl-1"> </h3>
+                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text-xl se:text-xl s8:text-xl pl-2 lg:pl-5 md:pl-1"> </h3>
                 <div>
-                  <h3 id="idLineMentor1" className="defFont text-white text-xl lg:text-3xl">idLineMentor1</h3>
-                  <h3 id="noTelpMentor1" className="defFont text-white text-lg lg:text-xl">081278787362</h3>
+                  <h3 id="idLineMentor1" className="defFont text-white text-xl lg:text-3xl se:text-lg s8:text-lg">idLineMentor1</h3>
+                  <h3 id="noTelpMentor1" className="defFont text-white text-lg lg:text-xl se:text-base s8:text-base">081278787362</h3>
                 </div>
 
               </div>
 
-              <br></br>
+              
               <div className="flex">
-                <h3 id="mentor2" className="defFont text-white text-lg lg:text-3xl">Mentor2</h3>
+                <h3 id="mentor2" className="defFont text-white text-lg lg:text-3xl md:text-base se:text-base s8:text-base">Mentor2</h3>
                 <br></br>
 
-                <h3 className="lineFonts text-white text-2xl lg:text-4xl pl-2 lg:pl-5"> </h3>
+                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text-xl se:text-xl s8:text-xl pl-2 lg:pl-5 md:pl-1"> </h3>
                 <div>
-                  <h3 id="idLineMentor2" className="defFont text-white text-xl lg:text-3xl">idLineMentor2</h3>
-                  <h3 id="noTelpMentor2" className="defFont text-white text-lg lg:text-xl">081278787362</h3>
+                  <h3 id="idLineMentor2" className="defFont text-white text-xl lg:text-3xl se:text-lg s8:text-lg">idLineMentor2</h3>
+                  <h3 id="noTelpMentor2" className="defFont text-white text-lg lg:text-xl se:text-base s8:text-base">081278787362</h3>
                 </div>
 
               </div>
