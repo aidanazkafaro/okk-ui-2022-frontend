@@ -85,3 +85,87 @@
   font-family: 'FontAwesomeFonts';
   font-style: normal;
 }
+
+/*se text Size */
+@media (device-width: 375px) {
+  .se\:text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
+
+  .se\:text-base {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+  }
+
+  .se\:text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .se\:text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .se\:text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+  }
+}
+
+/*se padding*/
+@media (device-width: 375px) {
+  .se\:pr-16 {
+    padding-right: 4rem;
+    /* 64px */
+  }
+}
+
+/*samsung 8+ text size*/
+@media (device-width: 360px) {
+  .s8\:text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
+
+  .s8\:text-base {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+  }
+
+  .s8\:text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .s8\:text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .s8\:text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+  }
+}
