@@ -28,7 +28,7 @@ const HeaderCariKelompok = () => {
         </div>
       </section>
       <div className="relative garland-section">
-        <img className="absolute garland" alt="" src={garland} />
+        <img className="absolute garland-carikelompok" alt="" src={garland} />
       </div>
       {/* body */}
       {/* <div className="flex justify-evenly carikelompok-body px-5 sm:px-10 md:px-8 lg:px-24 2xl:px-32 3xl:px-0"> */}

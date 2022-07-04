@@ -1,4 +1,4 @@
-.garland {
+.garland-carikelompok {
   top: -8.2rem;
 }
 
@@ -27,7 +27,7 @@
     width: 100%;
   }
 
-  .garland {
+  .garland-carikelompok {
     top: -9.5rem;
     object-fit: cover;
     width: 100%;
@@ -49,7 +49,7 @@
     width: 100%;
   }
 
-  .garland {
+  .garland-carikelompok {
     top: -9.5rem;
     object-fit: cover;
     width: 100%;
@@ -71,7 +71,7 @@
     width: 100%;
   }
 
-  .garland {
+  .garland-carikelompok {
     top: -11.5rem;
     object-fit: cover;
     width: 100%;
@@ -101,7 +101,7 @@
     width: 100%;
   }
 
-  .garland {
+  .garland-carikelompok {
     top: -12rem;
     object-fit: cover;
     width: 100%;
@@ -119,7 +119,7 @@
     width: 100%;
   }
 
-  .garland {
+  .garland-carikelompok {
     top: -12.5rem;
     object-fit: cover;
     width: 100%;
@@ -132,20 +132,12 @@
     height: 750px;
   }
 
-  .loop {
-    transform: scale(1.5);
-  }
-
-  .book {
-    transform: scale(1.3);
-  }
-
   .garland-section {
     height: 405px;
     width: 100%;
   }
 
-  .garland {
+  .garland-carikelompok {
     top: -12.5rem;
     object-fit: cover;
     width: 100%;
