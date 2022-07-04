@@ -8,7 +8,7 @@ import CariKelompok from "./CariKelompok";
 
 const HeaderCariKelompok = () => {
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full min-w-[350px]">
       {/* header */}
       <section className="relative bg-[#F9E1CF] items-center flex -top-20 h-full">
         <div className="bg-header-carikelompok bg-cover w-full pt-36 header-bg-section sm:pt-60">
