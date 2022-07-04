@@ -325,12 +325,12 @@ const CariKelompok = () => {
         <div id="hasilPencarian" className="pict">
           <div className="relative flex items-center justify-center mt-20 md:mt-0">
             <img alt="hasil" src={hasil} />
-            <div className="absolute items-center justify-center top-10 lg:top-20 md:top-20 left-14 lg:left-20 md:left-8">
+            <div className="absolute items-center justify-center top-10 lg:top-20 md:top-20 iair:top-10 imini:top-10 left-14 lg:left-20 md:left-8">
 
-              <h3 className="text-base lg:text-3xl md:text-xs se:text-sm s8:text-sm text-white font-poppins font-bold ">
+              <h3 className="text-base lg:text-3xl md:text-xs se:text-sm s8:text-sm iair:text-sm imini:text-xs text-white font-poppins font-bold ">
                 Nomor Kelompokmu
               </h3>
-              <h3 id="nomorKelompok" className="text-center defFont text-white pr-10 lg:pr-5 se:pr-16 text-4xl lg:text-8xl md:text-xl se:text-2xl">
+              <h3 id="nomorKelompok" className="text-left defFont text-white pl-20 lg:pr-5 lg:pl-32 se:pr-16 text-4xl lg:text-8xl md:text-xl se:text-2xl imini:text-xl">
                 10
               </h3>
               <br></br>
@@ -341,26 +341,26 @@ const CariKelompok = () => {
 
 
               <div className="flex">
-                <h3 id="mentor1" className="defFont text-white text-lg lg:text-3xl md:text-base se:text-base s8:text-base">Mentor1</h3>
+                <h3 id="mentor1" className="defFont text-white text-lg lg:text-3xl md:text-base se:text-base s8:text-base iair:text-base imini:text-base iair:px-2">Mentor1</h3>
                 <br></br>
 
-                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text-xl se:text-xl s8:text-xl pl-2 lg:pl-5 md:pl-1"> </h3>
+                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text-xl se:text-xl s8:text-xl iair:text-xl imini:text-lg pl-2 lg:pl-5 md:pl-1"> </h3>
                 <div>
-                  <h3 id="idLineMentor1" className="defFont text-white text-xl lg:text-3xl se:text-lg s8:text-lg">idLineMentor1</h3>
-                  <h3 id="noTelpMentor1" className="defFont text-white text-lg lg:text-xl se:text-base s8:text-base">081278787362</h3>
+                  <h3 id="idLineMentor1" className="defFont text-white text-xl lg:text-3xl se:text-lg s8:text-lg iair:text-base imini:text-base pr-4 se:pr-4 iair:px-2 imini:pr-4">idLineMentor1</h3>
+                  <h3 id="noTelpMentor1" className="defFont text-white text-lg lg:text-xl se:text-base s8:text-base iair:text-sm imini:text-xs pr-4 se:pr-4 iair:px-3 imini:pr-4">081278787362</h3>
                 </div>
 
               </div>
 
               
               <div className="flex">
-                <h3 id="mentor2" className="defFont text-white text-lg lg:text-3xl md:text-base se:text-base s8:text-base">Mentor2</h3>
+                <h3 id="mentor2" className="defFont text-white text-lg lg:text-3xl md:text-base se:text-base s8:text-base iair:text-base imini:text-base iair:px-2">Mentor2</h3>
                 <br></br>
 
-                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text-xl se:text-xl s8:text-xl pl-2 lg:pl-5 md:pl-1"> </h3>
+                <h3 className="lineFonts text-white text-2xl lg:text-4xl md:text-xl se:text-xl s8:text-xl iair:text-xl imini:text-lg pl-2 lg:pl-5 md:pl-1"> </h3>
                 <div>
-                  <h3 id="idLineMentor2" className="defFont text-white text-xl lg:text-3xl se:text-lg s8:text-lg">idLineMentor2</h3>
-                  <h3 id="noTelpMentor2" className="defFont text-white text-lg lg:text-xl se:text-base s8:text-base">081278787362</h3>
+                  <h3 id="idLineMentor2" className="defFont text-white text-xl lg:text-3xl se:text-lg s8:text-lg iair:text-base imini:text-base pr-4 se:pr-4 iair:px-2 imini:pr-4">idLineMentor2</h3>
+                  <h3 id="noTelpMentor2" className="defFont text-white text-lg lg:text-xl se:text-base s8:text-base iair:text-sm imini:text-xs pr-4 se:pr-4 iair:px-3 imini:pr-4">081278787362</h3>
                 </div>
 
               </div>
