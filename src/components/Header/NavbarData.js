@@ -1,22 +1,18 @@
 export const menuItems = [
   {
     path: "/",
-    label: "HOME",
+    label: "Home",
   },
   {
     path: "/PageMisi",
-    label: "MISI",
+    label: "Misi",
   },
   {
     path: "/PageBerita",
-    label: "BERITA",
+    label: "FAQ",
   },
   {
-    path: "/tentang",
-    label: "TENTANG",
-  },
-  {
-    path: "/kontak",
-    label: "KONTAK",
+    path: "/PageKontak",
+    label: "Kontak",
   },
 ];

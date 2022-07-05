@@ -21,6 +21,9 @@ module.exports = {
         "hero-bg": "url('/src/assets/hero-bg.svg')",
         "hero-loop": "url('/src/assets/LOOP.png')",
       },
+      screens: {
+        '3xl': '1800px',
+      }
     },
     fontFamily: {
       signika: ["Signika"],
