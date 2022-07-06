@@ -20,10 +20,11 @@ module.exports = {
       backgroundImage: {
         "hero-bg": "url('/src/assets/hero-bg.svg')",
         "hero-loop": "url('/src/assets/LOOP.png')",
+        "header-carikelompok": "url('/src/assets/header-bg-carikelompok.svg')",
       },
       screens: {
-        '3xl': '1800px',
-      }
+        "3xl": "1800px",
+      },
     },
     fontFamily: {
       signika: ["Signika"],

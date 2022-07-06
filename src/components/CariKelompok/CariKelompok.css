@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
+
+@font-face {
+  font-family: "FontAwesomeFonts";
+  src: url("../../assets/webfonts/fa-brands-400.ttf");
+}
+
+.main-sect {
+  display: flex;
+  flex-direction: column;
+  font-family: "Signika", sans-serif;
+  margin: 0 0.5em;
+  margin-top: 100px;
+}
+
+.title-2 {
+  grid-area: title-2;
+}
+
+.input {
+  grid-area: input;
+}
+
+.pict {
+  grid-area: pict;
+}
+
+@media (min-width: 450px) {
+  .main-sect {
+    margin-top: 0px;
+    margin: 0 2em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-sect {
+    display: grid;
+    grid-template-columns: 0.5fr 4fr 0.5fr 0.5fr 4fr 0.5fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      ". title-2 . . . ."
+      ". input . . pict .";
+  }
+}
+
+.posNoKelText {
+  right: 9vw;
+  top: 8vh;
+
+  z-index: 999;
+}
+
+.posNoKel {
+  right: 200px;
+  top: 80px;
+}
+
+.posMentor {
+  right: 270px;
+  top: 200px;
+}
+
+.posMentor12 {
+  left: 30px;
+  top: 280px;
+}
+
+.defFont {
+  font-family: "Signika";
+  font-style: normal;
+}
+
+.popFont {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+}
+
+.onTop {
+  z-index: 999;
+}
+
+.lineFonts {
+  font-family: "FontAwesomeFonts";
+  font-style: normal;
+}
+
+/*se text Size */
+@media (device-width: 375px) {
+  .se\:text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
+
+  .se\:text-base {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+  }
+
+  .se\:text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .se\:text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .se\:text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+  }
+}
+
+/*se padding*/
+@media (device-width: 375px) {
+  .se\:pr-16 {
+    padding-right: 4rem;
+    /* 64px */
+  }
+  .se\:px-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+    padding-right: 0.5rem;
+    /* 8px */
+  }
+
+  .se\:px-3 {
+    padding-left: 0.75rem;
+    /* 12px */
+    padding-right: 0.75rem;
+    /* 12px */
+  }
+
+  .se\:px-4 {
+    padding-left: 1rem;
+    /* 16px */
+    padding-right: 1rem;
+    /* 16px */
+  }
+
+  .se\:pl-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+  }
+
+  .se\:pr-4 {
+    padding-right: 1rem;
+    /* 8px */
+    padding-left: 0.2rem;
+    /* 8px */
+  }
+}
+
+/*samsung 8+ text size*/
+@media (device-width: 360px) {
+  .s8\:text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
+
+  .s8\:text-base {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+  }
+
+  .s8\:text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .s8\:text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .s8\:text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+  }
+}
+
+/*ipad air text size*/
+@media (device-width: 820px) and (device-height: 1180px) {
+  .iair\:text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
+
+  .iair\:text-base {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+  }
+
+  .iair\:text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .iair\:text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .iair\:text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+  }
+}
+
+/*ipad air top*/
+@media (device-width: 820px) and (device-height: 1180px) {
+  .iair\:top-10 {
+    top: 2.5rem;
+    /* 40px */
+  }
+}
+
+/*ipad air px*/
+@media (device-width: 820px) and (device-height: 1180px) {
+  .iair\:px-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+    padding-right: 0.5rem;
+    /* 8px */
+  }
+
+  .iair\:px-3 {
+    padding-left: 0.75rem;
+    /* 12px */
+    padding-right: 0.75rem;
+    /* 12px */
+  }
+}
+
+/*ipad mini text size*/
+@media (device-width: 768px) and (device-height: 1024px) {
+  .imini\:text-xs {
+    font-size: 0.75rem;
+    /* 12px */
+    line-height: 1rem;
+    /* 16px */
+  }
+
+  .imini\:text-sm {
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.25rem;
+    /* 20px */
+  }
+
+  .imini\:text-base {
+    font-size: 1rem;
+    /* 16px */
+    line-height: 1.5rem;
+    /* 24px */
+  }
+
+  .imini\:text-lg {
+    font-size: 1.125rem;
+    /* 18px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .imini\:text-xl {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+    /* 28px */
+  }
+
+  .imini\:text-2xl {
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+  }
+}
+
+/*ipad air top*/
+@media (device-width: 768px) and (device-height: 1024px) {
+  .imini\:top-10 {
+    top: 2.5rem;
+    /* 40px */
+  }
+}
+
+/*ipad air px*/
+@media (device-width: 768px) and (device-height: 1024px) {
+  .imini\:px-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+    padding-right: 0.5rem;
+    /* 8px */
+  }
+
+  .imini\:px-3 {
+    padding-left: 0.75rem;
+    /* 12px */
+    padding-right: 0.75rem;
+    /* 12px */
+  }
+
+  .imini\:px-4 {
+    padding-left: 1rem;
+    /* 16px */
+    padding-right: 1rem;
+    /* 16px */
+  }
+
+  .imini\:pl-2 {
+    padding-left: 0.5rem;
+    /* 8px */
+  }
+
+  .imini\:pr-4 {
+    padding-right: 1rem;
+    /* 8px */
+    padding-left: 0.2rem;
+    /* 8px */
+  }
+}

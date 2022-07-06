@@ -34,10 +34,12 @@ const HeroArea = () => {
                 >
                   Tentang
                 </a> */}
-                <Button variant="contained" style={{
-                  backgroundColor: "#E1AA43"
-                }}>
-
+                <Button
+                  variant="contained"
+                  style={{
+                    backgroundColor: "#E1AA43",
+                  }}
+                >
                   <Link
                     activeClass="active"
                     to="index-about"
