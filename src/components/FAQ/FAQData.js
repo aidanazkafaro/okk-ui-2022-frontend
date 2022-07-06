@@ -1,18 +1,50 @@
 export const FAQData = [{
-    title: "Consectetur adipiscing elit?",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis",
+    title: "Apa itu OKK dan kenapa mahasiswa baru harus mengikuti kegiatan ini?",
+    question: "OKK adalah Orientasi Kegiatan Kampus, di mana acara ini bertujuan untuk memperkenalkan lingkungan kampus UI kepada mahasiswa baru 2022. Dengan acara ini, diharapkan mahasiswa baru dapat lebih mengenal lingkungan kampus dan memberikan kontribusi terbaik bagi Universitas Indonesia. \nOKK memiliki fungsi untuk mengubah status keanggotaan IKM UI dari biasa menjadi aktif. Dengan acara ini, harapannya adalah mahasiswa baru dapat dilengkapi dengan kemampuan dan atribut yang dapat menolong mahasiswa baru menempuh babak baru sebagai mahasiswa.",
 },
 {
-    title: "Lorem ipsum dolor sit amet?",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis",
+    title: "OKK UI 2022 dilaksanakan dari tanggal berapa sampai berapa, ya?",
+    question: "Kegiatan mentoring OKK UI 2022 akan berlangsung dari tanggal 1 - 14 Agustus 2022 dan untuk acara puncak OKK UI 2022 akan diselenggarakan pada tanggal 15 Agustus 2022.",
 },
 {
-    title: "How long?",
-    question: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis",
+    title: "Apa saja kegiatan yang akan diadakan di OKK UI 2022?",
+    question: "Kegiatan yang akan ada pada OKK UI 2022 berupa kegiatan mentoring, acara penyambutan, dan acara puncak OKK UI 2022.",
 },
 {
-    title: "Veritatis repellendus ea sequi pariatur?",
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis expedita voluptatem aspernatur suscipit dignissimos fuga est dolore tempora excepturi? Quis cupiditate veritatis repellendus ea sequi pariatur, alias dolore perspiciatis at in consequuntur tempora voluptatum nemo tenetur harum molestiae dolorem. Hic tempore recusandae aliquid, laudantium, quidem voluptatem amet voluptates similique velit possimus quo non? Quae dignissimos beatae libero aliquam sit nam at facilis magnam ut repellendus ipsam eveniet illum dicta harum rerum ea numquam praesentium aspernatur deleniti quia nihil officia animi, non qui? Earum inventore delectus vel id quibusdam? Iure, quia maxime. Libero ut beatae harum commodi porro incidunt accusantium numquam! Blanditiis expedita voluptatem aspernatur suscipit dignissimos fuga est dolore tempora excepturi? Quis cupiditate veritatis repellendus ea sequi pariatur, alias dolore perspiciatis at in consequuntur tempora voluptatum nemo tenetur harum molestiae dolorem. Hic tempore recusandae aliquid, laudantium, quidem voluptatem amet voluptates similique velit possimus quo non? Quae dignissimos beatae libero aliquam sit nam at facilis magnam ut repellendus ipsam eveniet illum dicta harum rerum ea numquam praesentium aspernatur deleniti quia nihil officia animi, non qui? Earum inventore delectus vel id quibusdam? Iure, quia maxime. Libero ut beatae harum commodi porro incidunt accusantium numquam!",
+    title: "Kegiatan OKK UI 2022 akan dilaksanakan secara",
+    offline: "offline",
+    conjunction: "atau",
+    online: "online?",
+    question: "Kegiatan OKK UI 2022 akan dilaksanakan secara",
+    subQuestion: "hybrid (offline dan online).",
+},
+{
+    title: "Kalau aku mau cari kelompok mentoring aku, lihatnya di mana, ya?",
+    question: "Pembagian kelompok mentoring dapat dilihat dari {link-kelompok}.",
+},
+{
+    title: "Apakah wajib mengikuti seluruh kegiatan OKK UI 2022?",
+    question: "Seluruh kegiatan OKK UI 2022 wajib diikuti oleh mahasiswa baru 2022.",
+},
+{
+    title: "Di mana saja bisa melihat informasi terbaru dari OKK UI?",
+    question: "Linimasa resmi OKK UI 2022 meliputi: \n- Website (okk.ui.ac.id) \n- Instagram (@okk_ui) \n- Twitter (@OKK_UI) \n- Facebook (OKK UI) \n- Tiktok (okk_ui) \n- Line: @okkui",
+},
+{
+    title: "Kegiatan acara puncak OKK ngapain aja?",
+    question: "",
+},
+{
+    title: "Deadline misi 1, 2, dan 3 kapan ya Kak?",
+    question: "Informasi lebih lanjut dapat dilihat di {Link}.",
+},
+{
+    title: "Bagaimana jika Saya belum mendapatkan kelompok mentoring OKK UI 2022?",
+    question: "Kamu dapat menghubungi CP OKK UI untuk fakultas kamu yaitu pada {Link list CP } kemudian mengirimkan format :\nNama :\nNPM :\nFakultas :",
+},
+{
+    title: "Di mana saya bisa bertanya mengenai hal lain seputar OKK UI 2022?",
+    question: "Untuk pertanyaan lain seputar OKK UI 2022, boleh menghubungi :\n📲 Farah (085716182634)\n📲 Shafmed (087770558657)\n📲 Yud (085959563107)\n{cp} atau {cp}, ya. Semangat! :D",
 },
 
 ];
