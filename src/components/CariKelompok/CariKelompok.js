@@ -292,15 +292,15 @@ const CariKelompok = () => {
               id="cariKelompokText"
               className="absolute w-3/4 text-3xl sm:text-4xl md:text-3xl text-white font-poppins font-bold"
             >
-              Cari Kelompok Mu
+              Cari Kelompokmu
             </h3>
           </div>
         </div>
 
         <div id="hasilPencarian" className="pict">
-          <div className="relative flex items-center justify-center mt-20 md:mt-0">
+          <div className="relative flex items-center justify-center mt-20 md:mt-0 iair:mt-0">
             <img alt="hasil" src={hasil} />
-            <div className="absolute items-center justify-center top-10 lg:top-20 md:top-20 iair:top-10 imini:top-10 left-14 lg:left-20 md:left-8">
+            <div className="absolute items-center justify-center top-14 lg:top-24 md:top-20 iair:top-10 imini:top-10 left-16 lg:left-24 md:left-8">
               <h3 className="text-base lg:text-3xl md:text-xs se:text-sm s8:text-sm iair:text-sm imini:text-xs text-white font-poppins font-bold ">
                 Nomor Kelompokmu
               </h3>

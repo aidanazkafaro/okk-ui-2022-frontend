@@ -239,8 +239,9 @@
   }
 }
 
-/*ipad air top*/
+/*ipad air left top etc*/
 @media (device-width: 820px) and (device-height: 1180px) {
+  
   .iair\:top-10 {
     top: 2.5rem;
     /* 40px */
@@ -261,6 +262,16 @@
     /* 12px */
     padding-right: 0.75rem;
     /* 12px */
+  }
+
+  .iair\:mt-0 {
+    margin-top: 0rem;
+    
+  }
+
+  .iair\:mt-20 {
+    margin-top: 5rem;
+    
   }
 }
 
@@ -309,7 +320,7 @@
   }
 }
 
-/*ipad air top*/
+/*ipad mini top*/
 @media (device-width: 768px) and (device-height: 1024px) {
   .imini\:top-10 {
     top: 2.5rem;
@@ -317,7 +328,7 @@
   }
 }
 
-/*ipad air px*/
+/*ipad mini px*/
 @media (device-width: 768px) and (device-height: 1024px) {
   .imini\:px-2 {
     padding-left: 0.5rem;
