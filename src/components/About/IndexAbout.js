@@ -9,7 +9,7 @@ const IndexAbout = () => {
   return (
     <section className="about-section" >
       <img
-        className="lg:-mt-5 3xl:-mt-16"
+        className="start-about-section lg:-mt-5 3xl:-mt-16"
         alt=""
         src={garland}
       />

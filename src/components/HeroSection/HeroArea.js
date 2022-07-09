@@ -42,7 +42,7 @@ const HeroArea = () => {
                 >
                   <Link
                     activeClass="active"
-                    to="index-about"
+                    to="start-about-section"
                     spy={true}
                     smooth={true}
                     offset={50}
