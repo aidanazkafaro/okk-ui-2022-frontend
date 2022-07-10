@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCommentsDollar,
   faMagnifyingGlass,
 } from "@fortawesome/free-solid-svg-icons";
 import "./CariKelompok.css";
@@ -9,21 +8,65 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Form } from "./CariKelompok.styled";
 import hasil from "../../assets/hasil.png";
-import lineBrands from "../../assets/line-brands.svg";
 import axios from "axios";
 
+var Recaptcha = require('react-recaptcha');
+
 const CariKelompok = () => {
+  const verifiedState = { isVerified: false };
+
   const [valNpm, setValNpm] = useState("");
   const [valLine, setValLine] = useState("");
   const [valInput1, setValInput1] = useState("flex");
   const [valInput2, setValInput2] = useState("none");
   const [check, setCheck] = useState(true);
+  const [data, setData] = useState(verifiedState);
   const notifyNPM = () => toast("⚠ Masukkan NPMmu terlebih dahulu!");
   const notifyLine = () => toast("⚠ Masukkan ID LINEmu terlebih dahulu!");
+  const notifyVerified = () => toast("⚠ Verifikasi Captcha terlebih dahulu!");
+
+  let recaptchaInstance;
 
   useEffect(() => {
     document.getElementById("hasilPencarian").style.display = "none";
+
   }, []);
+
+  // specifying your onload callback function
+  var callback = function () {
+    console.log('Done!!!!');
+  };
+
+  // specifying verify callback function
+  var verifyCallback = function (response) {
+    console.log(response);
+    if (response) {
+      setData({
+        ...data,
+        isVerified: true
+      })
+    }
+  };
+
+  var expiredCallback = function () {
+
+    alert("Your recatpcha has expired, please verify again ...");
+    setData({
+      ...data,
+      isVerified: false
+    })
+    // You can reset it automatically if you want
+    // grecaptcha.reset();
+  };
+
+  const resetRecaptcha = () => {
+
+    recaptchaInstance.reset();  
+    setData({
+      ...data,
+      isVerified: false
+    })
+  };
 
   const handleRadioChange = () => {
     if (valInput1 === "none") {
@@ -40,15 +83,22 @@ const CariKelompok = () => {
   const handleSubmitNpm = (e) => {
     e.preventDefault();
     if (valNpm === "") {
+
       notifyNPM();
+
+    } else if (data.isVerified === false) {
+
+      notifyVerified();
+
     } else {
+      resetRecaptcha();
       console.log(valNpm);
       axios
         .post("http://localhost:5500/npm", {
           npm: valNpm,
         })
         .then(function (response) {
-          if (response.data.npm != undefined) {
+          if (response.data.npm !== undefined) {
             menampilkanHasil(response);
           } else {
             document.getElementById("hasilAwal").style.display = "flex";
@@ -67,14 +117,19 @@ const CariKelompok = () => {
     e.preventDefault();
     if (valLine === "") {
       notifyLine();
+    } else if (data.isVerified === false) {
+
+      notifyVerified();
+
     } else {
+      resetRecaptcha()
       console.log(valNpm);
       axios
         .post("http://localhost:5500/line", {
           id_line: valLine,
         })
         .then(function (response) {
-          if (response.data.id_line != undefined) {
+          if (response.data.id_line !== undefined) {
             menampilkanHasil(response);
           } else {
             document.getElementById("hasilAwal").style.display = "flex";
@@ -105,7 +160,7 @@ const CariKelompok = () => {
 
     var mentor1Strip = [];
     for (let i = 0; i < mentor1.length; i++) {
-      if (mentor1[i] == " ") {
+      if (mentor1[i] === " ") {
         whitespace++;
       }
       if (whitespace < 2) {
@@ -118,7 +173,7 @@ const CariKelompok = () => {
     var mentor2Strip = [];
     whitespace = 0;
     for (let i = 0; i < mentor2.length; i++) {
-      if (mentor2[i] == " ") {
+      if (mentor2[i] === " ") {
         whitespace++;
       }
       if (whitespace < 2) {
@@ -131,28 +186,15 @@ const CariKelompok = () => {
     document.getElementById("mentor1").innerHTML = mentor1Strip.join("");
     document.getElementById("mentor2").innerHTML = mentor2Strip.join("");
 
-    document.getElementById("idLineMentor1").innerHTML =
-      response.data.id_line_mentor1;
-    document.getElementById("idLineMentor2").innerHTML =
-      response.data.id_line_mentor2;
+    document.getElementById("idLineMentor1").innerHTML = response.data.id_line_mentor1;
+    document.getElementById("idLineMentor2").innerHTML = response.data.id_line_mentor2;
 
-    document.getElementById("noTelpMentor1").innerHTML =
-      response.data.nomor_wa_mentor1;
-    document.getElementById("noTelpMentor2").innerHTML =
-      response.data.nomor_wa_mentor2;
+    document.getElementById("noTelpMentor1").innerHTML = response.data.nomor_wa_mentor1;
+    document.getElementById("noTelpMentor2").innerHTML = response.data.nomor_wa_mentor2;
+
   };
 
-  const handleInputNPM = () => {
-    if (valNpm === "") {
-      notifyNPM();
-    }
-  };
 
-  const handleInputLine = () => {
-    if (valLine === "") {
-      notifyLine();
-    }
-  };
 
   return (
     <>
@@ -210,6 +252,7 @@ const CariKelompok = () => {
                     className="hover:bg-[#E7BB68] duration-500 rounded-full p-4 bg-[#E1AA43] rounded-50"
                     onClick={handleSubmitNpm}
                   />
+
                 </Form>
               </div>
 
@@ -257,6 +300,14 @@ const CariKelompok = () => {
                   />
                 </Form>
               </div>
+              <Recaptcha
+                ref={e => recaptchaInstance = e}
+                sitekey="6LfoEtwgAAAAAPjMkiNv2cchLOsyn9iJDTLnwgSs"
+                render="explicit"
+                verifyCallback={verifyCallback}
+                onloadCallback={callback}
+                expiredCallback={expiredCallback}
+              />
             </div>
           </div>
         </div>
