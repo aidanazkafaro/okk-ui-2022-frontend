@@ -4,15 +4,15 @@ export const menuItems = [
     label: "Home",
   },
   {
-    path: "/PageMisi",
+    path: "/Misi",
     label: "Misi",
   },
   {
-    path: "/PageBerita",
+    path: "/faq",
     label: "FAQ",
   },
   {
-    path: "/PageKontak",
+    path: "/Kontak",
     label: "Kontak",
   },
 ];

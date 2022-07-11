@@ -4,7 +4,7 @@ import { FAQData } from "./FAQData";
 const FAQ = () => {
   return (
     <>
-      <div className='xl:mx-36 md:mx-20 mx-12 mt-20 mb-60'>
+      <div className='my-2 max-w-[1400px] mx-auto mt-10 lg:px-16 2xl:px-32 3xl:px-0'>
         <div className="flex items-right justify-right">
           <h1 className="font-signika xl:text-5xl md:text-4xl text-3xl font-semibold">Frequently Asked Questions</h1>
         </div>
@@ -22,12 +22,12 @@ const FAQ = () => {
                   {FAQ.title} <i>{FAQ.offline}</i> {FAQ.conjunction} <i>{FAQ.online}</i>
                 </h1>
               </div>
-              <div className="absolute top-5 right-3 transition-transform duration-500 rotate-0 peer-checked:-rotate-90">
+              <div className="absolute top-5 right-3 transition-transform duration-200 rotate-0 peer-checked:-rotate-90">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </div>
-              <div className="overflow-hidden rounded-lg bg-[#F9E1CF] transition-all duration-500 max-h-0 peer-checked:max-h-full">
+              <div className="overflow-hidden rounded-lg bg-[#F9E1CF] transition-transform duration-200 max-h-0 peer-checked:max-h-full">
                 <div className="p-5 border-t text-justify whitespace-pre-wrap">
                   {FAQ.question}
                   <i>{FAQ.subQuestion}</i>

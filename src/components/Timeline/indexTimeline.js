@@ -1,14 +1,13 @@
 import React from "react";
 import { TimelineData } from "./TimelineData";
 import Stopwatch from "../../assets/stopwatch.png"
-import "./timeline.css";
 
 
 const Timeline = () => {
   return (
     <>
       <div className="relative">
-        <img className="absolute md:top-10 top-24 xl:-top-10 right-0 w-[400px] h-[1200px] xl:w-[400px] xl:h-[1400px]" src={Stopwatch} alt="OKK UI"></img>
+        <img className="absolute md:top-10 top-24 xl:-top-10 right-0 w-[400px] h-[1200px] xl:w-[500px] xl:h-[1400px]" src={Stopwatch} alt="OKK UI"></img>
       </div>
       <div className="xl:mx-12 md:mx-10 mx-3 py-8">
         <div className={`flex items-center justify-center`}>

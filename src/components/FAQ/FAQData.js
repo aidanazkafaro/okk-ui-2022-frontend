@@ -6,7 +6,7 @@ export const FAQData = [
 {
     title: "Kapan OKK UI 2022 dilaksanakan?",
     question: "Informasi timeline OKK UI 2022 dapat diakses pada ",
-    link: "../Timeline/indexTimeline",
+    link: "../Timeline",
     linkTo: "bagian ini."
 },
 {
@@ -26,7 +26,7 @@ export const FAQData = [
 {
     title: "Kalau aku mau cari kelompok mentoring aku, lihatnya di mana, ya?",
     question: "Pembagian kelompok mentoring dapat dilihat ",
-    link: "../CariKelompok/CariKelompok",
+    link: "../Kelompok",
     linkTo: "di sini.",
     question1: " (Untuk jalur SNMPTN, SBMPTN, Talent Scouting, Afirmasi, Japres)"
 },
