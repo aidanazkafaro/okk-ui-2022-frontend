@@ -5,14 +5,15 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Calendar from "./Calendar";
 
-export default function Misi({ misiItem }) {
+export default function Misi({ misiItem, disable }) {
   const [showTimeline, setShowTimeline] = useState(true);
   const [showDescription, setShowDescription] = useState(false);
 
   return (
-    <div className=" my-2 max-w-[1400px] mx-auto lg:px-16 2xl:px-32 3xl:px-0 ">
+    <div className="my-2 max-w-[1400px] mx-auto lg:px-16 2xl:px-32 3xl:px-0 ">
       <Accordion
         square={true}
+        disabled={disable}
         className="rounded-3xl"
         sx={{
           backgroundColor: "#E1AA43",

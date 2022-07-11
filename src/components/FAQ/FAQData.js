@@ -47,7 +47,7 @@ export const FAQData = [
     question: "Silakan menghubungi CP OKK UI untuk fakultas masing-masing pada",
     link: "https://tinyurl.com/CPOKK2022",
     linkTo: " https://tinyurl.com/CPOKK2022 ",
-    question1: "dan mengirimkan format :\nNama :\nNPM :\nFakultas :",
+    question1: "dan mengirimkan pesan dengan format :\nNama :\nNPM :\nFakultas :",
 },
 {
     title: "Di mana saya bisa bertanya mengenai hal lain seputar OKK UI 2022?",
