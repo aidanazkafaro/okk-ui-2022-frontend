@@ -5,11 +5,11 @@ const FAQ = () => {
 
   return (
     <>
-      <div className=' max-w-[1400px] p-5 md:p-0 mx-auto my-10 lg:px-16 2xl:px-32 3xl:px-0'>
+      <div className=' max-w-[1400px] p-5  mx-auto my-10 lg:px-16 2xl:px-32 3xl:px-0'>
         <div className="flex items-right justify-center">
           <h1 className="font-signika xl:text-5xl md:text-4xl text-3xl font-semibold">Frequently Asked Questions</h1>
         </div>
-        <div className="flex items-right justify-right">
+        <div className="flex items-right justify-center">
           <div
             className="container xl:w-[600px] md:w-[450px] w-[380px] h-2 mt-1 bg-underlineOrange rounded-xl mb-8"
           />
