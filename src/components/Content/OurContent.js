@@ -16,7 +16,6 @@ const OurContent = () => {
       <div className=" px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-48 py-8">
         <div className="content-area md:text-left text-center">
           <h1 className="rounded w-fit font-semibold text-6xl mb-8 pb-1 border-orange-300 border-b-8">
-            {" "}
             Content{" "}
           </h1>
         </div>

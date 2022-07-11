@@ -8,8 +8,8 @@ import Youtube from "../../assets/Youtube.svg";
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#E1AA43] ">
-        <div className="flex justify-between mx-auto max-w-[1400px] py-10 px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-32 3xl:px-0">
+      <div className="bg-[#E1AA43]">
+        <div className="flex justify-between  mx-auto max-w-[1400px] py-10 px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-32 3xl:px-0 ">
           <div>
             <div className="lg:text-3xl md:text-sm">
               <h1>#OKKUI2022</h1>

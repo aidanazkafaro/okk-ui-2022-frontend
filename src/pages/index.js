@@ -14,6 +14,8 @@ const Home = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
+
+
   return (
     <div className={`${isOpen ? "fixed h-screen w-full" : ""} min-w-[300px]`}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />

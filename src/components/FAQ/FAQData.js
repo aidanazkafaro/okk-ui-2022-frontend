@@ -6,7 +6,7 @@ export const FAQData = [
 {
     title: "Kapan OKK UI 2022 dilaksanakan?",
     question: "Informasi timeline OKK UI 2022 dapat diakses pada ",
-    link: "../Timeline",
+    link: "/",
     linkTo: "bagian ini."
 },
 {
@@ -20,19 +20,19 @@ export const FAQData = [
     online: "online?",
     question: "Kegiatan OKK UI 2022 akan dilaksanakan secara ",
     subQuestion: "hybrid (offline dan online) ",
-    link: "../Timeline/indexTimeline",
+    link: "/",
     linkTo: "dengan rincian yang dapat dilihat di sini."
 },
 {
     title: "Kalau aku mau cari kelompok mentoring aku, lihatnya di mana, ya?",
     question: "Pembagian kelompok mentoring dapat dilihat ",
-    link: "../Kelompok",
+    link: "/Kelompok",
     linkTo: "di sini.",
     question1: " (Untuk jalur SNMPTN, SBMPTN, Talent Scouting, Afirmasi, Japres)"
 },
 {
     title: "Bagaimana link untuk pengumuman kelompok mentoring untuk mahasiswa jalur simak?",
-    question: "Informasi kelompok mentoring akan segera diinformasikan pada link yang berbeda dengan poin nomor 5",
+    question: "Informasi kelompok mentoring akan segera di-update di website OKK UI",
 },
 {
     title: "Apakah wajib mengikuti seluruh kegiatan OKK UI 2022?",

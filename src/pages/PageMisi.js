@@ -15,13 +15,15 @@ const PageMisi = () => {
     <>
       <div className={`${isOpen ? "fixed h-screen w-full" : ""} min-w-[300px]`}>
         <Navbar isOpen={isOpen} setIsOpen={toggle} />
-        <div className="p-5 mb-14 md:pt-20">
+        <div className="p-5 mb-28 md:pt-20">
           {misiItems.map((misiItem, id) => (
             <Misi key={id} misiItem={misiItem} disable={misiItem.disable} />
           ))}
         </div>
         {/* <Sponsor /> */}
-        <Footer />
+        <div className="relative bottom-0 w-screen">
+          <Footer />
+        </div>
       </div>
     </>
   );
