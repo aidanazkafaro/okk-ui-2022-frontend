@@ -87,7 +87,7 @@ function SamplePrevArrow(props) {
 }
 
 function Card(props) {
-  const { judul, deskripsi } = props;
+  const { judul, deskripsi, misiKe, logo } = props;
 
   return (
     <div className={`relative`}>
@@ -98,16 +98,28 @@ function Card(props) {
           </div>
           <div className={`absolute w-4/5 h-4/5 top-10 max-w-screen-lg`}>
             <div className={`px-24 grid grid-cols-2 gap-6`}>
-              <div className={`w-full h-full`}></div>
+              <div className={`w-full h-full flex items-center`}>
+                <img
+                  src={logo}
+                  className={`max-h-full max-w-full w-full`}
+                  alt=""
+                />
+              </div>
               <div className={`grid grid-rows-7 gap-5`}>
-                <div className="w-44 h-10 font-poppins text-3xl font-bold mt-7">
+                <div className="w-fit h-9">
+                  <div className="font-poppins text-4xl font-bold mt-7">
+                    {misiKe}
+                  </div>
+                </div>
+
+                <div className="w-fit font-poppins text-3xl font-bold mt-7">
                   {judul}
                 </div>
 
                 {/* konten misi */}
                 <div className={`h-full w-full row-span-2`}>
                   <div
-                    className={`line-clamp-5 font-poppins text-lg font-normal`}
+                    className={`line-clamp-4 font-poppins text-lg font-normal`}
                   >
                     {deskripsi}
                   </div>
@@ -146,7 +158,13 @@ export default function CustomArrows({ misiItems }) {
       <Slider {...settings}>
         {misiItems.map((obj, index) => {
           return (
-            <Card key={index} judul={obj.judul} deskripsi={obj.deskripsi} />
+            <Card
+              key={index}
+              judul={obj.judul}
+              deskripsi={obj.deskripsi}
+              misiKe={obj.misiKe}
+              logo={obj.logo}
+            />
           );
         })}
       </Slider>

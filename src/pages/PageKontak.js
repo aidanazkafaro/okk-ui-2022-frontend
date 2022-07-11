@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import Berita from "../components/Berita/Berita";
-import CariKelompok from "../components/CariKelompok/CariKelompok";
+import Kontak from "../components/Kontak/Kontak";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import Sponsor from "../components/Sponsor/Sponsor";
 
-const Kelompok = () => {
+const PageKontak = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -14,12 +13,12 @@ const Kelompok = () => {
   return (
     <div className={`${isOpen ? "fixed h-screen w-full" : ""} min-w-[300px]`}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
-
-      <Berita />
+      
+      <Kontak />
       <Sponsor />
       <Footer />
     </div>
   );
 };
 
-export default Kelompok;
+export default PageKontak;

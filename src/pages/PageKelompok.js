@@ -3,6 +3,7 @@ import CariKelompok from "../components/CariKelompok/CariKelompok";
 import Footer from "../components/footer/Footer";
 import Navbar from "../components/Header/Navbar";
 import Sponsor from "../components/Sponsor/Sponsor";
+import HeaderCariKelompok from "../components/CariKelompok/HeaderCariKelompok";
 
 const Kelompok = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,9 +12,9 @@ const Kelompok = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className={`${isOpen ? "fixed h-screen w-full" : ""} `}>
+    <div className={`${isOpen ? " fixed h-screen w-full" : ""} min-w-[350px]`}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
-
+      <HeaderCariKelompok />
       <CariKelompok />
       <Sponsor />
       <Footer />

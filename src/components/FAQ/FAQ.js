@@ -3,6 +3,7 @@ import { FAQData } from "./FAQData";
 
 const FAQ = () => {
   return (
+<<<<<<< HEAD
     <>
       <div className='xl:mx-36 md:mx-20 mx-12 mt-20 mb-60'>
         <div className="flex items-right justify-right">
@@ -41,6 +42,9 @@ const FAQ = () => {
         </div>
       </div>
     </>
+=======
+    <div>Ini Page FAQ </div>
+>>>>>>> 830c24457f9ea08e1da011c574a13ad5d31b3c79
   )
 }
 

@@ -8,22 +8,27 @@
 }
 
 .about-right{
-    padding: 20px 20px 0px 20px;
+    padding:0;
 }
 
 .about-left{
-    padding: 0px 40px 0px 40px;
+    padding: 0;
 }
 
 .about-title {
     font-family: Signika;
-    text-align: center;
+    text-align: left;
     margin: 2rem 0 2rem 0;
 }
   
 .about-content {
     font-family: Poppins;
     text-align: justify;
+}
+
+.about-highlight {
+    font-weight: bold;
+    color: #364130;
 }
 
 .star{
@@ -86,23 +91,6 @@
     .about-section{
         top: -9.5rem;
     }
-    .about-article{
-        flex-direction: row;
-    }
-    .about-content {
-        text-align: left;
-    }
-    .about-right{
-        width: 50%;
-        padding-top: 0;
-    }
-    .about-left{
-        width: 50%;
-    }
-    .about-title{
-        text-align: left;
-        margin-top: 0;
-    }
     .big-star{
         display: block;
         left: 3rem;
@@ -119,6 +107,25 @@
 @media (min-width: 1024px){
     .about-section{
         top: -10.5rem;
+        margin-bottom:-6rem;
+    }
+    .about-article{
+        flex-direction: row;
+    }
+    .about-content {
+        text-align: left;
+    }
+    .about-right{
+        width: 50%;
+        padding-top: 0;
+    }
+    .about-left{
+        width: 50%;
+        padding-right: 4rem;
+    }
+    .about-title{
+        text-align: left;
+        margin-top: 0;
     }
 }
 
@@ -132,4 +139,4 @@
     .about-section{
         top: -12.5rem;
     }
-}	
+}

@@ -49,7 +49,7 @@ function SamplePrevArrow(props) {
 }
 
 function Card(props) {
-  const { judul, deskripsi } = props;
+  const { judul, deskripsi, misiKe, logo } = props;
 
   return (
     <div className={`relative`}>
@@ -79,22 +79,18 @@ function Card(props) {
           </div>
           <div className={`absolute w-4/5 h-cardheightmobile top-9 px-7 `}>
             <div className={`flex items-center justify-center h-1/3`}>
-              <img src={rectangleMobile} className={``} alt="" />
+              <img src={logo} className={``} alt="" />
             </div>
-
-            <div className={`grid grid-rows-8 gap-1`}>
-              <div className="w-44 h-full font-poppins text-2xl font-bold mt-7">
-                {judul}
-              </div>
-
-              {/* konten misi */}
-              <div className={`h-full w-full row-span-2`}>
-                <div
-                  className={`line-clamp-6 font-poppins text-lg font-normal`}
-                >
-                  {deskripsi}
-                </div>
-              </div>
+            <div className="font-poppins text-3xl font-bold mt-8 text-center">
+              {misiKe}
+            </div>
+            <div className="font-poppins text-2xl font-bold mt-2 text-center">
+              {judul}
+            </div>
+            <div
+              className={`line-clamp-4 font-poppins text-lg font-normal mt-2 text-center`}
+            >
+              {deskripsi}
             </div>
           </div>
         </div>
@@ -116,7 +112,15 @@ export default function MobileCard({ misiItems }) {
     <div>
       <Slider {...settings}>
         {misiItems.map((obj, index) => {
-          return <Card key={index} judul={obj.judul} deskripsi={obj.deskripsi} />;
+          return (
+            <Card
+              key={index}
+              judul={obj.judul}
+              deskripsi={obj.deskripsi}
+              misiKe={obj.misiKe}
+              logo={obj.logo}
+            />
+          );
         })}
       </Slider>
     </div>

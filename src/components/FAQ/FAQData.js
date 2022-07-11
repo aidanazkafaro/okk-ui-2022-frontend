@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const FAQData = [{
     title: "Apa itu OKK dan kenapa mahasiswa baru harus mengikuti kegiatan ini?",
     question: "OKK adalah Orientasi Kegiatan Kampus, di mana acara ini bertujuan untuk memperkenalkan lingkungan kampus UI kepada mahasiswa baru 2022. Dengan acara ini, diharapkan mahasiswa baru dapat lebih mengenal lingkungan kampus dan memberikan kontribusi terbaik bagi Universitas Indonesia. \nOKK memiliki fungsi untuk mengubah status keanggotaan IKM UI dari biasa menjadi aktif. Dengan acara ini, harapannya adalah mahasiswa baru dapat dilengkapi dengan kemampuan dan atribut yang dapat menolong mahasiswa baru menempuh babak baru sebagai mahasiswa.",
@@ -49,3 +50,6 @@ export const FAQData = [{
 
 ];
 
+=======
+ 
+>>>>>>> 830c24457f9ea08e1da011c574a13ad5d31b3c79
