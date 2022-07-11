@@ -15,12 +15,14 @@ export const FAQData = [{
     offline: "offline",
     conjunction: "atau",
     online: "online?",
-    question: "Kegiatan OKK UI 2022 akan dilaksanakan secara",
+    question: "Kegiatan OKK UI 2022 akan dilaksanakan secara ",
     subQuestion: "hybrid (offline dan online).",
 },
 {
     title: "Kalau aku mau cari kelompok mentoring aku, lihatnya di mana, ya?",
-    question: "Pembagian kelompok mentoring dapat dilihat dari {link-kelompok}.",
+    question: "Pembagian kelompok mentoring dapat dilihat ",
+    link: "../CariKelompok/CariKelompok",
+    linkTo: "di sini.",
 },
 {
     title: "Apakah wajib mengikuti seluruh kegiatan OKK UI 2022?",
@@ -31,12 +33,10 @@ export const FAQData = [{
     question: "Linimasa resmi OKK UI 2022 meliputi: \n- Website (okk.ui.ac.id) \n- Instagram (@okk_ui) \n- Twitter (@OKK_UI) \n- Facebook (OKK UI) \n- Tiktok (okk_ui) \n- Line: @okkui",
 },
 {
-    title: "Kegiatan acara puncak OKK ngapain aja?",
-    question: "",
-},
-{
     title: "Deadline misi 1, 2, dan 3 kapan ya Kak?",
-    question: "Informasi lebih lanjut dapat dilihat di {Link}.",
+    question: "Informasi lebih lanjut dapat dilihat ",
+    link: "../Misi/IndexMisi",
+    linkTo: "di sini.",
 },
 {
     title: "Bagaimana jika Saya belum mendapatkan kelompok mentoring OKK UI 2022?",
@@ -44,7 +44,7 @@ export const FAQData = [{
 },
 {
     title: "Di mana saya bisa bertanya mengenai hal lain seputar OKK UI 2022?",
-    question: "Untuk pertanyaan lain seputar OKK UI 2022, boleh menghubungi :\n📲 Farah (085716182634)\n📲 Shafmed (087770558657)\n📲 Yud (085959563107)\n{cp} atau {cp}, ya. Semangat! :D",
+    question: "Untuk pertanyaan lain seputar OKK UI 2022, silakan menghubungi :\n📲 Farah (085716182634)\n📲 Shafmed (087770558657)\n📲 Yud (085959563107)",
 },
 
 ];

@@ -17,7 +17,7 @@ const FAQ = () => {
           {FAQData.map((FAQ, id) => (
             <div key={id} className="relative mt-4 bg-underlineOrange overflow-hidden rounded-xl p-2">
               <input type="checkbox" className="peer absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer" />
-              <div className="h-12 w-full pl-5 flex items-center max-h-full">
+              <div className="h-full w-full p-3 flex items-center max-h-full">
                 <h1 className='xl:text-xl font-bold md:text-lg text-sm mr-5'>
                   {FAQ.title} <i>{FAQ.offline}</i> {FAQ.conjunction} <i>{FAQ.online}</i>
                 </h1>
@@ -28,7 +28,13 @@ const FAQ = () => {
                 </svg>
               </div>
               <div className="overflow-hidden rounded-lg bg-[#F9E1CF] transition-all duration-500 max-h-0 peer-checked:max-h-full">
-                <div className="p-5 border-t text-justify whitespace-pre-wrap">{FAQ.question} <i>{FAQ.subQuestion}</i></div>
+                <div className="p-5 border-t text-justify whitespace-pre-wrap">
+                  {FAQ.question}
+                  <i>{FAQ.subQuestion}</i>
+                  <a href={FAQ.link}>
+                    <span className='font-bold'>{FAQ.linkTo}</span>
+                  </a>
+                </div>
               </div>
             </div>
           ))}
