@@ -26,11 +26,11 @@ const Timeline = () => {
           </h1>
         </div>
         <div className="mx-auto w-1/2 md:w-1/4 mb-14 flex">
-          <h1 className={`${july ? "text-orange-400 border-orange-400" : ""} z-50 text-lg font-bold text-center w-1/2 cursor-pointer border-2 `} onClick={()=>{
+          <h1 className={`${july ? "text-orange-400 border-orange-400" : ""} z-0 text-lg font-bold text-center w-1/2 cursor-pointer border-2 `} onClick={()=>{
             setJuly(true);
 
           }}>Juli</h1>
-          <h1 className={`${!july ? "text-orange-400 border-orange-400" : ""} z-50 text-lg font-bold text-center w-1/2 cursor-pointer border-2 `} onClick={()=>{
+          <h1 className={`${!july ? "text-orange-400 border-orange-400" : ""} z-0 text-lg font-bold text-center w-1/2 cursor-pointer border-2 `} onClick={()=>{
             setJuly(false);
           }}>Agustus</h1>
         </div>
