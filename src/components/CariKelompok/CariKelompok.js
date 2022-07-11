@@ -10,6 +10,7 @@ import { Form } from "./CariKelompok.styled";
 import hasil from "../../assets/hasil.png";
 import axios from "axios";
 
+var jsonObj = require("../../assets/json/datamaba.json");
 var Recaptcha = require('react-recaptcha');
 
 const CariKelompok = () => {
@@ -27,10 +28,15 @@ const CariKelompok = () => {
 
   let recaptchaInstance;
 
+  let dataHasil;
+
   useEffect(() => {
     document.getElementById("hasilPencarian").style.display = "none";
 
+    console.log("json size = ", jsonObj.maba.length);
   }, []);
+
+  var mabas = new Map();
 
   // specifying your onload callback function
   var callback = function () {
@@ -61,7 +67,7 @@ const CariKelompok = () => {
 
   const resetRecaptcha = () => {
 
-    recaptchaInstance.reset();  
+    recaptchaInstance.reset();
     setData({
       ...data,
       isVerified: false
@@ -91,25 +97,27 @@ const CariKelompok = () => {
       notifyVerified();
 
     } else {
+      dataHasil = undefined;
       resetRecaptcha();
-      console.log(valNpm);
-      axios
-        .post("http://localhost:5500/npm", {
-          npm: valNpm,
-        })
-        .then(function (response) {
-          if (response.data.npm !== undefined) {
-            menampilkanHasil(response);
-          } else {
-            document.getElementById("hasilAwal").style.display = "flex";
-            document.getElementById("hasilPencarian").style.display = "none";
-            document.getElementById("cariKelompokText").innerHTML =
-              "Maaf, pencarian tidak ditemukan :(";
-          }
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
+      for (let i = 0; i < jsonObj.maba.length; i++) {
+        if (jsonObj.maba[i].npm === null || jsonObj.maba[i].npm === undefined) {
+          continue;
+        }
+        if (jsonObj.maba[i].npm.toString() == valNpm) {
+
+          dataHasil = jsonObj.maba[i];
+          break;
+        }
+      }
+
+      if (dataHasil !== undefined && dataHasil !== null) {
+        menampilkanHasil(dataHasil);
+      } else {
+        document.getElementById("hasilAwal").style.display = "flex";
+        document.getElementById("hasilPencarian").style.display = "none";
+        document.getElementById("cariKelompokText").innerHTML =
+          "Maaf, pencarian tidak ditemukan :(";
+      }
     }
   };
 
@@ -122,25 +130,28 @@ const CariKelompok = () => {
       notifyVerified();
 
     } else {
+      dataHasil = undefined;
       resetRecaptcha()
-      console.log(valNpm);
-      axios
-        .post("http://localhost:5500/line", {
-          id_line: valLine,
-        })
-        .then(function (response) {
-          if (response.data.id_line !== undefined) {
-            menampilkanHasil(response);
-          } else {
-            document.getElementById("hasilAwal").style.display = "flex";
-            document.getElementById("hasilPencarian").style.display = "none";
-            document.getElementById("cariKelompokText").innerHTML =
-              "Maaf, pencarian tidak ditemukan :(";
-          }
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
+      console.log(valLine);
+      for (let i = 0; i < jsonObj.maba.length; i++) {
+        if (jsonObj.maba[i].id_line === null || jsonObj.maba[i].id_line === undefined) {
+          continue;
+        }
+        if (jsonObj.maba[i].id_line.toString() === valLine) {
+
+          dataHasil = jsonObj.maba[i];
+          break;
+        }
+      }
+
+      if (dataHasil !== undefined && dataHasil !== null) {
+        menampilkanHasil(dataHasil);
+      } else {
+        document.getElementById("hasilAwal").style.display = "flex";
+        document.getElementById("hasilPencarian").style.display = "none";
+        document.getElementById("cariKelompokText").innerHTML =
+          "Maaf, pencarian tidak ditemukan :(";
+      }
     }
   };
 
@@ -151,10 +162,10 @@ const CariKelompok = () => {
     document.getElementById("hasilPencarian").style.display = "flex";
 
     document.getElementById("nomorKelompok").innerHTML =
-      response.data.nomor_kelompok;
+      response.nomor_kelompok;
 
-    var mentor1 = response.data.nama_mentor1;
-    var mentor2 = response.data.nama_mentor2;
+    var mentor1 = response.nama_mentor1;
+    var mentor2 = response.nama_mentor2;
 
     var whitespace = 0;
 
@@ -186,11 +197,11 @@ const CariKelompok = () => {
     document.getElementById("mentor1").innerHTML = mentor1Strip.join("");
     document.getElementById("mentor2").innerHTML = mentor2Strip.join("");
 
-    document.getElementById("idLineMentor1").innerHTML = response.data.id_line_mentor1;
-    document.getElementById("idLineMentor2").innerHTML = response.data.id_line_mentor2;
+    document.getElementById("idLineMentor1").innerHTML = response.id_line_mentor1;
+    document.getElementById("idLineMentor2").innerHTML = response.id_line_mentor2;
 
-    document.getElementById("noTelpMentor1").innerHTML = response.data.nomor_wa_mentor1;
-    document.getElementById("noTelpMentor2").innerHTML = response.data.nomor_wa_mentor2;
+    document.getElementById("noTelpMentor1").innerHTML = response.nomor_wa_mentor1;
+    document.getElementById("noTelpMentor2").innerHTML = response.nomor_wa_mentor2;
 
   };
 
