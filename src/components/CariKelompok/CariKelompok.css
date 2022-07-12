@@ -5,6 +5,11 @@
   src: url("../../assets/webfonts/fa-brands-400.ttf");
 }
 
+input[type=radio] {
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+}
+
 .main-sect {
   display: flex;
   flex-direction: column;
