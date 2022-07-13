@@ -48,9 +48,9 @@ function MobileNav({ isOpen, setIsOpen }) {
 
         <button
           type="button"
-          className=" text-[#E8D05F] border-[#E8D05F] border-[4px] active:bg-[#E8D05F] active:text-white font-signika font-semibold rounded-[8px] text-xl px-20 md:px-64 py-3 text-center mb-2 mt-4"
+          className=" text-[#E8D05F] border-[#E8D05F] border-[4px] active:bg-[#E8D05F] active:text-white font-signika font-semibold rounded-[8px] px-14 md:px-64 py-3 text-center mb-2 mt-4 mx-5"
           href="/Kelompok">
-          <NavLink to={'/Kelompok'}>Cari Kelompok</NavLink>
+          <NavLink to={'/Kelompok'} >Cari Kelompok</NavLink>
         </button>
       </div>
     </div>

@@ -55,8 +55,8 @@ export const FAQData = [
     title:
       "Bagaimana jika Saya belum mendapatkan kelompok mentoring OKK UI 2022?",
     question: "Silakan menghubungi CP OKK UI untuk fakultas masing-masing pada",
-    link: "https://tinyurl.com/CPOKK2022",
-    linkTo: " https://tinyurl.com/CPOKK2022 ",
+    linkOut: "https://tinyurl.com/CPOKK2022",
+    linkText: " https://tinyurl.com/CPOKK2022 ",
     question1:
       "dan mengirimkan pesan dengan format :\nNama :\nNPM :\nFakultas :",
   },

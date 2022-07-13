@@ -5,7 +5,7 @@ import { HashLink } from "react-router-hash-link";
 const FAQ = () => {
   return (
     <>
-      <div className=" max-w-[1400px] p-5  mx-auto my-10 lg:px-16 2xl:px-32 3xl:px-0">
+      <div className="w-screen max-w-[1400px] p-5  mx-auto my-10 lg:px-16 2xl:px-32 3xl:px-0 ">
         <div className="flex items-right justify-center">
           <h1 className="font-signika xl:text-5xl md:text-4xl text-3xl font-semibold">
             Frequently Asked Questions
@@ -54,6 +54,7 @@ const FAQ = () => {
                   <HashLink smooth to={String(FAQ.link)} >
                     <span className="font-bold">{FAQ.linkTo}</span>
                   </HashLink>
+                  <a href={FAQ.linkOut} className={`font-bold`} target="_blank" rel="noreferrer">{FAQ.linkText}</a>
                   {FAQ.question1}
                 </div>
               </div>
