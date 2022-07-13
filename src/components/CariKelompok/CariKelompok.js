@@ -7,7 +7,8 @@ import "./CariKelompok.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Form } from "./CariKelompok.styled";
-import hasil from "../../assets/hasil.png";
+import hasil from '../../assets/blob.png';
+
 import axios from "axios";
 
 //var jsonObj = require("../../assets/json/datamaba.json");
@@ -265,14 +266,14 @@ const CariKelompok = () => {
 
   return (
     <>
-      <div className="main-sect min-w-[350px]">
+      <div className="main-sect min-w-[350px] relative -top-[3rem] sm:-top-0 md:-top-[5rem]">
         <div className="rounded-3xl bg-[#364130] input sm:pt-10 px-10 md:px-2 lg:px-10 aspect-square flex items-center justify-center mb-10 lg:mb-16 xl:mb-20">
-          <div>
+          <div className="py-10 sm:py-0 md:p-4">
             <h2
               className="text-3xl 2xl:text-5xl
           font-semibold font-signika text-white border-b-8 border-[#E1AA43] rounded"
             >
-              Cari Berdasarkan:
+              Cari berdasarkan:
             </h2>
             <div className="input">
               <div className="my-8">
@@ -404,23 +405,23 @@ const CariKelompok = () => {
       </div> */}
 
         <div id="hasilAwal" className="pict">
-          <div className="relative flex items-center justify-center mt-20 md:mt-0">
+          <div className="relative flex items-center justify-center mb-12">
             <img alt="hasil" src={hasil} />
             <h3
               id="cariKelompokText"
               className="absolute w-3/4 text-2xl xl:text-2xl sm:text-4xl md:text-lg 2xl:text-4xl text-white font-poppins font-bold"
             >
-              Cari Kelompokmu
+              Mari cari kelompokmu!
             </h3>
           </div>
         </div>
 
         <div id="hasilPencarian" className="pict">
-          <div className="relative flex items-center justify-center mt-20 md:mt-0 iair:mt-0">
+          <div className="relative flex items-center justify-center mb-12">
             <img alt="hasil" src={hasil} />
             <div className="absolute items-center justify-center top-14 2xl:top-1/4 lg:top-[18%] md:top-[28%] sm:top-[12%] iair:top-10 imini:top-10 left-[15%] 2xl:left-[18%] lg:left-[15%] md:left-[16%] sm:left-[20%]">
               <h3 className="text-base 2xl:text-3xl lg:text-lg md:text-xs sm:text-2xl se:text-sm s8:text-sm iair:text-sm imini:text-xs text-white font-poppins font-bold ">
-                Nomor Kelompokmu
+                Nomor Kelompok
               </h3>
               <h3
                 id="nomorKelompok"
@@ -450,13 +451,13 @@ const CariKelompok = () => {
                 <div>
                   <h3
                     id="idLineMentor1"
-                    className="defFont text-white text-xl 2xl:text-3xl lg:text-xl md:text-sm sm:text-2xl se:text-lg s8:text-lg iair:text-base imini:text-base pr-4 se:pr-4 iair:px-2 imini:pr-4"
+                    className="defFont text-white text-lg 2xl:text-3xl lg:text-lg md:text-xs sm:text-2xl se:text-base s8:text-base iair:text-base imini:text-base iair:px-2"
                   >
                     idLineMentor1
                   </h3>
                   <h3
                     id="noTelpMentor1"
-                    className="defFont text-white text-lg 2xl:text-xl lg:text-base md:text-xs sm:text-xl se:text-base s8:text-base iair:text-sm imini:text-xs pr-4 se:pr-4 iair:px-3 imini:pr-4"
+                    className="defFont text-white text-lg 2xl:text-3xl lg:text-lg md:text-xs sm:text-2xl se:text-base s8:text-base iair:text-base imini:text-base iair:px-2"
                   >
                     081278787362
                   </h3>
@@ -479,13 +480,13 @@ const CariKelompok = () => {
                 <div>
                   <h3
                     id="idLineMentor2"
-                    className="defFont text-white text-xl 2xl:text-3xl lg:text-xl md:text-sm sm:text-2xl se:text-lg s8:text-lg iair:text-base imini:text-base pr-4 se:pr-4 iair:px-2 imini:pr-4"
+                    className="defFont text-white text-lg 2xl:text-3xl lg:text-lg md:text-xs sm:text-2xl se:text-base s8:text-base iair:text-base imini:text-base iair:px-2"
                   >
                     idLineMentor2
                   </h3>
                   <h3
                     id="noTelpMentor2"
-                    className="defFont text-white text-lg 2xl:text-xl lg:text-base md:text-xs sm:text-xl se:text-base s8:text-base iair:text-sm imini:text-xs pr-4 se:pr-4 iair:px-3 imini:pr-4"
+                    className="defFont text-white text-lg 2xl:text-3xl lg:text-lg md:text-xs sm:text-2xl se:text-base s8:text-base iair:text-base imini:text-base iair:px-2"
                   >
                     081278787362
                   </h3>

@@ -2,7 +2,7 @@ import React from "react";
 import "./HeaderCariKelompok.css";
 import loop from "../../assets/crop-loop.svg";
 import book from "../../assets/Written book.svg";
-import garland from "../../assets/Garland.svg";
+import garland from "../../assets/garland-carikelompok.png";
 
 const HeaderCariKelompok = () => {
   return (
