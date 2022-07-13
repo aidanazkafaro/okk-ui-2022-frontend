@@ -55,6 +55,7 @@ export default function Misi({ misiItem, disable }) {
                 <Calendar
                   startDate={misiItem.range.start}
                   endDate={misiItem.range.end}
+                  startMonth={misiItem.startMonth}
                 />
               </div>
             </div>
@@ -96,6 +97,7 @@ export default function Misi({ misiItem, disable }) {
                       <Calendar
                         startDate={misiItem.range.start}
                         endDate={misiItem.range.end}
+                        startMonth={misiItem.startMonth}
                       />
                     </div>
                   </li>
@@ -121,7 +123,7 @@ export default function Misi({ misiItem, disable }) {
                   </li>
                   <li className="ml-4 text-xl font-medium cursor-pointer">
                     <div className="absolute w-3 h-3 bg-[#E1AA43] rounded-full mt-1.5 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-[#E1AA43]"></div>
-                    Pengumpulan
+                    <a href={misiItem.linkPengumpulan} target="_blank" rel="noreferrer">Pengumpulan</a>
                   </li>
                 </ol>
               </div>

@@ -31,7 +31,7 @@ function MobileNav({ isOpen, setIsOpen }) {
       <div className="flex items-center w-full filter bg-white h-20">
         {/*logo container*/}
         <a className="text-xl font-semibold" href="/">
-          <img class="object-scale-down h-[60px] w-[100px] ml-[12px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
+          <img className="object-scale-down h-[60px] w-[100px] ml-[12px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
         </a>
       </div>
       <div className="flex flex-col mt-4 items-center">
@@ -64,7 +64,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <MobileNav isOpen={isOpen} setIsOpen={setIsOpen} />
         <div className="sm:w-4/12 flex justify-start">
           <a className="text-2xl font-semibold " href="/">
-            <img class="object-scale-down h-[60px] w-[100px] md:ml-[-15px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
+            <img className="object-scale-down h-[60px] w-[100px] md:ml-[-15px] sm:w-[120px] " src={Logo} alt="OKK UI"></img>
           </a>
         </div>
         <div className="w-6/12 flex justify-center">

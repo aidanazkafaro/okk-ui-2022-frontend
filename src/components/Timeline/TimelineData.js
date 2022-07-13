@@ -22,7 +22,7 @@ export const TimelineDataJuli = [
     {
         date: "Senin, 18 Juli - Rabu, 20 Juli",
         title: "Welmab 1",
-        description: "Welcoming Maba pertama",
+        description: "Welcoming Maba pertama dilakukan secara ONLINE",
     },
     {
         date: "Senin, 25 Juli",
@@ -32,7 +32,7 @@ export const TimelineDataJuli = [
     {
         date: "Sabtu, 30 Juli",
         title: "Welmab 2",
-        description: "Welcoming Maba kedua",
+        description: "Welcoming Maba kedua dilakukan secara ONLINE",
     },
 ];
 
@@ -45,31 +45,31 @@ export const TimelineDataAgustus = [
     {
         date: "Rabu, 3 Agustus",
         title: "Pengenalan Fakultas dan Jurusan",
-        description: "Mengenalkan fakultas dan jurusan yang ada di Universitas Indonesia",
+        description: "Mengenalkan fakultas dan jurusan yang ada di Universitas Indonesia (ONLINE)",
     },
     {
         date: "Sabtu, 6 Agustus",
         title: "Pengenalan Paguyuban dan Kerohanian",
-        description: "Mengenalkan paguyuban dan kerohanian yang ada di Universitas Indonesia",
+        description: "Mengenalkan paguyuban dan kerohanian yang ada di Universitas Indonesia (ONLINE)",
     },
     {
         date: "Senin, 1 Agustus - Minggu, 7 Agustus",
         title: "Mentoring 1",
-        description: "Mentoring 1 OKK UI 2022",
+        description: "Mentoring 1 OKK UI 2022 dilakukan secara ONLINE",
     },
     {
         date: "Senin, 8 Agustus - Kamis, 14 Agustus",
         title: "Mentoring 2",
-        description: "Mentoring 2 OKK UI 2022",
+        description: "Mentoring 2 OKK UI 2022 dilakukan secara ONLINE",
     },
     {
         date: "Selasa, 9 Agustus",
         title: "Pengenalan UKM",
-        description: "Mahasiswa baru mengenal UKM yang ada di Universitas Indonesia",
+        description: "Mahasiswa baru mengenal UKM yang ada di Universitas Indonesia (ONLINE)",
     },
     {
         date: "Senin, 15 Agustus",
         title: "Acara Puncak",
-        description: "Acara Puncak dan penutupan dari rangkaian acara OKK UI 2022",
+        description: "Acara Puncak dan penutupan dari rangkaian acara OKK UI 2022 (OFFLINE)",
     },
 ];

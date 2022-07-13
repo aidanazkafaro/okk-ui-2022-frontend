@@ -15,10 +15,8 @@ function classNames(...classes) {
 }
 
 export default function Calendar({ startDate, endDate, startMonth }) {
-  // let today = startOfToday();
-  // let [selectedDay, setSelectedDay] = useState(today);
-  // let [currentMonth, setCurrentMonth] = useState(format(today, "MMM-yyyy"));
-  let firstDayCurrentMonth = parse("JUL-2022", "MMM-yyyy", new Date());
+
+  let firstDayCurrentMonth = parse(String(startMonth), "MMMM-yyyy", new Date());
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
