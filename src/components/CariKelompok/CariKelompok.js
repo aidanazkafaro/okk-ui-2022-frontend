@@ -10,10 +10,11 @@ import { Form } from "./CariKelompok.styled";
 import hasil from "../../assets/hasil.png";
 import axios from "axios";
 
-var jsonObj = require("../../assets/json/datamaba.json");
+//var jsonObj = require("../../assets/json/datamaba.json");
 var Recaptcha = require('react-recaptcha');
 
 const CariKelompok = () => {
+
   const verifiedState = { isVerified: false };
 
   const [valNpm, setValNpm] = useState("");
@@ -25,18 +26,15 @@ const CariKelompok = () => {
   const notifyNPM = () => toast("⚠ Masukkan NPMmu terlebih dahulu!");
   const notifyLine = () => toast("⚠ Masukkan ID LINEmu terlebih dahulu!");
   const notifyVerified = () => toast("⚠ Verifikasi Captcha terlebih dahulu!");
+  const captchaExpired = () => toast("⚠ Captcha expired!");
 
   let recaptchaInstance;
 
-  let dataHasil;
+  //let dataHasil;
 
   useEffect(() => {
     document.getElementById("hasilPencarian").style.display = "none";
-
-    console.log("json size = ", jsonObj.maba.length);
   }, []);
-
-  var mabas = new Map();
 
   // specifying your onload callback function
   var callback = function () {
@@ -56,13 +54,12 @@ const CariKelompok = () => {
 
   var expiredCallback = function () {
 
-    alert("Your recatpcha has expired, please verify again ...");
+    captchaExpired();
     setData({
       ...data,
       isVerified: false
     })
-    // You can reset it automatically if you want
-    // grecaptcha.reset();
+
   };
 
   const resetRecaptcha = () => {
@@ -88,6 +85,11 @@ const CariKelompok = () => {
 
   const handleSubmitNpm = (e) => {
     e.preventDefault();
+    resetRecaptcha();
+    document.getElementById("hasilAwal").style.display = "flex";
+    document.getElementById("hasilPencarian").style.display = "none";
+    document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
+    return;
     if (valNpm === "") {
 
       notifyNPM();
@@ -97,32 +99,61 @@ const CariKelompok = () => {
       notifyVerified();
 
     } else {
-      dataHasil = undefined;
-      resetRecaptcha();
-      for (let i = 0; i < jsonObj.maba.length; i++) {
-        if (jsonObj.maba[i].npm === null || jsonObj.maba[i].npm === undefined) {
-          continue;
-        }
-        if (jsonObj.maba[i].npm.toString() == valNpm) {
 
-          dataHasil = jsonObj.maba[i];
-          break;
-        }
-      }
+      axios
+        .post("https://okkui2022backend.herokuapp.com/npm", {
+          npm: valNpm,
+        })
+        .then(function (response) {
+          if (response.data.npm !== undefined) {
+            menampilkanHasil(response.data);
+          } else {
+            document.getElementById("hasilAwal").style.display = "flex";
+            document.getElementById("hasilPencarian").style.display = "none";
+            document.getElementById("cariKelompokText").innerHTML =
+              "Maaf, pencarian tidak ditemukan :(";
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
 
-      if (dataHasil !== undefined && dataHasil !== null) {
-        menampilkanHasil(dataHasil);
-      } else {
-        document.getElementById("hasilAwal").style.display = "flex";
-        document.getElementById("hasilPencarian").style.display = "none";
-        document.getElementById("cariKelompokText").innerHTML =
-          "Maaf, pencarian tidak ditemukan :(";
-      }
+      /*  JIKA MENGGUNAKAN JSON MAKA PAKAI CODE DIBAWAH INI */
+
+      // dataHasil = undefined;
+      // resetRecaptcha();
+      // for (let i = 0; i < jsonObj.maba.length; i++) {
+      //   if (jsonObj.maba[i].npm === null || jsonObj.maba[i].npm === undefined) {
+      //     continue;
+      //   }
+      //   if (jsonObj.maba[i].npm.toString() === valNpm) {
+
+      //     dataHasil = jsonObj.maba[i];
+      //     break;
+      //   }
+      // }
+      // if (dataHasil !== undefined && dataHasil !== null) {
+      //   //menampilkanHasil(dataHasil);
+      //   document.getElementById("hasilAwal").style.display = "flex";
+      //   document.getElementById("hasilPencarian").style.display = "none";
+      //   document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 13 Juli 2022";
+      // } else {
+      //   document.getElementById("hasilAwal").style.display = "flex";
+      //   document.getElementById("hasilPencarian").style.display = "none";
+      //   document.getElementById("cariKelompokText").innerHTML =
+      //     "Maaf, pencarian tidak ditemukan :(";
+      //     document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 13 Juli 2022";
+      // }
     }
   };
 
   const handleSubmitLine = (e) => {
     e.preventDefault();
+    document.getElementById("hasilAwal").style.display = "flex";
+    document.getElementById("hasilPencarian").style.display = "none";
+    document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
+    return;
+    resetRecaptcha();
     if (valLine === "") {
       notifyLine();
     } else if (data.isVerified === false) {
@@ -130,28 +161,53 @@ const CariKelompok = () => {
       notifyVerified();
 
     } else {
-      dataHasil = undefined;
-      resetRecaptcha()
-      console.log(valLine);
-      for (let i = 0; i < jsonObj.maba.length; i++) {
-        if (jsonObj.maba[i].id_line === null || jsonObj.maba[i].id_line === undefined) {
-          continue;
-        }
-        if (jsonObj.maba[i].id_line.toString() === valLine) {
 
-          dataHasil = jsonObj.maba[i];
-          break;
-        }
-      }
+      axios
+        .post("https://okkui2022backend.herokuapp.com/line", {
+          id_line: valLine,
+        })
+        .then(function (response) {
+          if (response.data.id_line !== undefined) {
+            menampilkanHasil(response.data);
+          } else {
+            document.getElementById("hasilAwal").style.display = "flex";
+            document.getElementById("hasilPencarian").style.display = "none";
+            document.getElementById("cariKelompokText").innerHTML =
+              "Maaf, pencarian tidak ditemukan :(";
+          }
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
 
-      if (dataHasil !== undefined && dataHasil !== null) {
-        menampilkanHasil(dataHasil);
-      } else {
-        document.getElementById("hasilAwal").style.display = "flex";
-        document.getElementById("hasilPencarian").style.display = "none";
-        document.getElementById("cariKelompokText").innerHTML =
-          "Maaf, pencarian tidak ditemukan :(";
-      }
+      /*  JIKA MENGGUNAKAN JSON MAKA PAKAI CODE DIBAWAH INI */
+
+      // dataHasil = undefined;
+      // resetRecaptcha()
+      // console.log(valLine);
+      // for (let i = 0; i < jsonObj.maba.length; i++) {
+      //   if (jsonObj.maba[i].id_line === null || jsonObj.maba[i].id_line === undefined) {
+      //     continue;
+      //   }
+      //   if (jsonObj.maba[i].id_line.toString() === valLine) {
+
+      //     dataHasil = jsonObj.maba[i];
+      //     break;
+      //   }
+      // }
+
+      // if (dataHasil !== undefined && dataHasil !== null) {
+      //   //menampilkanHasil(dataHasil);
+      //   document.getElementById("hasilAwal").style.display = "flex";
+      //   document.getElementById("hasilPencarian").style.display = "none";
+      //   document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 13 Juli 2022";
+      // } else {
+      //   document.getElementById("hasilAwal").style.display = "flex";
+      //   document.getElementById("hasilPencarian").style.display = "none";
+      //   document.getElementById("cariKelompokText").innerHTML =
+      //     "Maaf, pencarian tidak ditemukan :(";
+      //   document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 13 Juli 2022";
+      // }
     }
   };
 

@@ -5,7 +5,7 @@ export const TimelineDataJuli = [
         description: "Pemeriksaan kesehatan (Pemkes) mahasiswa dilakukan secara OFFLINE di Universitas Indonesia",
     },
     {
-        date: "Selasa, 12 Juli 2022",
+        date: "Kamis, 14 Juli 2022",
         title: "Pengumuman Kelompok Mentoring OKK Gelombang 1",
         description: "Untuk melihat kelompok dapat mengakses halaman Kelompok pada website OKK",
     },
@@ -15,7 +15,7 @@ export const TimelineDataJuli = [
         description: "Pengambilan Jaket Kuning Universitas Indonesia dapat diambil di Balairung",
     },
     {
-        date: "Minggu, 24 Juli",
+        date: "Senin, 25 Juli",
         title: "Pengumuman Kelompok Mentoring OKK Gelombang 2",
         description: "Untuk melihat kelompok dapat mengakses halaman Kelompok pada website OKK",
     },
