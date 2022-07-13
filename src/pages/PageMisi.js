@@ -13,7 +13,7 @@ const PageMisi = () => {
   };
   return (
     <>
-      <div className={`${isOpen ? "fixed h-screen w-full" : ""} min-w-[300px]`}>
+      <div className={`${isOpen ? "fixed h-screen w-full" : ""} flex flex-col min-h-screen min-w-[300px]`}>
         <Navbar isOpen={isOpen} setIsOpen={toggle} />
         <div className="p-5 mb-28 md:pt-20">
           {misiItems.map((misiItem, id) => (
@@ -21,7 +21,7 @@ const PageMisi = () => {
           ))}
         </div>
         {/* <Sponsor /> */}
-        <div className="relative bottom-0 w-screen">
+        <div className="relative mt-auto bottom-0 w-screen">
           <Footer />
         </div>
       </div>
