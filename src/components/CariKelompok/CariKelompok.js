@@ -87,10 +87,10 @@ const CariKelompok = () => {
   const handleSubmitNpm = (e) => {
     e.preventDefault();
     resetRecaptcha();
-    document.getElementById("hasilAwal").style.display = "flex";
-    document.getElementById("hasilPencarian").style.display = "none";
-    document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
-    return;
+    // document.getElementById("hasilAwal").style.display = "flex";
+    // document.getElementById("hasilPencarian").style.display = "none";
+    // document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
+    // return;
     if (valNpm === "") {
 
       notifyNPM();
@@ -117,6 +117,8 @@ const CariKelompok = () => {
         })
         .catch(function (error) {
           console.error(error);
+          document.getElementById("cariKelompokText").innerHTML =
+          "Sepertinya kamu tidak terhubung ke jaringan internet :(";
         });
 
       /*  JIKA MENGGUNAKAN JSON MAKA PAKAI CODE DIBAWAH INI */
@@ -150,11 +152,11 @@ const CariKelompok = () => {
 
   const handleSubmitLine = (e) => {
     e.preventDefault();
-    document.getElementById("hasilAwal").style.display = "flex";
-    document.getElementById("hasilPencarian").style.display = "none";
-    document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
-    return;
     resetRecaptcha();
+    // document.getElementById("hasilAwal").style.display = "flex";
+    // document.getElementById("hasilPencarian").style.display = "none";
+    // document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
+    // return;
     if (valLine === "") {
       notifyLine();
     } else if (data.isVerified === false) {
@@ -179,6 +181,8 @@ const CariKelompok = () => {
         })
         .catch(function (error) {
           console.error(error);
+          document.getElementById("cariKelompokText").innerHTML =
+          "Sepertinya kamu tidak terhubung ke jaringan internet :(";
         });
 
       /*  JIKA MENGGUNAKAN JSON MAKA PAKAI CODE DIBAWAH INI */
@@ -380,30 +384,6 @@ const CariKelompok = () => {
           </div>
         </div>
 
-        {/* <div id="hasilPencarian" className="pict">
-        <div className="relative flex items-center justify-center mt-20 md:mt-0">
-          <img alt="hasil" src={hasil} />
-          <h3 className="absolute posNoKelText defFont text-white text-2xl lg:text-2xl sm:text-xl  ">
-            Nomor Kelompokmu
-          </h3>
-          <h3 id="nomorKelompok" className="absolute posNoKel defFont text-white text-2xl lg:text-8xl sm:text-xl  ">
-            10
-          </h3>
-
-          <h3 className="absolute posMentor defFont text-white text-2xl lg:text-2xl sm:text-xl  ">
-            Mentor
-          </h3>
-
-
-          <div className="absolute posMentor12">
-            <h3 id="mentor1" className="defFont text-white text-2xl lg:text-4xl sm:text-xl">JOhn Doe</h3>
-            <br></br>
-            <h3 id="mentor2" className="defFont text-white text-2xl lg:text-4xl sm:text-xl">DoeJohn</h3>
-          </div>
-
-        </div>
-      </div> */}
-
         <div id="hasilAwal" className="pict">
           <div className="relative flex items-center justify-center mb-12">
             <img alt="hasil" src={hasil} />
@@ -419,7 +399,7 @@ const CariKelompok = () => {
         <div id="hasilPencarian" className="pict">
           <div className="relative flex items-center justify-center mb-12">
             <img alt="hasil" src={hasil} />
-            <div className="absolute items-center justify-center top-14 2xl:top-1/4 lg:top-[18%] md:top-[28%] sm:top-[12%] iair:top-10 imini:top-10 left-[15%] 2xl:left-[18%] lg:left-[15%] md:left-[16%] sm:left-[20%]">
+            <div className="absolute items-center justify-center top-[13%] 2xl:top-[16%] lg:top-[18%] md:top-[28%] sm:top-[12%] iair:top-10 imini:top-10 left-[15%] 2xl:left-[18%] lg:left-[15%] md:left-[16%] sm:left-[20%]">
               <h3 className="text-base 2xl:text-3xl lg:text-lg md:text-xs sm:text-2xl se:text-sm s8:text-sm iair:text-sm imini:text-xs text-white font-poppins font-bold ">
                 Nomor Kelompok
               </h3>
@@ -473,7 +453,7 @@ const CariKelompok = () => {
                 </h3>
                 <br></br>
 
-                <h3 className="lineFonts text-white text-2xl 2xl:text-4xl lg:text-xl md:text-base sm:text-2xl se:text-xl s8:text-xl iair:text-xl imini:text-lg pl-2 2xl:pl-5 md:pl-1">
+                <h3 className="lineFonts text-white text-2xl 2xl:text-4xl lg:text-xl md:text-base sm:text-2xl se:text-xl s8:text-xl iair:text-xl imini:text-lg pl-2 2xl:pl-[2%] md:pl-1">
                   {" "}
                   
                 </h3>
