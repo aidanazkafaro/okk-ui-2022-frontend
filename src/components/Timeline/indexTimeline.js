@@ -33,7 +33,7 @@ const Timeline = () => {
             Timeline
           </h1>
         </div>
-        <div className="mx-auto w-1/2 md:w-1/4 mb-14 flex">
+        <div className="mx-auto w-2/3 md:w-1/4 mb-14 flex">
           <h1
             className={`${
               july ? "text-orange-400 border-orange-400" : ""

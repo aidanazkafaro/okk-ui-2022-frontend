@@ -270,11 +270,11 @@ const CariKelompok = () => {
 
   return (
     <>
-      <div className="main-sect min-w-[350px] relative -top-[3rem] sm:-top-0 md:-top-[5rem]">
+      <div className="main-sect min-w-screen relative -top-[3rem] sm:-top-0 md:-top-[5rem]">
         <div className="rounded-3xl bg-[#364130] input sm:pt-10 px-10 md:px-2 lg:px-10 aspect-square flex items-center justify-center mb-10 lg:mb-16 xl:mb-20">
           <div className="py-10 sm:py-0 md:p-4">
             <h2
-              className="text-3xl 2xl:text-5xl
+              className="text-2xl 2xl:text-5xl
           font-semibold font-signika text-white border-b-8 border-[#E1AA43] rounded"
             >
               Cari berdasarkan:
@@ -304,7 +304,7 @@ const CariKelompok = () => {
                 <Form
                   prop={valInput1}
                   onSubmit={handleSubmitNpm}
-                  className="gap-4 flex items-center desc"
+                  className="gap-4 flex items-center desc "
                 >
                   <input
                     type="text"
