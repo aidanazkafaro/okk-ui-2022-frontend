@@ -5,10 +5,6 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Backdrop from '@mui/material/Backdrop';
-import Button from '@mui/material/Button';
-import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
-
 
 import './Merch.css'
 
@@ -22,6 +18,7 @@ import totebag from '../../assets/merch/totebag/totebag.png';
 import tumbler from '../../assets/merch/tumbler/tumbler.png';
 
 export default function Merch() {
+
     const openState = {
         openTotebag: false,
         openTumbler: false,
@@ -46,7 +43,7 @@ export default function Merch() {
                         alt={cardAlt}
                     />
                     <CardContent>
-                        <div className="text-base">
+                        <div className="text-center font-bold text-xs md:text-lg md:text-left lg:text-xl">
                             {cardName}
                         </div>
                         <div className="hidden md:flex">
@@ -85,16 +82,6 @@ export default function Merch() {
         )
     }
 
-    // const showBackdrop = (maxW, cardImg, cardAlt, cardName, cardDetails) => {
-    //     <Backdrop
-    //         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-    //         open={open}
-    //         onClick={handleClose}
-    //     >
-    //         {cardsClick(maxW, cardImg, cardAlt, cardName, cardDetails)}
-    //     </Backdrop>
-    // }
-
     return (
         <div className="merchBody">
             <div className="flex items-right justify-center pt-[4%]">
@@ -126,28 +113,8 @@ export default function Merch() {
                                         })
                                     }
                                 >
-                                    {cardsClick(400, totebag, "Totebag", "Totebag", "Bawaanmu banyak? bingung mau bawanya gimana? tenang! dengan totebag OKK UI akan memudahkan kamu dalam membawa barang barang.")}
+                                    {cardsClick(360, totebag, "Totebag", "Totebag", "Bawaanmu banyak? bingung mau bawanya gimana? tenang! dengan totebag OKK UI akan memudahkan kamu dalam membawa barang barang.")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 400 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={totebag}
-                                            alt="totebag"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Totebag
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Bawaanmu banyak? bingung mau bawanya gimana? tenang! dengan totebag OKK UI akan memudahkan kamu dalam membawa barang barang.
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
                             </div>
                             <div class="w-1/2 p-0 md:p-2 pt-1">
                                 <a onClick={() =>
@@ -168,26 +135,6 @@ export default function Merch() {
                                 >
                                     {cardsClick(350, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 350 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={gelang}
-                                            alt="totebag"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Gelang
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
                             </div>
                             <div class="w-1/2 p-1 md:p-2">
                                 <a onClick={() =>
@@ -208,27 +155,6 @@ export default function Merch() {
                                 >
                                     {cardsClick(350, emblem, "emblem", "Emblem", "Sebuah emblem yang keren abis.")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 350 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={emblem}
-                                            alt="Stiker"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Emblem
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Sebuah emblem yang keren abis.
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
-
                             </div>
                             <div class="w-1/2 p-1 md:p-2">
                                 <a onClick={() =>
@@ -249,26 +175,6 @@ export default function Merch() {
                                 >
                                     {cardsClick(350, topi, "topi", "Topi", "Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 350 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={topi}
-                                            alt="totebag"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Topi
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
                             </div>
 
                             <div class="w-full p-1 md:p-2">
@@ -290,26 +196,6 @@ export default function Merch() {
                                 >
                                     {cardsClick(350, notebook, "notebook", "Notebook", "Bingung dengan catatan kuliah? Cobalah mencatat menggunakan notebook OKK UI ini! Buku ini dipercaya dapat memudahkan dalam belajar.")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 700 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={notebook}
-                                            alt="totebag"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Notebook
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Bingung dengan catatan kuliah? Cobalah mencatat menggunakan notebook OKK UI ini! Buku ini dipercaya dapat memudahkan dalam belajar.
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
                             </div>
                         </div>
                         <div class="flex flex-wrap w-1/2 pb-[20%]">
@@ -332,26 +218,6 @@ export default function Merch() {
                                 >
                                     {cardsClick(350, baju, "baju", "Baju", "Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 600 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={baju}
-                                            alt="baju"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Baju OKK UI
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
                             </div>
                             <div class="w-1/2 p-1 md:p-2">
                                 <a onClick={() =>
@@ -372,27 +238,6 @@ export default function Merch() {
                                 >
                                     {cardsClick(300, stiker, "stiker", "Stiker", "Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 350 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={stiker}
-                                            alt="Stiker"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Stiker
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
-
                             </div>
                             <div class="w-1/2 p-0 md:p-2">
                                 <a onClick={() =>
@@ -413,29 +258,7 @@ export default function Merch() {
                                 >
                                     {cardsClick(280, tumbler, "tumblr", "Tumblr", "Takut kehausan saat jalan-jalan di UI? sekarang kamu bisa menyimpan minuman menggunakantumbler OKKUI! sehingga kamu dapat minum kapanpun dan dimanapun.")}
                                 </Backdrop>
-                                {/* <Card sx={{ maxWidth: 230 }}>
-                                    <CardActionArea>
-                                        <CardMedia
-                                            component="img"
-                                            height="140"
-                                            image={tumbler}
-                                            alt="totebag"
-                                        />
-                                        <CardContent>
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                Tumblr
-                                            </Typography>
-                                            <div className="hidden md:flex">
-                                                <Typography variant="body2" color="text.secondary">
-                                                    Takut kehausan saat jalan-jalan di UI? sekarang kamu bisa menyimpan minuman menggunakan
-                                                    tumbler OKKUI! sehingga kamu dapat minum kapanpun dan dimanapun.
-                                                </Typography>
-                                            </div>
-                                        </CardContent>
-                                    </CardActionArea>
-                                </Card> */}
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -443,8 +266,7 @@ export default function Merch() {
 
 
             <div className="flex items-right justify-center p-[4%]">
-
-                <button class="button">
+                <button class="button font-bold">
                     <span class="button__text">
                         <span>P</span><span>e</span><span>s</span><span>a</span><span>n</span><span> </span><span>s</span><span>e</span><span>k</span><span>a</span><span>r</span><span>a</span><span>n</span><span>g</span>
                     </span>
@@ -473,12 +295,9 @@ export default function Merch() {
                             <path d="M147.87,541.93V320.84c-.05-13.2,8.25-21.51,21.62-24.27a42.71,42.71,0,0,1,7.14-1.32l-29.36-.63a67.77,67.77,0,0,0-9.13.45c-13.37,2.75-20.32,12.57-20.27,25.77l.38,221.24c-1.57,15.44,8.15,27.08,25.34,26.1l33-.19c-15.9,0-28.78-10.58-28.76-25.93Z" fill="#c79b5b" />
                             <path d="M148.16,343.22a6,6,0,0,0-6,6v92a6,6,0,0,0,12,0v-92A6,6,0,0,0,148.16,343.22Z" fill="#323c44" />
                         </g>
-
                     </svg>
                 </button>
-
             </div>
-
         </div >
     );
 }
