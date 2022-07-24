@@ -1,33 +1,35 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
+
+.merchBody {
   background-color: #f2e3ce;
+
 }
 
-/* only animate if the device supports hover */
 @media (hover: hover) {
   #creditcard {
-    /*  set start position */
+    
     transform: translateY(110px);
     transition: transform 0.1s ease-in-out;
-    /*  set transition for mouse enter & exit */
+    
   }
 
   #money {
-    /*  set start position */
+    
     transform: translateY(180px);
     transition: transform 0.1s ease-in-out;
-    /*  set transition for mouse enter & exit */
+    
   }
 
   button:hover #creditcard {
     transform: translateY(0px);
     transition: transform 0.2s ease-in-out;
-    /*  overide transition for mouse enter */
+   
   }
 
   button:hover #money {
     transform: translateY(0px);
     transition: transform 0.3s ease-in-out;
-    /*  overide transition for mouse enter */
+    
   }
 }
 
@@ -48,10 +50,6 @@ body {
   transition: transform .2s ease-in-out;
 }
 
-/* styling */
-
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
-
 .button {
   border: none;
   outline: none;
@@ -63,7 +61,7 @@ body {
   background-color: #e1aa43;
   color: #000;
   font-size: 21px;
-  font-family: "Signika", sans-serif;
+  font-family: "Signika", bold;
   cursor: pointer;
   box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
 }
@@ -79,3 +77,5 @@ body {
   right: 0.2rem;
   height: 140%;
 }
+
+

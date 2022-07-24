@@ -1,8 +1,14 @@
+import React, { useState } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import Backdrop from '@mui/material/Backdrop';
+import Button from '@mui/material/Button';
+import Badge from '@mui/material/Badge';
+import MailIcon from '@mui/icons-material/Mail';
+
 
 import './Merch.css'
 
@@ -15,9 +21,82 @@ import topi from '../../assets/merch/topi/topi.png';
 import totebag from '../../assets/merch/totebag/totebag.png';
 import tumbler from '../../assets/merch/tumbler/tumbler.png';
 
-export default function ActionAreaCard() {
+export default function Merch() {
+    const openState = {
+        openTotebag: false,
+        openTumbler: false,
+        openTopi: false,
+        openGelang: false,
+        openStiker: false,
+        openNotebook: false,
+        openBaju: false,
+        openEmblem: false
+    };
+
+    const [open, setOpen] = useState(openState);
+
+    const cards = (maxW, cardImg, cardAlt, cardName, cardDetails) => {
+        return (
+            <Card sx={{ maxWidth: maxW }}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        image={cardImg}
+                        alt={cardAlt}
+                    />
+                    <CardContent>
+                        <div className="text-base">
+                            {cardName}
+                        </div>
+                        <div className="hidden md:flex">
+                            <Typography variant="body2" color="text.secondary">
+                                {cardDetails}
+                            </Typography>
+                        </div>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        )
+    }
+
+    const cardsClick = (maxW, cardImg, cardAlt, cardName, cardDetails) => {
+        return (
+            <Card sx={{ maxWidth: maxW }}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="140"
+                        image={cardImg}
+                        alt={cardAlt}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {cardName}
+                        </Typography>
+                        <div className="">
+                            <Typography variant="body2" color="text.secondary">
+                                {cardDetails}
+                            </Typography>
+                        </div>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
+        )
+    }
+
+    // const showBackdrop = (maxW, cardImg, cardAlt, cardName, cardDetails) => {
+    //     <Backdrop
+    //         sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+    //         open={open}
+    //         onClick={handleClose}
+    //     >
+    //         {cardsClick(maxW, cardImg, cardAlt, cardName, cardDetails)}
+    //     </Backdrop>
+    // }
+
     return (
-        <>
+        <div className="merchBody">
             <div className="flex items-right justify-center pt-[4%]">
                 <h1 className="font-signika xl:text-5xl md:text-4xl text-3xl font-semibold">
                     OKK UI MERCHANDISE
@@ -31,7 +110,25 @@ export default function ActionAreaCard() {
                     <div class="flex flex-wrap -m-1 md:-m-2">
                         <div class="flex flex-wrap w-1/2">
                             <div class="w-1/2 p-1 md:p-2">
-                                <Card sx={{ maxWidth: 400 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openTotebag: true
+                                    })
+                                }>{cards(400, totebag, "Totebag", "Totebag", "Bawaanmu banyak? bingung mau bawanya gimana? tenang! dengan totebag OKK UI akan memudahkan kamu dalam membawa barang barang.")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openTotebag}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openTotebag: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(400, totebag, "Totebag", "Totebag", "Bawaanmu banyak? bingung mau bawanya gimana? tenang! dengan totebag OKK UI akan memudahkan kamu dalam membawa barang barang.")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 400 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -50,10 +147,28 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
                             </div>
                             <div class="w-1/2 p-0 md:p-2 pt-1">
-                                <Card sx={{ maxWidth: 350 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openGelang: true
+                                    })
+                                }>{cards(350, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openGelang}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openGelang: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(350, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 350 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -72,10 +187,28 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
                             </div>
                             <div class="w-1/2 p-1 md:p-2">
-                                <Card sx={{ maxWidth: 350 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openEmblem: true
+                                    })
+                                }>{cards(350, emblem, "emblem", "Emblem", "Sebuah emblem yang keren abis.")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openEmblem}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openEmblem: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(350, emblem, "emblem", "Emblem", "Sebuah emblem yang keren abis.")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 350 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -94,11 +227,29 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
 
                             </div>
                             <div class="w-1/2 p-1 md:p-2">
-                                <Card sx={{ maxWidth: 350 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openTopi: true
+                                    })
+                                }>{cards(350, topi, "topi", "Topi", "Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openTopi}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openTopi: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(350, topi, "topi", "Topi", "Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 350 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -117,12 +268,29 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
-
+                                </Card> */}
                             </div>
 
                             <div class="w-full p-1 md:p-2">
-                                <Card sx={{ maxWidth: 700 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openNotebook: true
+                                    })
+                                }>{cards(600, notebook, "notebook", "Notebook", "Bingung dengan catatan kuliah? Cobalah mencatat menggunakan notebook OKK UI ini! Buku ini dipercaya dapat memudahkan dalam belajar.")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openNotebook}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openNotebook: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(350, notebook, "notebook", "Notebook", "Bingung dengan catatan kuliah? Cobalah mencatat menggunakan notebook OKK UI ini! Buku ini dipercaya dapat memudahkan dalam belajar.")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 700 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -141,12 +309,30 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
                             </div>
                         </div>
                         <div class="flex flex-wrap w-1/2 pb-[20%]">
                             <div class="w-full p-1 md:p-2">
-                                <Card sx={{ maxWidth: 600 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openBaju: true
+                                    })
+                                }>{cards(600, baju, "baju", "Baju", "Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openBaju}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openBaju: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(350, baju, "baju", "Baju", "Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 600 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -165,10 +351,28 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
                             </div>
                             <div class="w-1/2 p-1 md:p-2">
-                                <Card sx={{ maxWidth: 350 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openStiker: true
+                                    })
+                                }>{cards(350, stiker, "stiker", "Stiker", "Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openStiker}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openStiker: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(300, stiker, "stiker", "Stiker", "Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 350 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -187,11 +391,29 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
 
                             </div>
                             <div class="w-1/2 p-0 md:p-2">
-                                <Card sx={{ maxWidth: 220 }}>
+                                <a onClick={() =>
+                                    setOpen({
+                                        ...open,
+                                        openTumbler: true
+                                    })
+                                }>{cards(230, tumbler, "tumblr", "Tumblr", "Takut kehausan saat jalan-jalan di UI? sekarang kamu bisa menyimpan minuman menggunakantumbler OKKUI! sehingga kamu dapat minum kapanpun dan dimanapun.")}</a>
+                                <Backdrop
+                                    sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+                                    open={open.openTumbler}
+                                    onClick={() =>
+                                        setOpen({
+                                            ...open,
+                                            openTumbler: false
+                                        })
+                                    }
+                                >
+                                    {cardsClick(280, tumbler, "tumblr", "Tumblr", "Takut kehausan saat jalan-jalan di UI? sekarang kamu bisa menyimpan minuman menggunakantumbler OKKUI! sehingga kamu dapat minum kapanpun dan dimanapun.")}
+                                </Backdrop>
+                                {/* <Card sx={{ maxWidth: 230 }}>
                                     <CardActionArea>
                                         <CardMedia
                                             component="img"
@@ -211,13 +433,13 @@ export default function ActionAreaCard() {
                                             </div>
                                         </CardContent>
                                     </CardActionArea>
-                                </Card>
+                                </Card> */}
                             </div>
 
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
 
             <div className="flex items-right justify-center p-[4%]">
@@ -257,6 +479,6 @@ export default function ActionAreaCard() {
 
             </div>
 
-        </>
+        </div >
     );
 }
