@@ -15,7 +15,7 @@ export const TimelineDataJuli = [
         description: "Pengambilan Jaket Kuning Universitas Indonesia dapat diambil di Balairung",
     },
     {
-        date: "Senin, 25 Juli",
+        date: "Minggu, 24 Juli",
         title: "Pengumuman Kelompok Mentoring OKK Gelombang 2",
         description: "Untuk melihat kelompok dapat mengakses halaman Kelompok pada website OKK",
     },
@@ -25,7 +25,7 @@ export const TimelineDataJuli = [
         description: "Welcoming Maba pertama dilakukan secara ONLINE",
     },
     {
-        date: "Senin, 25 Juli",
+        date: "Minggu, 24 Juli",
         title: "Penugasan Misi OKK UI 2022",
         description: "Penugasan Misi pertama",
     },
