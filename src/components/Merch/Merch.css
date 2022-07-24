@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika&display=swap");
+
+.merchBody {
+  background-color: #f2e3ce;
+
+}
+
+@media (hover: hover) {
+  #creditcard {
+    
+    transform: translateY(110px);
+    transition: transform 0.1s ease-in-out;
+    
+  }
+
+  #money {
+    
+    transform: translateY(180px);
+    transition: transform 0.1s ease-in-out;
+    
+  }
+
+  button:hover #creditcard {
+    transform: translateY(0px);
+    transition: transform 0.2s ease-in-out;
+   
+  }
+
+  button:hover #money {
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+    
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button:hover .button__text span {
+  transform: translateY(-0.25rem);
+  transition: transform .2s ease-in-out;
+}
+
+.button {
+  border: none;
+  outline: none;
+  background-color: purple;
+  padding: 1rem 90px 1rem 2rem;
+  position: relative;
+  border-radius: 8px;
+  letter-spacing: 0.7px;
+  background-color: #e1aa43;
+  color: #000;
+  font-size: 21px;
+  font-family: "Signika", bold;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button__svg {
+  position: absolute;
+  overflow: visible;
+  bottom: 6px;
+  right: 0.2rem;
+  height: 140%;
+}
+
+

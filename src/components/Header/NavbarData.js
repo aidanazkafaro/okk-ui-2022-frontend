@@ -15,4 +15,8 @@ export const menuItems = [
     path: "/Kontak",
     label: "Kontak",
   },
+  {
+    path: "/Merch",
+    label: "Merch",
+  }
 ];
