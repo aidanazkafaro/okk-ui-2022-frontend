@@ -266,7 +266,7 @@ export default function Merch() {
 
 
             <div className="flex items-right justify-center p-[4%]">
-                <button class="button font-bold">
+                <button onClick={() => window.open('http://www.bit.ly/MerchOKKUI2022')} class="button font-bold">
                     <span class="button__text">
                         <span>P</span><span>e</span><span>s</span><span>a</span><span>n</span><span> </span><span>s</span><span>e</span><span>k</span><span>a</span><span>r</span><span>a</span><span>n</span><span>g</span>
                     </span>
