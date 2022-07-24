@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import carouselCard from "../../assets/carousel-misi-mobile.png";
-import rectangleMobile from "../../assets/Rectangle.png";
+import "./sliderMisi.css";
 import RightArrow from "../../assets/right-arrow.svg";
 import LeftArrow from "../../assets/left-arrow.svg";
 
@@ -66,7 +66,7 @@ function Card(props) {
           <div className={`absolute w-4/5 h-cardheightmobile top-0 z-10`}>
             <div className="absolute top-[89%] w-full h-cardheightmobile">
               <div className="flex items-center justify-center">
-                <a href={"/PageMisi"}>
+                <a href={"/Misi"}>
                   <button
                     type="button"
                     className={`text-center font-semibold text-base font-signika h-9 w-36 px-6 bg-underlineOrange rounded-2xl shadow-md shadow-slate-500 `}
@@ -78,9 +78,18 @@ function Card(props) {
             </div>
           </div>
           <div className={`absolute w-4/5 h-cardheightmobile top-9 px-7 `}>
-            <div className={`flex items-center justify-center h-1/3`}>
-              <img src={logo} className={``} alt="" />
+            <div className="flex items-center justify-center">
+              <div className="h-2/3 w-2/3 sm:h-1/2 sm:w-1/2">
+                <div className={`w-full h-full`}>
+                  <img
+                    src={logo}
+                    className={`max-h-full max-w-full w-full`}
+                    alt=""
+                  />
+                </div>
+              </div>
             </div>
+
             <div className="font-poppins text-3xl font-bold mt-8 text-center">
               {misiKe}
             </div>
@@ -88,7 +97,7 @@ function Card(props) {
               {judul}
             </div>
             <div
-              className={`line-clamp-4 font-poppins text-lg font-normal mt-2 text-center`}
+              className={`lines font-poppins text-lg font-normal mt-2 text-center`}
             >
               {deskripsi}
             </div>

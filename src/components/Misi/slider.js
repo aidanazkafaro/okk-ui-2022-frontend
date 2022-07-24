@@ -126,7 +126,7 @@ function Card(props) {
                 </div>
                 {/* button selengkapnya */}
                 <div className={`w-full h-20`}>
-                  <a href={"/PageMisi"}>
+                  <a href={"/Misi"}>
                     <button
                       type="button"
                       className={`font-bold font-signika h-14 w-48 px-6 py-4 bg-underlineOrange rounded-2xl shadow-md shadow-slate-500 `}
