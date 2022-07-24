@@ -1,0 +1,36 @@
+.lines {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+}
+
+@media (min-width: 400px) {
+  .lines {
+    -webkit-line-clamp: 5;
+  }
+}
+
+@media (min-width: 450px) {
+  .lines {
+    -webkit-line-clamp: 4;
+  }
+}
+
+@media (min-width: 530px) {
+  .lines {
+    -webkit-line-clamp: 3;
+  }
+}
+
+@media (min-width: 590px) {
+  .lines {
+    -webkit-line-clamp: 2;
+  }
+}
+
+@media (min-width: 640px) {
+  .lines {
+    -webkit-line-clamp: 3;
+  }
+}

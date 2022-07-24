@@ -24,7 +24,7 @@ const Home = () => {
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
       <HeroArea />
       <IndexAbout />
-      {/* <IndexMisi /> */}
+      <IndexMisi />
       <Timeline />
       <OurContent />
       {/* <Sponsor /> */}

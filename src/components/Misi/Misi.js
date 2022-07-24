@@ -69,7 +69,9 @@ export default function Misi({ misiItem, disable }) {
                 <h2 className="font-bold">{misiItem.judul}</h2>
               </div>
               <div className="">
-                <p className="font-normal">{misiItem.deskripsi}</p>
+                <p className="font-normal whitespace-pre-wrap">
+                  {misiItem.deskripsi}
+                </p>
               </div>
             </div>
             <div className="flex-auto my-auto">
@@ -118,13 +120,21 @@ export default function Misi({ misiItem, disable }) {
                       }`}
                     >
                       <h2 className="font-bold">{misiItem.judul}</h2>
-                      <p>{misiItem.deskripsi}</p>
+                      <p className="whitespace-pre-wrap">
+                        {misiItem.deskripsi}
+                      </p>
                     </div>
                   </li>
-                  <li className="ml-4 text-xl font-medium cursor-pointer">
+                  {/* <li className="ml-4 text-xl font-medium cursor-pointer">
                     <div className="absolute w-3 h-3 bg-[#E1AA43] rounded-full mt-1.5 -left-[6.5px] border border-white dark:border-gray-900 dark:bg-[#E1AA43]"></div>
-                    <a href={misiItem.linkPengumpulan} target="_blank" rel="noreferrer">Pengumpulan</a>
-                  </li>
+                    <a
+                      href={misiItem.linkPengumpulan}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Pengumpulan
+                    </a>
+                  </li> */}
                 </ol>
               </div>
             </div>
