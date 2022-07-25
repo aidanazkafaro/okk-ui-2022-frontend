@@ -71,6 +71,15 @@ export default function Misi({ misiItem, disable }) {
               <div className="">
                 <p className="font-normal whitespace-pre-wrap">
                   {misiItem.deskripsi}
+                  <a
+                    href={misiItem.link}
+                    className={`font-bold`}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {misiItem.link}
+                  </a>
+                  {misiItem.deskripsi2}
                 </p>
               </div>
             </div>
@@ -122,6 +131,15 @@ export default function Misi({ misiItem, disable }) {
                       <h2 className="font-bold">{misiItem.judul}</h2>
                       <p className="whitespace-pre-wrap">
                         {misiItem.deskripsi}
+                        <a
+                          href={misiItem.link}
+                          className={`font-bold`}
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          {misiItem.link}
+                        </a>
+                        {misiItem.deskripsi2}
                       </p>
                     </div>
                   </li>
