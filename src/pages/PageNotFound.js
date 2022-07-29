@@ -14,7 +14,7 @@ const PageNotFound = () => {
     <div className={`${isOpen ? "fixed h-screen w-full" : ""} flex flex-col min-h-screen min-w-[300px]`}>
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
       <NotFound />
-      {/* <Sponsor /> */}
+      <Sponsor />
       <Footer />
     </div>
   );

@@ -27,7 +27,7 @@ const Home = () => {
       <IndexMisi />
       <Timeline />
       <OurContent />
-      {/* <Sponsor /> */}
+      <Sponsor />
       <Footer />
     </div>
   );

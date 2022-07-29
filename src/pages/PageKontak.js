@@ -15,7 +15,7 @@ const PageKontak = () => {
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
       
       <Kontak />
-      {/* <Sponsor /> */}
+      <Sponsor />
       <Footer />
     </div>
   );

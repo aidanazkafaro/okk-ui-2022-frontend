@@ -1,6 +1,13 @@
 import React from "react";
 import "./Sponsor.css";
 import logo from "../../assets/sponsor-logo-placeholder.jpg";
+import telkom from "../../assets/sponsor/telkom.png"
+import bri from "../../assets/sponsor/bri.png"
+import evenciio from "../../assets/sponsor/evenciio.png"
+import kowawa from "../../assets/sponsor/kowawa.png"
+import cano from "../../assets/sponsor/cano.png"
+import myrepublic from "../../assets/sponsor/myrepublic.png"
+import sahuta from "../../assets/sponsor/sahuta.png"
 
 const Sponsor = () => {
   return (
@@ -12,17 +19,16 @@ const Sponsor = () => {
           </h2>
         </div>
         <div className="h-auto py-1 w-full bg-white flex flex-col space-y-2  rounded-xl shadow-xl transition-transform drop-shadow-sm">
-          <div className="horizontal-image">
-            <img className="resize-image" src={logo} alt="logo" />
-            <img className="resize-image" src={logo} alt="logo" />
-            <img className="resize-image" src={logo} alt="logo" />
-            <img className="resize-image" src={logo} alt="logo" />
-            <img className="resize-image" src={logo} alt="logo" />
+          <div className="horizontal-image space-x-[6%]">
+            <img className="w-2/12 md:w-1/12" src={telkom} alt="logo" />
+            <img className="w-2/12 md:w-1/12" src={bri} alt="logo" />
+            <img className="w-2/12 md:w-1/12" src={cano} alt="logo" />
+            <img className="w-3/12 md:w-2/12" src={kowawa} alt="logo" />
           </div>
-          <div className="horizontal-image">
-            <img className="resize-image" src={logo} alt="logo" />
-            <img className="resize-image" src={logo} alt="logo" />
-            <img className="resize-image" src={logo} alt="logo" />
+          <div className="horizontal-image space-x-[6%]">
+            <img className="w-4/12 md:w-4/12" src={myrepublic} alt="logo" />
+            <img className="w-3/12 md:w-2/12" src={sahuta} alt="logo" />
+            <img className="w-4/12 md:w-3/12" src={evenciio} alt="logo" />
           </div>
         </div>
       </div>

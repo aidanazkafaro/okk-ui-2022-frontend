@@ -15,7 +15,7 @@ const PageFAQ = () => {
       <Navbar isOpen={isOpen} setIsOpen={toggle} />
 
       <FAQ />
-      {/* <Sponsor /> */}
+      <Sponsor />
       <Footer />
     </div>
   );

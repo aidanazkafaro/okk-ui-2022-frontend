@@ -20,7 +20,7 @@ const PageMisi = () => {
             <Misi key={id} misiItem={misiItem} disable={misiItem.disable} />
           ))}
         </div>
-        {/* <Sponsor /> */}
+        <Sponsor />
         <div className="relative mt-auto bottom-0 w-screen">
           <Footer />
         </div>
