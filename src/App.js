@@ -19,9 +19,7 @@ function App() {
         <Route exact path="/faq" element={<PageFAQ />} />
         <Route exact path="/Kontak" element={<PageKontak />} />
         <Route exact path="/Merch" element={<PageMerch />} />
-
         <Route exact path="*" element={<Home />} />
-
       </Routes>
     </Router>
   );
