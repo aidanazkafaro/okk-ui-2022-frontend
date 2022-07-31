@@ -63,7 +63,7 @@ export const TimelineDataAgustus = [
         description: "Mentoring 2 OKK UI 2022 dilakukan secara ONLINE",
     },
     {
-        date: "Selasa, 9 Agustus",
+        date: "Kamis, 11 Agustus",
         title: "Pengenalan UKM",
         description: "Mahasiswa baru mengenal UKM yang ada di Universitas Indonesia (ONLINE)",
     },
