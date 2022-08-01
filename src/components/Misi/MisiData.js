@@ -8,7 +8,7 @@ export const misiItems = [
     misiKe: "#Misi 1",
     misi: "Twibbon Post Instagram",
     logo: misi1,
-    startMonth: "JULY-2022",
+    startMonth: "JUL-2022",
     range: {
       start: "2022-7-24",
       end: "2022-7-31",
@@ -26,7 +26,7 @@ export const misiItems = [
     misiKe: "#Misi 2",
     misi: "TTS dan Yel-Yel Kelompok",
     logo: misi2,
-    startMonth: "AUGUST-2022",
+    startMonth: "AUG-2022",
     range: {
       start: "2022-8-1",
       end: "2022-8-7",

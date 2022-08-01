@@ -16,7 +16,7 @@ function classNames(...classes) {
 
 export default function Calendar({ startDate, endDate, startMonth }) {
 
-  let firstDayCurrentMonth = parse(String(startMonth), "MMMM-yyyy", new Date());
+  let firstDayCurrentMonth = parse(String(startMonth), "MMM-yyyy", new Date());
 
   let days = eachDayOfInterval({
     start: firstDayCurrentMonth,
@@ -30,7 +30,7 @@ export default function Calendar({ startDate, endDate, startMonth }) {
           <div className=" bg-white shadow-md rounded-md p-2 md:flex">
             <div className="flex-left items-center  md:my-auto mx-auto">
               <h2 className="font-semibold text-gray-900 text-lg md:text-2xl text-center flex-wrap ">
-                {format(firstDayCurrentMonth, "MMMM ")}
+                {format(firstDayCurrentMonth, "MMMM")}
                 <br></br>
                 {format(firstDayCurrentMonth, "yyyy")}
               </h2>
