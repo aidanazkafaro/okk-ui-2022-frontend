@@ -32,7 +32,7 @@ export const misiItems = [
       end: "2022-8-7",
     },
     deskripsi:"✨Halo Agnibrata Makara!✨\nGimana Misi 1? Seru kann? Nah setelah mengerjakan Misi 1, Agnibrata Makara akan diajak untuk mengerjakan Misi 2, yaitu Jamuan Cendekia.\nLink penugasan dapat diakses pada:\n\n",
-    link: "bit.ly/Misi2OKKUI2022",
+    link: "https://bit.ly/Misi2OKKUI2022",
     deskripsi2: "\n\nTeknis pengerjaan:\n1. Teman-teman Agnibrata Makara dapat mengakses link di atas atau dapat mengunjungi website OKK UI 2022.\n2. Kalian akan diarahkan menuju Google Drive yang berisi folder instruksi tugas dan template TTS.\n3. Teman-teman Agnibrata Makara dpat mengerjakan misi sesuai dengan instruksi pada template TTS yang sudah disediakan. Kemudian jika TTS sudah terisi penuh, TTS dikumpulkan kepada mentor masing-masing kelompok.\n4. Perhatikan Instagram @okk_ui setiap harinya untuk memperoleh petunjuk pengerjaan tugas ya.\n\nSelamat mengeksplorasi kampus UI! 😁\n\n#OKKUI2022\n#BersamaBereksplorasi",
     disable: false,
   },
