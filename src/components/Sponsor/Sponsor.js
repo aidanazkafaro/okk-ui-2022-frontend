@@ -8,6 +8,9 @@ import kowawa from "../../assets/sponsor/kowawa.png"
 import cano from "../../assets/sponsor/cano.png"
 import myrepublic from "../../assets/sponsor/myrepublic.png"
 import sahuta from "../../assets/sponsor/sahuta.png"
+import hipwee from "../../assets/sponsor/hipwee.png"
+import a1 from "../../assets/sponsor/1pers.jpg"
+import ffg from "../../assets/sponsor/frisian-flag.jpg"
 
 const Sponsor = () => {
   return (
@@ -23,12 +26,17 @@ const Sponsor = () => {
             <img className="w-2/12 md:w-1/12" src={telkom} alt="logo" />
             <img className="w-2/12 md:w-1/12" src={bri} alt="logo" />
             <img className="w-2/12 md:w-1/12" src={cano} alt="logo" />
-            <img className="w-3/12 md:w-2/12" src={kowawa} alt="logo" />
+            <img className="w-2/12 md:w-1/12 rounded-sm" src={hipwee} alt="logo" />
           </div>
           <div className="horizontal-image space-x-[6%]">
             <img className="w-4/12 md:w-4/12" src={myrepublic} alt="logo" />
             <img className="w-3/12 md:w-2/12" src={sahuta} alt="logo" />
             <img className="w-4/12 md:w-3/12" src={evenciio} alt="logo" />
+          </div>
+          <div className="horizontal-image space-x-[6%]">
+            <img className="w-2/12 md:w-1/12" src={a1} alt="logo" />
+            <img className="w-3/12 md:w-2/12" src={kowawa} alt="logo" />
+            <img className="w-4/12 md:w-2/12" src={ffg} alt="logo" />
           </div>
         </div>
       </div>
