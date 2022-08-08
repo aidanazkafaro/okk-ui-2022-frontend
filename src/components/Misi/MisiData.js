@@ -31,24 +31,28 @@ export const misiItems = [
       start: "2022-8-1",
       end: "2022-8-7",
     },
-    deskripsi:"✨Halo Agnibrata Makara!✨\nGimana Misi 1? Seru kann? Nah setelah mengerjakan Misi 1, Agnibrata Makara akan diajak untuk mengerjakan Misi 2, yaitu Jamuan Cendekia.\nLink penugasan dapat diakses pada:\n\n",
+    deskripsi:
+      "✨Halo Agnibrata Makara!✨\nGimana Misi 1? Seru kann? Nah setelah mengerjakan Misi 1, Agnibrata Makara akan diajak untuk mengerjakan Misi 2, yaitu Jamuan Cendekia.\nLink penugasan dapat diakses pada:\n\n",
     link: "https://bit.ly/Misi2OKKUI2022",
-    deskripsi2: "\n\nTeknis pengerjaan:\n1. Teman-teman Agnibrata Makara dapat mengakses link di atas atau dapat mengunjungi website OKK UI 2022.\n2. Kalian akan diarahkan menuju Google Drive yang berisi folder instruksi tugas dan template TTS.\n3. Teman-teman Agnibrata Makara dpat mengerjakan misi sesuai dengan instruksi pada template TTS yang sudah disediakan. Kemudian jika TTS sudah terisi penuh, TTS dikumpulkan kepada mentor masing-masing kelompok.\n4. Perhatikan Instagram @okk_ui setiap harinya untuk memperoleh petunjuk pengerjaan tugas ya.\n\nSelamat mengeksplorasi kampus UI! 😁\n\n#OKKUI2022\n#BersamaBereksplorasi",
+    deskripsi2:
+      "\n\nTeknis pengerjaan:\n1. Teman-teman Agnibrata Makara dapat mengakses link di atas atau dapat mengunjungi website OKK UI 2022.\n2. Kalian akan diarahkan menuju Google Drive yang berisi folder instruksi tugas dan template TTS.\n3. Teman-teman Agnibrata Makara dpat mengerjakan misi sesuai dengan instruksi pada template TTS yang sudah disediakan. Kemudian jika TTS sudah terisi penuh, TTS dikumpulkan kepada mentor masing-masing kelompok.\n4. Perhatikan Instagram @okk_ui setiap harinya untuk memperoleh petunjuk pengerjaan tugas ya.\n\nSelamat mengeksplorasi kampus UI! 😁\n\n#OKKUI2022\n#BersamaBereksplorasi",
     disable: false,
   },
-  // {
-  //   judul: "Pesta Pikiran",
-  //   misiKe: "#Misi 3",
-  //   misi: "Video Informatif",
-  //   logo: misi3,
-  //   startMonth: "AUGUST-2022",
-  //   range: {
-  //     start: "2022-8-8",
-  //     end: "2022-8-14",
-  //   },
-  //   deskripsi:
-  //     "Sekali lagi selamat! Kita akan memasuki fase terakhir, yaitu mengeksplorasi lingkungan sosial dan budaya di Indonesia. Misi ini akan membawamu menjelajahi Indonesia, karena negeri yang beragam ini sedang membutuhkan bantuanmu. Tiada gading yang tidak retak, begitu pula dengan Indonesia kita tercinta.\nMisi ini akan mengajakmu berpikir kritis untuk membantu menyelesaikan permasalahan sosial dan budaya yang ada di Indonesia. Kemudian, hasil pemikiran mu akan dituangkan dalam bentuk video informatif kelompok. Siapkan dirimu untuk merayakan puncak perjalananmu dengan mengeksplorasi Indonesia!",
-  //   linkPengumpulan: "https://okk.ui.ac.id/",
-  //   disable: true,
-  // },
+  {
+    judul: "Pesta Pikiran",
+    misiKe: "#Misi 3",
+    misi: "Video Informatif",
+    logo: misi3,
+    startMonth: "AUG-2022",
+    range: {
+      start: "2022-8-8",
+      end: "2022-8-14",
+    },
+    deskripsi:
+      "✨Halo Agnibrata Makara!✨\n\nGimana perasaannya setelah melewati misi 2, yaitu TTS dan yel-yel? Nah setelah mengerjakan Misi 2, Agnibrata Makara akan diajak untuk mengerjakan Misi 3, yaitu Pesta Pikiran. Pengerjaan Misi 3 membutuhkan kekompakan dari kelompok. Jadi, selamat berdiskusi dan bekerjasama!\n\nLink penugasan dapat diakses pada:\n\n",
+    link: "https://bit.ly/Misi3OKKUI2022",
+    deskripsi2:
+      "\n\nTeknis pengerjaan:\n1. Teman-teman Agnibrata Makara dapat mengakses link di atas atau dapat mengunjungi website OKK UI 2022.\n2. Kalian akan diarahkan menuju Google Drive yang berisi folder instruksi tugas dan pemicu misi.\n3. Teman-teman Agnibrata Makara dapat mengerjakan misi sesuai dengan instruksi yang sudah disediakan secara berkelompok. Perhatikan pemicu misi yang perlu dibahas oleh kelompok kalian dan buatlah menjadi sebuah video informatif. Kemudian, hasilnya dapat diupload pada instagram salah satu perwakilan kelompok menggunakan hashtag yang telah ditentukan\n\nSelamat berdiskusi! 😁\n\n#OKKUI2022\n#BersamaBereksplorasi\n#PestaPikiran\n——————\nOKK UI 2022\nBuku, Pesta, dan Cinta\n",
+    disable: false,
+  },
 ];
