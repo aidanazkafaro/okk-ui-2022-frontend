@@ -17,6 +17,7 @@ import misterpotato from "../../assets/sponsor/misterpotato.png";
 import pnmim from "../../assets/sponsor/pnmim.png";
 import ponds from "../../assets/sponsor/ponds.png";
 import smax from "../../assets/sponsor/smax.png";
+
 const Sponsor = () => {
   return (
     <div className="max-w-[1400px] mx-auto px-5 sm:px-10 md:px-10 lg:px-24 2xl:px-32 3xl:px-0">

@@ -8,6 +8,8 @@ import Backdrop from '@mui/material/Backdrop';
 
 import './Merch.css'
 
+
+// basic merch
 import baju from '../../assets/merch/baju/kaos_depan.png';
 import emblem from '../../assets/merch/emblem/emblem.png';
 import gelang from '../../assets/merch/gelang/gelang.png';
@@ -16,6 +18,10 @@ import stiker from '../../assets/merch/stiker/stiker.png';
 import topi from '../../assets/merch/topi/topi.png';
 import totebag from '../../assets/merch/totebag/totebag.png';
 import tumbler from '../../assets/merch/tumbler/tumbler.png';
+
+// merch with actor
+import baju_actor from '../../assets/merch/actor/kaos1.jpg';
+import notebook_actor from '../../assets/merch/actor/notebook2.jpg';
 
 export default function Merch() {
 
@@ -92,11 +98,106 @@ export default function Merch() {
             <div className="flex items-right justify-center pb-[1%]">
                 <div className="container xl:w-[600px] md:w-[450px] w-[380px] h-2 mt-1 bg-underlineOrange rounded-xl mb-8" />
             </div>
-            <section class="overflow-hidden text-gray-700">
-                <div class="container px-5 py-2 mx-auto lg:pt-24 lg:px-32">
+
+
+            <div className="flex justify-center items-center">
+                <div className="w-[85%] md:w-[70%]">
+                    <div id="carouselDarkVariant" class="carousel slide carousel-fade carousel-dark relative" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                            <button
+                                data-bs-target="#carouselDarkVariant"
+                                data-bs-slide-to="0"
+                                class="active"
+                                aria-current="true"
+                                aria-label="Slide 1"
+                            ></button>
+                            <button
+                                data-bs-target="#carouselDarkVariant"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 1"
+                            ></button>
+                            <button
+                                data-bs-target="#carouselDarkVariant"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 1"
+                            ></button>
+                        </div>
+
+
+                        <div class="carousel-inner relative w-full overflow-hidden">
+
+                            <div class="carousel-item active relative float-left w-full">
+                                <img
+                                    src={baju_actor}
+                                    class="block w-full rounded-lg"
+                                    alt="Baju OKK UI 2022"
+                                />
+                                <div class="carousel-caption hidden md:block absolute text-center">
+                                    <h5 class="text-xl text-white">Baju OKK UI 2022</h5>
+                                    <p class="text-white">Lihat betapa kerennya mereka saat menggunakan baju OKK UI 2022.</p>
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item relative float-left w-full">
+                                <img
+                                    src={notebook_actor}
+                                    class="block w-full rounded-lg"
+                                    alt="Notebook, Tumbler, dan Baju OKK UI"
+                                />
+                                <div class="carousel-caption hidden md:block absolute text-center">
+                                    <h5 class="text-xl text-white">Notebook dan Tumbler</h5>
+                                    <p class="text-white">Haus saat mencatat menggunakan notebook? tenang! okk memiliki keduanya.</p>
+                                </div>
+                            </div>
+
+
+                            {/* <div class="carousel-item relative float-left w-full">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp"
+                                    class="block w-full"
+                                    alt="Woman Reading a Book"
+                                />
+                                <div class="carousel-caption hidden md:block absolute text-center">
+                                    <h5 class="text-xl">Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                         */}
+                        </div>
+
+
+
+                        <button
+                            class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                            type="button"
+                            data-bs-target="#carouselDarkVariant"
+                            data-bs-slide="prev"
+                        >
+                            <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                            class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                            type="button"
+                            data-bs-target="#carouselDarkVariant"
+                            data-bs-slide="next"
+                        >
+                            <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <section class="overflow-hidden text-gray-700 ">
+                <div class="container px-5 py-2 mx-auto lg:pt-12 lg:px-32">
                     <div class="flex flex-wrap -m-1 md:-m-2">
-                        <div class="flex flex-wrap w-1/2">
-                            <div class="w-1/2 p-1 md:p-2">
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
+                            <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
@@ -116,13 +217,15 @@ export default function Merch() {
                                     {cardsClick(360, totebag, "Totebag", "Totebag", "Bawaanmu banyak? bingung mau bawanya gimana? tenang! dengan totebag OKK UI akan memudahkan kamu dalam membawa barang barang.")}
                                 </Backdrop>
                             </div>
-                            <div class="w-1/2 p-0 md:p-2 pt-1">
+                        </div>
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
+                            <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openGelang: true
                                     })
-                                }>{cards(350, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}</a>
+                                }>{cards(400, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openGelang}
@@ -133,16 +236,18 @@ export default function Merch() {
                                         })
                                     }
                                 >
-                                    {cardsClick(350, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}
+                                    {cardsClick(400, gelang, "Gelang", "Gelang", "Tangan kerasa kosong? ingin menghiasi tangan kamu dengan sesuatu yang keren? pakailah gelang OKK UI!")}
                                 </Backdrop>
                             </div>
-                            <div class="w-1/2 p-1 md:p-2">
+                        </div>
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
+                            <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openEmblem: true
                                     })
-                                }>{cards(350, emblem, "emblem", "Emblem", "Sebuah emblem yang keren abis.")}</a>
+                                }>{cards(400, emblem, "emblem", "Emblem", "Sebuah emblem yang keren abis.")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openEmblem}
@@ -156,13 +261,15 @@ export default function Merch() {
                                     {cardsClick(350, emblem, "emblem", "Emblem", "Sebuah emblem yang keren abis.")}
                                 </Backdrop>
                             </div>
-                            <div class="w-1/2 p-1 md:p-2">
+                        </div>
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
+                            <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openTopi: true
                                     })
-                                }>{cards(350, topi, "topi", "Topi", "Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.")}</a>
+                                }>{cards(400, topi, "topi", "Topi", "Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openTopi}
@@ -176,14 +283,15 @@ export default function Merch() {
                                     {cardsClick(350, topi, "topi", "Topi", "Depok panas?! Tenang saja! dengan topi OKK UI ini kamu akan terlindung dari sinar matahari yang terik.")}
                                 </Backdrop>
                             </div>
-
+                        </div>
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
                             <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openNotebook: true
                                     })
-                                }>{cards(600, notebook, "notebook", "Notebook", "Bingung dengan catatan kuliah? Cobalah mencatat menggunakan notebook OKK UI ini! Buku ini dipercaya dapat memudahkan dalam belajar.")}</a>
+                                }>{cards(400, notebook, "notebook", "Notebook", "Bingung dengan catatan kuliah? Cobalah mencatat menggunakan notebook OKK UI ini! Buku ini dipercaya dapat memudahkan dalam belajar.")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openNotebook}
@@ -198,14 +306,14 @@ export default function Merch() {
                                 </Backdrop>
                             </div>
                         </div>
-                        <div class="flex flex-wrap w-1/2 pb-[20%]">
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
                             <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openBaju: true
                                     })
-                                }>{cards(600, baju, "baju", "Baju", "Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!")}</a>
+                                }>{cards(400, baju, "baju", "Baju", "Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openBaju}
@@ -219,13 +327,15 @@ export default function Merch() {
                                     {cardsClick(350, baju, "baju", "Baju", "Kamu anak UI tapi belum punya baju OKK UI?!?! NANI!? Segera dapatkan baju OKK UI dan rasakan benefitnya!")}
                                 </Backdrop>
                             </div>
-                            <div class="w-1/2 p-1 md:p-2">
+                        </div>
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
+                            <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openStiker: true
                                     })
-                                }>{cards(350, stiker, "stiker", "Stiker", "Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!")}</a>
+                                }>{cards(400, stiker, "stiker", "Stiker", "Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openStiker}
@@ -239,13 +349,15 @@ export default function Merch() {
                                     {cardsClick(300, stiker, "stiker", "Stiker", "Bingung cara menunjukkan identitasmu? tenang! dengan stiker OKK UI ini kamu dapat menunjukkan identitas kamu ke orang-orang!")}
                                 </Backdrop>
                             </div>
-                            <div class="w-1/2 p-0 md:p-2">
+                        </div>
+                        <div class="flex flex-wrap w-1/3 md:w-1/4">
+                            <div class="w-full p-1 md:p-2">
                                 <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openTumbler: true
                                     })
-                                }>{cards(230, tumbler, "tumblr", "Tumblr", "Takut kehausan saat jalan-jalan di UI? sekarang kamu bisa menyimpan minuman menggunakantumbler OKKUI! sehingga kamu dapat minum kapanpun dan dimanapun.")}</a>
+                                }>{cards(400, tumbler, "tumblr", "Tumblr", "Takut kehausan saat jalan-jalan di UI? sekarang kamu bisa menyimpan minuman menggunakantumbler OKKUI! sehingga kamu dapat minum kapanpun dan dimanapun.")}</a>
                                 <Backdrop
                                     sx={{ color: '#fff', zIndex: (theme) => theme.zIndex.drawer + 1 }}
                                     open={open.openTumbler}
@@ -262,8 +374,7 @@ export default function Merch() {
                         </div>
                     </div>
                 </div>
-            </section >
-
+            </section>
 
             <div className="flex items-right justify-center p-[4%]">
                 <button onClick={() => window.open('http://www.bit.ly/MerchOKKUI2022')} class="button font-bold">
