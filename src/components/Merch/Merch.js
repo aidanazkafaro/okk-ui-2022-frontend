@@ -127,11 +127,6 @@ export default function Merch() {
                                 data-bs-slide-to="1"
                                 aria-label="Slide 1"
                             ></button>
-                            <button
-                                data-bs-target="#carouselDarkVariant"
-                                data-bs-slide-to="2"
-                                aria-label="Slide 1"
-                            ></button>
                         </div>
 
 
@@ -318,7 +313,7 @@ export default function Merch() {
                         </div>
                         <div class="flex flex-wrap w-1/3 md:w-1/4">
                             <div class="w-full p-1 md:p-2">
-                               <a onClick={() =>
+                                <a onClick={() =>
                                     setOpen({
                                         ...open,
                                         openTumbler: true
@@ -364,7 +359,7 @@ export default function Merch() {
                         </div>
                         <div class="flex flex-wrap w-1/3 md:w-1/4">
                             <div class="w-full p-1 md:p-2">
-                                
+
 
                                 <a onClick={() =>
                                     setOpen({
