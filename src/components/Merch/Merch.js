@@ -20,18 +20,18 @@ import totebag from '../../assets/merch/totebag/totebag.png';
 import tumbler from '../../assets/merch/tumbler/tumbler.png';
 
 // merch with actor
-import baju_actor from '../../assets/merch/actor/kaos1.jpg';
-import notebook_actor from '../../assets/merch/actor/notebook2.jpg';
+import baju_actor from '../../assets/merch/actor/kaos1.jpeg';
+import notebook_actor from '../../assets/merch/actor/notebook2.jpeg';
 
 // basic merch with actor
 import kaos2 from '../../assets/merch/actor/kaos2.png';
-import emblem1 from '../../assets/merch/actor/emblem1.jpg';
-import gelang2 from '../../assets/merch/actor/gelang2.jpg';
-import notebook1 from '../../assets/merch/actor/notebook1.jpg';
-import sticker1 from '../../assets/merch/actor/sticker1.jpg';
-import topi2 from '../../assets/merch/actor/topi2.jpg';
-import totebag1 from '../../assets/merch/actor/totebag1.jpg';
-import tumbler2 from '../../assets/merch/actor/tumbler2.jpg';
+import emblem1 from '../../assets/merch/actor/emblem1.jpeg';
+import gelang2 from '../../assets/merch/actor/gelang2.jpeg';
+import notebook1 from '../../assets/merch/actor/notebook1.jpeg';
+import sticker1 from '../../assets/merch/actor/sticker1.jpeg';
+import topi2 from '../../assets/merch/actor/topi2.jpeg';
+import totebag1 from '../../assets/merch/actor/totebag1.jpeg';
+import tumbler2 from '../../assets/merch/actor/tumbler2.jpeg';
 
 export default function Merch() {
 
