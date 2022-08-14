@@ -17,6 +17,8 @@ import misterpotato from "../../assets/sponsor/misterpotato.png";
 import pnmim from "../../assets/sponsor/pnmim.png";
 import ponds from "../../assets/sponsor/ponds.png";
 import smax from "../../assets/sponsor/smax.png";
+import bsm from "../../assets/sponsor/bsm.jpg"
+import gopay from "../../assets/sponsor/gopay.png"
 
 const Sponsor = () => {
   return (
@@ -28,17 +30,10 @@ const Sponsor = () => {
           </h2>
         </div>
         <div className="h-auto py-1 w-full bg-white flex flex-col space-y-2  rounded-xl shadow-xl transition-transform drop-shadow-sm overflow-hidden">
-          {/* sponsor kecil */}
-          <div className="horizontal-image space-x-[3%]">
-            <img className="w-1/12 md:w-1/12" src={smax} alt="logo" />
-            <img className="w-1/12 md:w-1/12" src={misterpotato} alt="logo" />
-            <img className="w-1/12 md:w-1/12" src={a1} alt="logo" />
-            <img className="w-1/12 md:w-1/12" src={telkom} alt="logo" />
-            <img className="w-1/12 md:w-1/12" src={bri} alt="logo" />
-            <img className="w-1/12 md:w-1/12" src={cano} alt="logo" />
-            <img className="w-1/12 md:w-1/12 rounded-sm" src={hipwee} alt="logo"/>
+        <div className="horizontal-image h-20 -mb-2 md:-mb-0 md:h-28">
+            <img className="w-6/12 md:w-5/12" src={ponds} alt="logo" />
+   
           </div>
-
 
           {/* sponsor medium */}
           <div className="horizontal-image space-x-[3%] md:h-44 ">
@@ -47,7 +42,7 @@ const Sponsor = () => {
             <img className="w-4/12 md:w-3/12" src={evenciio} alt="logo" />
           </div>
           <div className="horizontal-image space-x-[3%] h-16 md:h-24">
-            <img className="w-3/12 md:w-3/12" src={ponds} alt="logo" />
+            <img className="w-3/12 md:w-3/12" src={gopay} alt="logo" />
             <img className="w-3/12 md:w-3/12" src={fitbar} alt="logo" />
             <img className="w-3/12 md:w-2/12" src={bantex} alt="logo" />
           </div>
@@ -57,6 +52,17 @@ const Sponsor = () => {
             <img className="w-3/12 md:w-2/12" src={kowawa} alt="logo" />
             <img className="w-3/12 md:w-3/12" src={pnmim} alt="logo" />
             <img className="w-3/12 md:w-2/12" src={ffg} alt="logo" />
+          </div>
+          {/* sponsor kecil */}
+          <div className="horizontal-image space-x-[3%]">
+            <img className="w-1/12 md:w-1/12" src={smax} alt="logo" />
+            <img className="w-1/12 md:w-1/12" src={misterpotato} alt="logo" />
+            <img className="w-1/12 md:w-1/12" src={a1} alt="logo" />
+            <img className="w-1/12 md:w-1/12" src={telkom} alt="logo" />
+            <img className="w-1/12 md:w-1/12" src={bri} alt="logo" />
+            <img className="w-1/12 md:w-1/12" src={cano} alt="logo" />
+            <img className="w-1/12 md:w-1/12 rounded-sm" src={hipwee} alt="logo"/>
+            <img className="w-1/12 md:w-1/12 rounded-sm" src={bsm} alt="logo"/>
           </div>
         </div>
       </div>
