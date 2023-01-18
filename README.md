@@ -14,5 +14,5 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-Here is the live result: [https://okk-ui-2022-frontend.vercel.app/](https://okk-ui-2022-frontend.vercel.app/)
+Here is the live result: [https://okk-ui-2022-frontend-d2rqwdutv-aidanazkafaro.vercel.app/](https://okk-ui-2022-frontend-d2rqwdutv-aidanazkafaro.vercel.app/)
 
