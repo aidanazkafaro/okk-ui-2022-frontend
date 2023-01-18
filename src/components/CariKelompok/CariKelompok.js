@@ -12,7 +12,7 @@ import hasil from '../../assets/blob.png';
 import axios from "axios";
 
 //var jsonObj = require("../../assets/json/datamaba.json");
-var Recaptcha = require('react-recaptcha');
+//var Recaptcha = require('react-recaptcha');
 
 const CariKelompok = () => {
 
@@ -26,49 +26,49 @@ const CariKelompok = () => {
   const [data, setData] = useState(verifiedState);
   const notifyNPM = () => toast("⚠ Masukkan NPMmu terlebih dahulu!");
   const notifyLine = () => toast("⚠ Masukkan ID LINEmu terlebih dahulu!");
-  const notifyVerified = () => toast("⚠ Verifikasi Captcha terlebih dahulu!");
-  const captchaExpired = () => toast("⚠ Captcha expired!");
+  // const notifyVerified = () => toast("⚠ Verifikasi Captcha terlebih dahulu!");
+  // const captchaExpired = () => toast("⚠ Captcha expired!");
 
-  let recaptchaInstance;
+  //let recaptchaInstance;
 
   useEffect(() => {
     document.getElementById("hasilPencarian").style.display = "none";
   }, []);
 
-  // specifying your onload callback function
-  var callback = function () {
-    console.log('Done!!!!');
-  };
+  // // specifying your onload callback function
+  // var callback = function () {
+  //   console.log('Done!!!!');
+  // };
 
-  // specifying verify callback function
-  var verifyCallback = function (response) {
-    console.log(response);
-    if (response) {
-      setData({
-        ...data,
-        isVerified: true
-      })
-    }
-  };
+  // // specifying verify callback function
+  // var verifyCallback = function (response) {
+  //   console.log(response);
+  //   if (response) {
+  //     setData({
+  //       ...data,
+  //       isVerified: true
+  //     })
+  //   }
+  // };
 
-  var expiredCallback = function () {
+  // var expiredCallback = function () {
 
-    captchaExpired();
-    setData({
-      ...data,
-      isVerified: false
-    })
+  //   captchaExpired();
+  //   setData({
+  //     ...data,
+  //     isVerified: false
+  //   })
 
-  };
+  // };
 
-  const resetRecaptcha = () => {
+  // const resetRecaptcha = () => {
 
-    recaptchaInstance.reset();
-    setData({
-      ...data,
-      isVerified: false
-    })
-  };
+  //   recaptchaInstance.reset();
+  //   setData({
+  //     ...data,
+  //     isVerified: false
+  //   })
+  // };
 
   const handleRadioChange = () => {
     if (valInput1 === "none") {
@@ -84,7 +84,7 @@ const CariKelompok = () => {
 
   const handleSubmitNpm = (e) => {
     e.preventDefault();
-    resetRecaptcha();
+    //resetRecaptcha();
     // document.getElementById("hasilAwal").style.display = "flex";
     // document.getElementById("hasilPencarian").style.display = "none";
     // document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
@@ -93,11 +93,12 @@ const CariKelompok = () => {
 
       notifyNPM();
 
-    } else if (data.isVerified === false) {
+    // } else if (data.isVerified === false) {
 
-      notifyVerified();
+    //   notifyVerified();
 
-    } else {
+    // 
+  } else {
 
       axios
         .post("https://okk-ui-2022.et.r.appspot.com/npm", {
@@ -150,18 +151,19 @@ const CariKelompok = () => {
 
   const handleSubmitLine = (e) => {
     e.preventDefault();
-    resetRecaptcha();
+    //resetRecaptcha();
     // document.getElementById("hasilAwal").style.display = "flex";
     // document.getElementById("hasilPencarian").style.display = "none";
     // document.getElementById("cariKelompokText").innerHTML = "Pencarian kelompok akan dibuka tanggal 14 Juli 2022";
     // return;
     if (valLine === "") {
       notifyLine();
-    } else if (data.isVerified === false) {
+    // } else if (data.isVerified === false) {
 
-      notifyVerified();
+    //   notifyVerified();
 
-    } else {
+    //
+   } else {
 
       axios
         .post("https://okk-ui-2022.et.r.appspot.com/line", {
@@ -370,14 +372,14 @@ const CariKelompok = () => {
                   />
                 </Form>
               </div>
-              <Recaptcha
+              {/* <Recaptcha
                 ref={e => recaptchaInstance = e}
                 sitekey="6LfoEtwgAAAAAPjMkiNv2cchLOsyn9iJDTLnwgSs"
                 render="explicit"
                 verifyCallback={verifyCallback}
                 onloadCallback={callback}
                 expiredCallback={expiredCallback}
-              />
+              /> */}
             </div>
           </div>
         </div>
