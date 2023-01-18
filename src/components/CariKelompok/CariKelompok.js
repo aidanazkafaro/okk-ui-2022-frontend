@@ -31,8 +31,6 @@ const CariKelompok = () => {
 
   let recaptchaInstance;
 
-  //let dataHasil;
-
   useEffect(() => {
     document.getElementById("hasilPencarian").style.display = "none";
   }, []);
@@ -102,7 +100,7 @@ const CariKelompok = () => {
     } else {
 
       axios
-        .post("https://okkui2022backend.herokuapp.com/npm", {
+        .post("https://okk-ui-2022.et.r.appspot.com/npm", {
           npm: valNpm,
         })
         .then(function (response) {
@@ -166,7 +164,7 @@ const CariKelompok = () => {
     } else {
 
       axios
-        .post("https://okkui2022backend.herokuapp.com/line", {
+        .post("https://okk-ui-2022.et.r.appspot.com/line", {
           id_line: valLine,
         })
         .then(function (response) {
